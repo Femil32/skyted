@@ -1,5 +1,5 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Text Intro
 export const textIntro = (elem) => {
@@ -10,12 +10,12 @@ export const textIntro = (elem) => {
       opacity: 0,
       stagger: 0.8,
       duration: 1.5,
-      ease: 'back',
+      ease: "back",
     },
     {
       yPercent: 0,
       opacity: 1,
-    },
+    }
   );
 };
 
@@ -24,9 +24,9 @@ export const menuShow = (elem1, elem2) => {
   gsap.from([elem1, elem2], {
     duration: 0.7,
     height: 0,
-    transformOrigin: 'right top',
+    transformOrigin: "right top",
     skewY: 2,
-    ease: 'power4.inOut',
+    ease: "power4.inOut",
     stagger: {
       amount: 0.2,
     },
@@ -38,7 +38,7 @@ export const menuHide = (elem1, elem2) => {
   gsap.to([elem1, elem2], {
     duration: 0.8,
     height: 0,
-    ease: 'power4.inOut',
+    ease: "power4.inOut",
     stagger: {
       amount: 0.07,
     },
@@ -51,7 +51,7 @@ export const staggerLinks = (elem1, elem2, elem3) => {
     duration: 0.8,
     y: 100,
     delay: 0.1,
-    ease: 'power4.inOut',
+    ease: "power4.inOut",
     stagger: {
       amount: 0.3,
     },
@@ -64,7 +64,7 @@ export const hoverLink = (e) => {
     duration: 0.4,
     y: 3,
     skewX: 4,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
   });
 };
 
@@ -74,7 +74,7 @@ export const hoverExit = (e) => {
     duration: 0.4,
     y: -3,
     skewX: 0,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
   });
 };
 // Skew gallery Images
@@ -82,7 +82,7 @@ export const skewGallery = (elem1) => {
   // register ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
   // make the right edge "stick" to the scroll bar. force3D: true improves performance
-  gsap.set(elem1, { transformOrigin: 'right center', force3D: true });
+  gsap.set(elem1, { transformOrigin: "right center", force3D: true });
   const clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
   ScrollTrigger.create({
     trigger: elem1,
@@ -91,7 +91,7 @@ export const skewGallery = (elem1) => {
       gsap.to(elem1, {
         skew: 0,
         skewY: velocity,
-        ease: 'power3',
+        ease: "power3",
         duration: 0.8,
         overwrite: true,
       });
