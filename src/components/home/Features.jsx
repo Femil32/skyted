@@ -1,0 +1,56 @@
+import React from "react";
+import { MetaverseIcon, OfficeIcon, TravellersIcon } from "../AllSvgs";
+import { IconCard, PageHeader } from "../Micro";
+
+function Features() {
+  return (
+    <section className="section-container bg-white text-black">
+      <PageHeader
+        title={(
+          <>
+            <span className="block">Get back your</span>
+            <span>&quot; Freedom of Speech &quot;</span>
+          </>
+        )}
+        className="max-w-lg text-center mx-auto"
+      />
+      <div className="flex gap-32 py-6">
+        <IconCard
+          icon={<TravellersIcon width="42" />}
+          title="Travellers"
+          description={
+            `Whether you are on the flight, in the car or
+            waiting in the lounge area we have got you...`
+          }
+          link="/"
+          linkText="Get More"
+          btnClassName="bg-[#1781B8] text-white"
+        />
+        <IconCard
+          icon={<OfficeIcon width="42" />}
+          title="Office & Call Center"
+          description={
+            `Hybrid work has create lots of stress has we
+            were used to work silently for months during...`
+          }
+          link="/"
+          linkText="Get More"
+          btnClassName="bg-[#1781B8] text-white"
+        />
+        <IconCard
+          icon={<MetaverseIcon width="42" />}
+          title="Metaverse & Gamers"
+          description={
+            `Are you tired to wake up the whole family
+            when you play night games?`
+          }
+          link="/"
+          linkText="Get More"
+          btnClassName="bg-[#1781B8] text-white"
+        />
+      </div>
+    </section>
+  );
+}
+
+export default Features;

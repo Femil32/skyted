@@ -1,33 +1,59 @@
 body {
-    min-height: 100vh;
-    width: 100%;
-    background: #121212;
-    color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  background: #121212;
+  color: #ffffff;
 }
 
 svg {
-    display: inline-block !important;
+  display: inline-block !important;
+}
+
+details>summary {
+  list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
 }
 
 
 /* 1. Hero */
 .hero {
-    background: url('./assets/imgs/blure-bg.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 0;
+  background: url('./assets/imgs/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.factors {
+  background: url('./assets/imgs/blure-bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.navbar-bg {
+  background: url('./assets/imgs/dark-section.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
 }
 
 .state-digit {
-    @apply text-6xl font-semibold tracking-wide mb-4
+  @apply text-6xl font-semibold tracking-wide mb-4
 }
 
 .gray-discription {
-    @apply max-w-[200px] relative text-gray-100 opacity-70
+  @apply max-w-[200px] relative text-gray-100 opacity-70
 }
 
 .section-container {
-    @apply px-24 py-[88px] relative
+  @apply px-24 py-[88px] w-full
 }
