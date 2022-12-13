@@ -14,7 +14,7 @@ function Features() {
         )}
         className="max-w-lg text-center mx-auto"
       />
-      <div className="flex gap-32 py-6">
+      <div className="flex flex-col flex-wrap gap-8 md:gap-32 py-6">
         <IconCard
           icon={<TravellersIcon width="42" />}
           title="Travellers"

@@ -1,11 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { PageHeader } from "../Micro";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+// import "swiper/css/navigation";
 
 import ConsumerLogo from "@/assets/imgs/consumer-logo.png";
 import Kickstarter from "@/assets/imgs/kickstarter.png";
@@ -45,25 +45,37 @@ const slideData = [
 
 function Events() {
   return (
-    <section className="py-[88px] w-full bg-white text-black">
+    <section className="md:py-[88px] py-8 px-6 w-full bg-white text-black">
       <div>
         <PageHeader className="text-center" title="Coming up next..." />
-        <div className="py-6">
+        <div className="py-8 relative">
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
+            slidesPerView={1}
+            spaceBetween={10}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+              },
+            }}
+            navigation
+            modules={[Navigation]}
             loop="true"
             centeredSlides="true"
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
             className="mySwiper"
           >
             {slideData.map((slide) => (
-              <SwiperSlide className="max-w-md">
+              <SwiperSlide className="w-full md:max-w-md min-h-[600px]">
                 <div className="flex flex-col justify-center items-start gap-4">
-                  <div className="w-96">
+                  <div className="md:w-96">
                     <img src={slide.slideImg} alt="ConsumerLogo" />
                   </div>
                   <h6>{slide.slideDescription}</h6>

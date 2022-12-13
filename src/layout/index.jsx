@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 function Layout() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* <NavBar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} /> */}
       <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <Outlet />
