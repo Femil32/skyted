@@ -3,10 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { RoundedMinus, RoundedPlus, ShareArrow } from "./AllSvgs";
+import LogoIMG from "../assets/imgs/logo.png";
 
 // PageHeader
 export const PageHeader = ({ title, className }) => (
-  <h2 className={`text-5xl font-semibold mb-8 ${className}`}>
+  <h2 className={`lg:text-5xl md:text-4xl text-3xl font-semibold mb:mb-8 mb-4 ${className}`}>
     {title}
   </h2>
 );
@@ -57,7 +58,7 @@ CtaBtn.defaultProps = {
 export const IconCard = ({
   icon, title, description, link, linkText, className, btnClassName,
 }) => (
-  <div className={`p-2 ${className}`}>
+  <div className={`p-6 ring-1 ${className} shadow-md rounded-xl`}>
     <div className="flex justify-center items-start flex-col gap-5">
       <div>{icon}</div>
       <h6 className="text-lg font-semibold">{title}</h6>
@@ -150,3 +151,9 @@ Detail.defaultProps = {
   summary: "",
   detail: "",
 };
+
+export const SkytedLogo = () => (
+  <div className="object-cover w-16 relative">
+    <img src={LogoIMG} alt="skyted" className="w-full h-full" />
+  </div>
+);

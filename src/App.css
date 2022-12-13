@@ -3,6 +3,7 @@ body {
   width: 100%;
   background: #121212;
   color: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 
 svg {
@@ -20,7 +21,7 @@ details>summary::-webkit-details-marker {
 
 /* 1. Hero */
 .hero {
-  background: url('./assets/imgs/hero-bg.jpg');
+  background: url('./assets/imgs/hero-bg.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -46,14 +47,50 @@ details>summary::-webkit-details-marker {
   z-index: 0;
 }
 
+
+.swiper-button-prev{
+  z-index: 99;
+  position: absolute !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: #ffffff !important;
+  bottom: 0 !important;
+  width: 40px;
+  height: 40px;
+  background: url('./assets/svgs/left.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  left: 50%;
+  transform: translateX(-120%);
+  /* background-attachment: ; */
+  background-size: 20px;
+  border-radius: 50%;
+}
+
+.swiper-button-next{
+  position: absolute !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: #ffffff !important;
+  bottom: 0 !important;
+  width: 40px;
+  height: 40px;
+  background: url('./assets/svgs/left.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  right: 50%;
+  transform: translateX(120%) rotate(180deg);
+  /* background-attachment: ; */
+  background-size: 20px;
+  border-radius: 50%;
+}
+
 .state-digit {
-  @apply text-6xl font-semibold tracking-wide mb-4
+  @apply text-4xl md:text-6xl font-semibold tracking-wide mb-4
 }
 
 .gray-discription {
-  @apply max-w-[200px] relative text-gray-100 opacity-70
+  @apply max-w-[200px] relative text-gray-100 opacity-70 text-base md:text-lg
 }
 
 .section-container {
-  @apply px-24 py-[88px] w-full
+  @apply lg:px-24 lg:py-[88px] py-8 px-6 w-full
 }

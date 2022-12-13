@@ -28,10 +28,10 @@ function FAQ() {
 
   return (
     <section className="section-container bg-white text-black">
-      <div className="flex">
+      <div className="flex gap-6 md:gap-0 flex-col md:flex-row">
         <div className="flex-1">
           <div className="max-w-lg">
-            <span className="text-red-500 font-medium">The FAQs</span>
+            <span className="text-red-500 font-medium mb-2">The FAQs</span>
             <PageHeader title="You want to know more about us?" />
             <SlatePara text="Everything you need to know about the product and billing.
               Can’t find the answer you’re looking for? Please check."
@@ -39,7 +39,7 @@ function FAQ() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4 md:gap-6">
             {allFaq.map((faq) => <Detail summary={faq.summary} detail={faq.detail} />)}
           </div>
         </div>
