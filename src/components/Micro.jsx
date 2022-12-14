@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { object } from "prop-types";
 import { Link } from "react-router-dom";
 import { RoundedMinus, RoundedPlus, ShareArrow } from "./AllSvgs";
 import LogoIMG from "../assets/imgs/logo.png";
@@ -13,7 +13,7 @@ export const PageHeader = ({ title, className }) => (
 );
 
 PageHeader.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   className: PropTypes.string,
 };
 PageHeader.defaultProps = {
@@ -123,8 +123,8 @@ TextArea.defaultProps = {
   className: "",
   placeholder: "Enter here",
   name: "",
-  cols: "",
-  rows: "",
+  cols: 10,
+  rows: 10,
 };
 
 export const Detail = ({ summary, detail }) => (

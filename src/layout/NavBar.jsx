@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
 import PropTypes from "prop-types";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
-const NavBar = ({ isNavOpen, setIsNavOpen }) => {
+const NavBar = ({ navState, handleNav }) => {
   const navLinks = [
     {
       title: "Home",
@@ -39,16 +39,48 @@ const NavBar = ({ isNavOpen, setIsNavOpen }) => {
 
   const nav = useRef();
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const t1 = gsap.timeline();
-      t1.fromTo(".inner", {
-        width: 0,
+  useEffect(() => {
+    const t1 = gsap.timeline();
+    if (navState.isClicked === false) {
+      console.log(navState);
+      t1.fromTo(".nav-link", {
+        xPercent: 0,
+        opacity: 1,
+      }, {
+        stagger: 0.05,
+        xPercent: -20,
+        opacity: 0,
+      }).to([".outer", ".inner"], {
+        stagger: {
+          amount: 0.07,
+        },
+        duration: 0.8,
+        ease: "power3.inOut",
+        height: 0,
+      });
+
+      t1.to(".main-nav", {
+        duration: 0,
+        css: {
+          display: "none",
+        },
+      });
+    } else if (navState.isClicked === true
+      || (navState.isClicked === true && navState.initial === null)
+    ) {
+      t1.to(".main-nav", {
+        duration: 0,
+        css: {
+          display: "block",
+        },
+      });
+      t1.fromTo([".inner", ".outer"], {
+        height: 0,
       }, {
         stagger: 0.2,
         duration: 0.5,
         ease: "easeIn",
-        width: "100%",
+        height: "100vh",
       }).fromTo(".nav-link", {
         xPercent: -20,
         opacity: 0,
@@ -57,30 +89,30 @@ const NavBar = ({ isNavOpen, setIsNavOpen }) => {
         xPercent: 0,
         opacity: 1,
       });
-    }, nav);
-
-    return () => ctx.revert();
-  }, []);
+    }
+  }, [navState]);
 
   return (
-    <nav ref={nav} className={`${isNavOpen ? " top-0" : " top-0"} transform transition-all w-full fixed left-0 h-screen z-50`}>
-      <div className="fixed inner h-screen bg-blue-600 left-0 top-0 z-10" />
-      <div className="fixed inner h-screen navbar-bg left-0 top-0 z-10" />
-      <div className="wrapper flex-col h-full flex z-50 relative">
-        <button type="button" className="px-24 py-6" onClick={() => setIsNavOpen(!isNavOpen)}>dff</button>
+    <nav ref={nav} className="main-nav transform transition-all w-full hidden overflow-hidden fixed top-0 left-0 h-screen z-50">
+      <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" />
+      <div className="fixed outer h-full w-screen  navbar-bg left-0 top-0 z-10" />
+      <div className="wrapper flex-col h-full w-full flex z-50 relative">
+        <button type="button" className="nav-link text-black bg-white flex justify-center items-center rounded-full w-12 h-12" onClick={handleNav}>
+          x
+        </button>
         <div className="flex mx-24 mt-16 h-full justify-between items-start">
           <div className="">
-            <ul className="nav-links">
+            <ul className="nav-links space-y-4 leading-3">
               {
-                navLinks.map((link) => (
+                navLinks.map((link, i) => (
                   <li
-                    key={link.title}
+                    key={i}
                     className="nav-link"
                   >
                     <NavLink
                       to={link.link}
                       state={link.state}
-                      className={({ isActive }) => `${isActive ? "border-red-900" : "border-transparent"} transition-all font-bold text-6xl uppercase tracking-tight leading-tight border-l-8 px-2`}
+                      className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold text-6xl uppercase tracking-tight px-2`}
                     >
                       {link.title}
                     </NavLink>
@@ -111,13 +143,8 @@ const NavBar = ({ isNavOpen, setIsNavOpen }) => {
 };
 
 NavBar.propTypes = {
-  isNavOpen: PropTypes.bool,
-  setIsNavOpen: PropTypes.func,
-};
-
-NavBar.defaultProps = {
-  isNavOpen: false,
-  setIsNavOpen: () => { },
+  handleNav: PropTypes.func.isRequired,
+  navState: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
 export default NavBar;

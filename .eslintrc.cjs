@@ -18,6 +18,7 @@ module.exports = {
     "import/no-": 0,
     "react/jsx-indent": "off",
     "no-console": 0,
+    "react/no-array-index-key": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
   },

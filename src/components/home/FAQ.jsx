@@ -39,8 +39,8 @@ function FAQ() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col gap-4 md:gap-6">
-            {allFaq.map((faq) => <Detail summary={faq.summary} detail={faq.detail} />)}
+          <div className="flex flex-col gap-4 md:gap-6 transition-all">
+            {allFaq.map((faq, i) => <Detail key={i} summary={faq.summary} detail={faq.detail} />)}
           </div>
         </div>
       </div>

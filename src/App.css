@@ -47,6 +47,9 @@ details>summary::-webkit-details-marker {
   z-index: 0;
 }
 
+.swiper{
+  padding: 50px;
+}
 
 .swiper-button-prev{
   z-index: 99;
@@ -67,6 +70,7 @@ details>summary::-webkit-details-marker {
 }
 
 .swiper-button-next{
+  z-index: 99;
   position: absolute !important;
   background-color: rgba(0, 0, 0, 0.1) !important;
   color: #ffffff !important;
@@ -81,6 +85,11 @@ details>summary::-webkit-details-marker {
   /* background-attachment: ; */
   background-size: 20px;
   border-radius: 50%;
+}
+
+li.nav-link:hover{
+  transform: skewX(-10deg) !important;
+  transition: all 250ms linear;
 }
 
 .state-digit {
