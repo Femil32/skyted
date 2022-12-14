@@ -42,7 +42,7 @@ function Factors() {
           <div>
             <h6 className="text-xl font-medium text-blue-700">This gives the product exclusive advantages:</h6>
             <ul className="space-y-2 list-disc p-4 text-base md:text-lg">
-              {points.map((point) => <li key={point}>{point.point}</li>)}
+              {points.map((point, i) => <li key={i}>{point.point}</li>)}
             </ul>
           </div>
         </div>

@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
-import NavBar from "./NavBar";
 
 function Layout() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <div className="overflow-hidden">
-      {/* <NavBar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} /> */}
-      <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+      {/* <NavBar isNavOpen={navState} setIsNavOpen={handleNav} /> */}
+      <Header />
       <Outlet />
       <Footer />
     </div>

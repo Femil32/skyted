@@ -26,9 +26,9 @@ function About() {
               <PlayIcon width="62" />
             </span>
           </div>
-          <caption className="py-2 px-2 block text-[#001432]/50 text-xs md:text-sm text-left">
+          <span className="py-2 px-2 block text-[#001432]/50 text-xs md:text-sm text-left">
             Have you ever dreamt to be  totally free to be able to say what you want to say?
-          </caption>
+          </span>
         </div>
       </div>
 

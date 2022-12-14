@@ -45,7 +45,7 @@ const slideData = [
 
 function Events() {
   return (
-    <section className="md:py-[88px] py-8 px-6 w-full bg-white text-black">
+    <section className="md:py-[88px] py-10 px-6 w-full bg-white text-black">
       <div>
         <PageHeader className="text-center" title="Coming up next..." />
         <div className="py-8 relative">
@@ -53,27 +53,18 @@ function Events() {
             slidesPerView={1}
             spaceBetween={10}
             breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
               768: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
               },
             }}
             navigation
             modules={[Navigation]}
-            loop="true"
-            centeredSlides="true"
+            // centeredSlides="true"
             className="mySwiper"
           >
-            {slideData.map((slide) => (
-              <SwiperSlide className="w-full md:max-w-md min-h-[600px]">
+            {slideData.map((slide, i) => (
+              <SwiperSlide key={i} className="w-full md:max-w-[425px] min-h-[600px]">
                 <div className="flex flex-col justify-center items-start gap-4">
                   <div className="md:w-96">
                     <img src={slide.slideImg} alt="ConsumerLogo" />
