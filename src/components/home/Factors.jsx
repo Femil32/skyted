@@ -32,22 +32,22 @@ function Factors() {
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="md:w-3/5 order-2 md:order-1">
           <div className="mb-3 max-w-xl">
-            <h6 className="text-xl font-medium text-blue-700">Discover Key Factors</h6>
-            <p className="py-4 text-base md:text-lg">
+            <h6 className="text-xl font-medium text-blue-700" data-aos="fade-in">Discover Key Factors</h6>
+            <p className="py-4 text-base md:text-lg" data-aos="fade-in">
               Skyted has collaborated with the French DARPA to embed small resonators into the mask,
               previously develop to silence jet engines. These resonators are 10 times more powerful
               than existing silencing device previously design as mask
             </p>
           </div>
           <div>
-            <h6 className="text-xl font-medium text-blue-700">This gives the product exclusive advantages:</h6>
-            <ul className="space-y-2 list-disc p-4 text-base md:text-lg">
+            <h6 className="text-xl font-medium text-blue-700" data-aos="fade-in">This gives the product exclusive advantages:</h6>
+            <ul className="space-y-2 list-disc p-4 text-base md:text-lg" data-aos="fade-in">
               {points.map((point, i) => <li key={i}>{point.point}</li>)}
             </ul>
           </div>
         </div>
         <div className="md:w-2/5 order-1 md:order-2">
-          <div className="mx-auto mb-8 md:mb-0 scale-110">
+          <div className="mx-auto mb-8 md:mb-0 scale-110" data-aos="fade-in">
             <img src={MaskMan} alt="product" className="w-full h-full" />
           </div>
         </div>

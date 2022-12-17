@@ -2,6 +2,8 @@ import { gsap } from "gsap";
 import PropTypes from "prop-types";
 import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import LogoNav from "@/assets/imgs/logo-nav.png";
+import { CloseIcon } from "../components/AllSvgs";
 
 const NavBar = ({ navState, handleNav }) => {
   const navLinks = [
@@ -44,11 +46,11 @@ const NavBar = ({ navState, handleNav }) => {
     if (navState.isClicked === false) {
       console.log(navState);
       t1.fromTo(".nav-link", {
-        xPercent: 0,
+        yPercent: 0,
         opacity: 1,
       }, {
         stagger: 0.05,
-        xPercent: -20,
+        yPercent: -20,
         opacity: 0,
       }).to([".outer", ".inner"], {
         stagger: {
@@ -82,11 +84,11 @@ const NavBar = ({ navState, handleNav }) => {
         ease: "easeIn",
         height: "100vh",
       }).fromTo(".nav-link", {
-        xPercent: -20,
+        yPercent: -20,
         opacity: 0,
       }, {
         stagger: 0.05,
-        xPercent: 0,
+        yPercent: 0,
         opacity: 1,
       });
     }
@@ -97,10 +99,10 @@ const NavBar = ({ navState, handleNav }) => {
       <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" />
       <div className="fixed outer h-full w-screen  navbar-bg left-0 top-0 z-10" />
       <div className="wrapper justify-between items-center section-container h-full w-full flex z-50 relative">
-        <button type="button" className="nav-link absolute top-16 left-1/2 -translate-x-1/2 text-black bg-white flex justify-center items-center rounded-full w-14 h-14" onClick={handleNav}>
-          x
+        <button type="button" className="mx-4 nav-link absolute top-8 left-26 -translate-x-1/2 text-white" onClick={handleNav}>
+          <CloseIcon width={12} />
         </button>
-        <div className="flex justify-between w-full items-start">
+        <div className="flex relative justify-between w-full items-start">
           <div className="">
             <ul className="nav-links space-y-4 leading-3">
               {
@@ -121,7 +123,7 @@ const NavBar = ({ navState, handleNav }) => {
               }
             </ul>
           </div>
-          <aside className="border-l-4 px-8 max-w-sm nav-link">
+          <aside className="border-l-2 border-gray-100/10 px-8 max-w-sm nav-link">
             <h3 className="text-2xl mb-10">Skyted.inc</h3>
             <div className="text-light-gray">
               <address className="mb-6">
@@ -136,6 +138,9 @@ const NavBar = ({ navState, handleNav }) => {
               </a>
             </div>
           </aside>
+        </div>
+        <div className="absolute bottom-24 right-28 max-w-lg nav-link">
+          <img src={LogoNav} alt="skyted" className="w-full h-full" />
         </div>
       </div>
     </nav>

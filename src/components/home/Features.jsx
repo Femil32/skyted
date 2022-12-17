@@ -16,6 +16,7 @@ function Features() {
       />
       <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-8 md:gap-20 py-6">
         <IconCard
+          data-aos="fade-in"
           icon={<TravellersIcon width="42" />}
           title="Travellers"
           description={

@@ -7,7 +7,7 @@ import LogoIMG from "../assets/imgs/logo.png";
 
 // PageHeader
 export const PageHeader = ({ title, className }) => (
-  <h2 className={`lg:text-5xl md:text-4xl text-3xl font-semibold mb:mb-8 mb-4 ${className}`}>
+  <h2 data-aos="fade-in" className={`lg:text-5xl md:text-4xl text-3xl font-semibold mb:mb-8 mb-4 ${className}`}>
     {title}
   </h2>
 );
@@ -23,7 +23,7 @@ PageHeader.defaultProps = {
 
 // SlatePara
 export const SlatePara = ({ text, className }) => (
-  <p className={`text-[#001432]/50 font-semibold ${className}`}>
+  <p data-aos="fade-in" className={`text-[#001432]/50 font-semibold ${className}`}>
     {text}
   </p>
 );
@@ -58,7 +58,7 @@ CtaBtn.defaultProps = {
 export const IconCard = ({
   icon, title, description, link, linkText, className, btnClassName,
 }) => (
-  <div className={`p-6 ring-1 ${className} shadow-md rounded-xl flex-1`}>
+  <div data-aos="fade-in" className={`p-6 ring-1 ${className} shadow-md rounded-xl flex-1`}>
     <div className="flex justify-center items-start flex-col gap-5">
       <div>{icon}</div>
       <h6 className="text-lg font-semibold">{title}</h6>

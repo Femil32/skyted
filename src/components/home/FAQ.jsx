@@ -31,7 +31,7 @@ function FAQ() {
       <div className="flex gap-6 md:gap-0 flex-col md:flex-row">
         <div className="flex-1">
           <div className="max-w-lg">
-            <span className="text-red-500 font-medium mb-2">The FAQs</span>
+            <span className="text-red-500 font-medium mb-2" data-aos="fade-in">The FAQs</span>
             <PageHeader title="You want to know more about us?" />
             <SlatePara text="Everything you need to know about the product and billing.
               Can’t find the answer you’re looking for? Please check."
@@ -39,7 +39,7 @@ function FAQ() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col gap-4 md:gap-8 transition-all">
+          <div className="flex flex-col gap-4 md:gap-8 transition-all" data-aos="fade-in">
             {allFaq.map((faq, i) => <Detail key={i} summary={faq.summary} detail={faq.detail} />)}
           </div>
         </div>
