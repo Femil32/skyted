@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import React, { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import MaskIMG from "../../assets/imgs/mask.png";
 
 const Hero = () => {
   const hero = useRef();
@@ -17,11 +18,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={hero} className="hero section-container h-screen">
-      <div className="flex justify-center items-center flex-col gap-6">
+    <div ref={hero} className="hero section-container h-screen pb-0">
+      <div className="flex h-full w-full justify-center items-center flex-col gap-6">
         {/* Headline */}
-        <div className="h-full flex justify-center md:justify-start items-center flex-col">
-          <div className="relative text-center text-5xl md:text-5xl text-gray-800 font-radwave-demo">
+        <div className="h-full w-full flex gap-6 items-center flex-col justify-end">
+          <div className="relative mb-12 text-center text-5xl md:text-7xl text-gray-800 font-radwave-demo">
             <div className="w-full relative md:tracking-[-0.03em] font-bold md:leading-[76px] uppercase [background:linear-gradient(95.57deg,_#fff,_#a3a4a5_25.52%,_#fff_51.56%,_#a3a4a5_76.31%,_#fff)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block">
               <p className="[margin-block-start:0] [margin-block-end:0px]">
                 Silent Calls. Silent Games.
@@ -29,30 +30,48 @@ const Hero = () => {
               <p className="m-[0]">Everywhere. Anytime.</p>
             </div>
           </div>
+          <div className="flex justify-between w-full">
+            {/* stats */}
+            <article className="relative flex justify-center items-center md:block text-center">
+              <div className="md:mb-8 animate">
+                <h2 className="state-digit">56%</h2>
+                <p className="gray-discription">
+                  92 million US workforce is
+                  working remotely leading
+                  to virtual meets
+                </p>
+              </div>
+              <div className="animate">
+                <h2 className="state-digit">1B</h2>
+                <p className="gray-discription">
+                  daily participants on video
+                  conferencing solutions (Zoom,
+                  Google, Microsoft etc).
+
+                </p>
+              </div>
+            </article>
+
+            {/* mask man */}
+            <div className="w-32 lg:w-96 object-contain">
+              <img src={MaskIMG} alt="Maskman" className="w-full h-full" />
+            </div>
+
+            {/* description */}
+            <div className="data">
+              <article className="md:text-left text-center md:max-w-xs">
+                <p className="text-gray">
+                  Based in Toulouse, France, we have a designed a disruptive sound
+                  absorbing open air mask. We are backed by AIRBUS and the European
+                  Space Agency to introduce inflight calls.
+                </p>
+                <Link to="/" className="underline block">Get more</Link>
+              </article>
+            </div>
+
+          </div>
         </div>
 
-        {/* stats */}
-        <article className="md:absolute md:bottom-24 md:left-24 relative flex justify-center items-center md:block text-center">
-          <div className="md:mb-8 animate">
-            <h2 className="state-digit">8k +</h2>
-            <p className="gray-discription">number of zoom calls having every day here</p>
-          </div>
-          <div className="animate">
-            <h2 className="state-digit">183k +</h2>
-            <p className="gray-discription">Active users interact every month</p>
-          </div>
-        </article>
-
-        {/* description */}
-        <div className="md:absolute md:top-1/2 md:right-24 md:-translate-y-1/ data">
-          <article className="md:text-left text-center max-w-xs">
-            <p className="text-gray">
-              Based in Toulouse Fr, Skyted’s team is obsessed with
-              speechless calls. We are backed by Airbus dev. and the Europea...
-            </p>
-            <Link to="/" className="underline block">Get more</Link>
-          </article>
-        </div>
       </div>
     </div>
   );

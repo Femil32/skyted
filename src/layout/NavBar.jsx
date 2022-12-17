@@ -96,11 +96,11 @@ const NavBar = ({ navState, handleNav }) => {
     <nav ref={nav} className="main-nav transform transition-all w-full hidden overflow-hidden fixed top-0 left-0 h-screen z-50">
       <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" />
       <div className="fixed outer h-full w-screen  navbar-bg left-0 top-0 z-10" />
-      <div className="wrapper flex-col h-full w-full flex z-50 relative">
-        <button type="button" className="nav-link text-black bg-white flex justify-center items-center rounded-full w-12 h-12" onClick={handleNav}>
+      <div className="wrapper justify-between items-center section-container h-full w-full flex z-50 relative">
+        <button type="button" className="nav-link absolute top-16 left-1/2 -translate-x-1/2 text-black bg-white flex justify-center items-center rounded-full w-14 h-14" onClick={handleNav}>
           x
         </button>
-        <div className="flex mx-24 mt-16 h-full justify-between items-start">
+        <div className="flex justify-between w-full items-start">
           <div className="">
             <ul className="nav-links space-y-4 leading-3">
               {

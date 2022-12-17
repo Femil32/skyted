@@ -1,5 +1,5 @@
 import React from "react";
-import MaskMan from "@/assets/imgs/Masque-noire.png";
+import MaskMan from "@/assets/imgs/mask-break.png";
 
 const points = [
   {
@@ -46,8 +46,8 @@ function Factors() {
             </ul>
           </div>
         </div>
-        <div className="md:w-2/5">
-          <div className="w-44 md:w-72 mx-auto mb-8 md:mb-0">
+        <div className="md:w-2/5 order-1 md:order-2">
+          <div className="mx-auto mb-8 md:mb-0 scale-110">
             <img src={MaskMan} alt="product" className="w-full h-full" />
           </div>
         </div>

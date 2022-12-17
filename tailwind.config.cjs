@@ -6,6 +6,11 @@ module.exports = {
       colors: {
         black: "#121212",
         "light-gray": "#ffffff80",
+        fb: "#3b5998",
+        insta: "#c32aa3",
+        linkedin: "#0a66c2",
+        yt: "#ff0000",
+        twitter: "#1da1f2",
       },
     },
   },

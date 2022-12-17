@@ -52,6 +52,7 @@ details>summary::-webkit-details-marker {
 }
 
 .swiper-button-prev{
+  cursor: pointer;
   z-index: 99;
   position: absolute !important;
   background-color: rgba(0, 0, 0, 0.1) !important;
@@ -70,6 +71,7 @@ details>summary::-webkit-details-marker {
 }
 
 .swiper-button-next{
+  cursor: pointer;
   z-index: 99;
   position: absolute !important;
   background-color: rgba(0, 0, 0, 0.1) !important;
@@ -92,12 +94,17 @@ li.nav-link:hover{
   transition: all 250ms linear;
 }
 
+.showNav {
+  @apply top-0 outline-none backdrop-blur bg-[#121212]/70;
+  /* box-shadow: 0 5px 20px -15px #000000; */
+}
+
 .state-digit {
-  @apply text-4xl md:text-6xl font-semibold tracking-wide mb-4
+  @apply text-3xl md:text-5xl font-semibold mb-4 md:text-left
 }
 
 .gray-discription {
-  @apply max-w-[200px] relative text-gray-100 opacity-70 text-base md:text-lg
+  @apply max-w-[250px] relative text-gray-100 opacity-70 text-sm md:text-base md:text-left
 }
 
 .section-container {

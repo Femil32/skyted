@@ -12,7 +12,11 @@
     }
 
     .social-icon {
-        @apply w-12 h-12 rounded-full flex justify-center items-center bg-gray-200
+        @apply w-12 h-12 transition-all cursor-pointer rounded-full flex justify-center items-center bg-gray-200
+    }
+
+    .footer-link{
+      @apply hover:text-yt/80 transition-all
     }
 
     .red-header {

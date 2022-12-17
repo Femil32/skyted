@@ -58,7 +58,7 @@ CtaBtn.defaultProps = {
 export const IconCard = ({
   icon, title, description, link, linkText, className, btnClassName,
 }) => (
-  <div className={`p-6 ring-1 ${className} shadow-md rounded-xl`}>
+  <div className={`p-6 ring-1 ${className} shadow-md rounded-xl flex-1`}>
     <div className="flex justify-center items-start flex-col gap-5">
       <div>{icon}</div>
       <h6 className="text-lg font-semibold">{title}</h6>
@@ -129,7 +129,7 @@ TextArea.defaultProps = {
 
 export const Detail = ({ summary, detail }) => (
   <details className="cursor-pointer group">
-    <summary className="flex justify-between items-center font-medium text-lg">
+    <summary className="flex justify-between items-center font-medium text-2xl">
       <span>{summary}</span>
       <div className="group-open:hidden">
         <RoundedPlus width="20" />
@@ -138,7 +138,7 @@ export const Detail = ({ summary, detail }) => (
         <RoundedMinus width="20" />
       </div>
     </summary>
-    <p className="opacity-40 mt-2 text-base font-medium">{detail}</p>
+    <p className="opacity-40 mt-2 text-base font-medium mr-4">{detail}</p>
   </details>
 );
 
