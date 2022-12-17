@@ -8,13 +8,13 @@ function Features() {
       <PageHeader
         title={(
           <>
-            <span className="block">Get back your</span>
-            <span>&quot; Freedom of Speech &quot;</span>
+            <span className="block whitespace-nowrap mb-2">Get back your</span>
+            <span className="whitespace-nowrap block">&quot;Freedom of Speech&quot;</span>
           </>
         )}
         className="max-w-lg text-center mx-auto"
       />
-      <div className="flex flex-col flex-wrap gap-8 md:gap-32 py-6">
+      <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-8 md:gap-20 py-6">
         <IconCard
           icon={<TravellersIcon width="42" />}
           title="Travellers"

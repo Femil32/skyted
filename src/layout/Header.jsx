@@ -44,11 +44,29 @@ function Header() {
     }
   };
 
+  useEffect(() => {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-80px";
+      }
+      if (currentScrollPos !== 0) {
+        document.getElementById("navbar").classList.add("showNav");
+      } else if (currentScrollPos === 0) {
+        document.getElementById("navbar").classList.remove("showNav");
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }, []);
+
   return (
-    <div className="navbar fixed top-0 z-40 px-24 py-4 hidden md:flex">
+    <div id="navbar" className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 z-40 px-24 py-5 hidden md:flex">
       <div className="navbar-start">
         <div className="dropdown">
-          <button type="button" className="px-4 cursor-pointer" disabled={isDisabled} onClick={handleNav}>
+          <button type="button" className="cursor-pointer" disabled={isDisabled} onClick={handleNav}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
           </button>
         </div>

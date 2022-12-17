@@ -1,9 +1,19 @@
-import React from "react";
+/* eslint-disable jsx-a11y/media-has-caption */
+import React, { useEffect, useRef } from "react";
+import ExpertSpeech from "../../assets/video/expert-speech.mp4";
 import { PageHeader, SlatePara } from "../Micro";
-import HeadPhoneImg from "../../assets/imgs/headphone.png";
-import { PlayIcon } from "../AllSvgs";
 
 function About() {
+  const videoEl = useRef(null);
+
+  const attemptPlay = () => {
+    videoEl?.current.play();
+  };
+
+  useEffect(() => {
+    attemptPlay();
+  }, []);
+
   return (
     <section className="section-container bg-white text-black">
       <div>
@@ -20,11 +30,17 @@ function About() {
           />
         </div>
         <div className="">
-          <div className="flex relative object-cover overflow-hidden justify-center items-center rounded-3xl w-full h-64 md:h-96  border">
-            <img src={HeadPhoneImg} alt="HeadPhoneImg" className="w-full h-full absolute top-0 left-0" />
-            <span className="block z-10">
-              <PlayIcon width="62" />
-            </span>
+          <div className="flex relative object-cover overflow-hidden justify-center items-center rounded-3xl w-full ring">
+            <video
+              className="w-full h-full"
+              playsInline
+              loop
+              muted
+              controls
+              alt="ExpertSpeech"
+              src={ExpertSpeech}
+              ref={videoEl}
+            />
           </div>
           <span className="py-2 px-2 block text-[#001432]/50 text-xs md:text-sm text-left">
             Have you ever dreamt to be  totally free to be able to say what you want to say?
