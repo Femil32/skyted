@@ -18,11 +18,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={hero} className="hero section-container h-screen pb-0">
+    <div ref={hero} className="hero-bg section-container h-screen pb-0">
       <div className="flex h-full w-full justify-center items-center flex-col gap-6">
         {/* Headline */}
         <div className="h-full w-full flex gap-6 items-center flex-col justify-end">
-          <div className="relative mb-12 text-center text-5xl md:text-7xl text-gray-800 font-radwave-demo">
+          <div className="relative mb-12 text-center font-radwave text-5xl md:text-6xl text-gray-800 font-radwave-demo">
             <div className="w-full relative md:tracking-[-0.03em] font-bold md:leading-[76px] uppercase [background:linear-gradient(95.57deg,_#fff,_#a3a4a5_25.52%,_#fff_51.56%,_#a3a4a5_76.31%,_#fff)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block">
               <p className="[margin-block-start:0] [margin-block-end:0px]">
                 Silent Calls. Silent Games.

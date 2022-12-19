@@ -103,6 +103,12 @@ export const LinkedInIcon = (props) => (
   </svg>
 );
 
+export const LeftArrowIcon = (props) => (
+  <svg {...props} viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 6H2M2 6L6.86956 1M2 6L6.86956 11" stroke="#1781B8" strokeWidth="2" />
+  </svg>
+);
+
 export const YoutubeIcon = (props) => (
   <svg {...props} viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <rect opacity="0.05" width="50" height="50" rx="25" fill="#001432" />

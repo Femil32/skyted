@@ -99,9 +99,9 @@ const NavBar = ({ navState, handleNav }) => {
       <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" />
       <div className="fixed outer h-full w-screen  navbar-bg left-0 top-0 z-10" />
       <div className="wrapper justify-between items-center section-container h-full w-full flex z-50 relative">
-        <button type="button" className="mx-4 nav-link absolute top-8 left-26 -translate-x-1/2 text-white" onClick={handleNav}>
+        {/* <button type="button" className="mx-4 nav-link absolute top-8 left-26 -translate-x-1/2 text-white" onClick={handleNav}>
           <CloseIcon width={12} />
-        </button>
+        </button> */}
         <div className="flex relative justify-between w-full items-start">
           <div className="">
             <ul className="nav-links space-y-4 leading-3">
@@ -112,6 +112,7 @@ const NavBar = ({ navState, handleNav }) => {
                     className="nav-link"
                   >
                     <NavLink
+                      onClick={() => handleNav(true)}
                       to={link.link}
                       state={link.state}
                       className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold text-6xl uppercase tracking-tight px-2`}

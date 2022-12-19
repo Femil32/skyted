@@ -28,7 +28,7 @@ const points = [
 
 function Factors() {
   return (
-    <section className="factors section-container">
+    <section className="blur-bg section-container">
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="md:w-3/5 order-2 md:order-1">
           <div className="mb-3 max-w-xl">
