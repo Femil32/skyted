@@ -5,12 +5,18 @@ module.exports = {
     extend: {
       colors: {
         black: "#121212",
-        "light-gray": "#ffffff80",
+        "light-gray": "#F7FAFB",
         fb: "#3b5998",
         insta: "#c32aa3",
         linkedin: "#0a66c2",
         yt: "#ff0000",
         twitter: "#1da1f2",
+      },
+      fontFamily: {
+        radwave: "radwave",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
     },
   },
