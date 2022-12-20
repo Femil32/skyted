@@ -3,7 +3,7 @@ body {
   width: 100%;
   background: #121212;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'whyte', sans-serif;
 }
 
 svg {
@@ -20,7 +20,7 @@ details>summary::-webkit-details-marker {
 
 
 /* 1. Hero */
-.hero {
+.hero-bg {
   background: url('./assets/imgs/hero-bg.png');
   background-repeat: no-repeat;
   background-position: center center;
@@ -29,7 +29,7 @@ details>summary::-webkit-details-marker {
   z-index: 0;
 }
 
-.factors {
+.blur-bg {
   background: url('./assets/imgs/blure-bg.png');
   background-repeat: no-repeat;
   background-position: center center;

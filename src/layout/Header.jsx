@@ -26,8 +26,13 @@ function Header() {
     }, 1200);
   };
 
-  const handleNav = () => {
+  const handleNav = (isClose = false) => {
     disableNav();
+    if (isClose) {
+      setNavState({
+        isClicked: false,
+      });
+    }
     if (navState.initial === false) {
       setNavState({
         initial: null,
@@ -63,11 +68,13 @@ function Header() {
   }, []);
 
   return (
-    <div id="navbar" className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 z-40 px-24 py-5 hidden md:flex">
+    <div id="navbar" className="navbar bg-light-gray border-0 outline-0 transition-all duration-700 fixed top-0 z-40 px-24 py-4 hidden md:flex">
       <div className="navbar-start">
         <div className="dropdown">
-          <button type="button" className="cursor-pointer" disabled={isDisabled} onClick={handleNav}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          <button type="button" className={`${navState.isClicked ? "text-white z-[99]" : "text-black"} relative cursor-pointer h-6`} disabled={isDisabled} onClick={handleNav}>
+            {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg> */}
+            <span className={`${navState.isClicked ? "rotate-45 mb-0" : "mb-1"} relative bg-current w-5 h-[3px] block`} />
+            <span className={`${navState.isClicked && "-rotate-45"} relative bg-current w-5 h-[3px] block`} />
           </button>
         </div>
       </div>
@@ -75,7 +82,7 @@ function Header() {
         <SkytedLogo />
       </div>
       <div className="navbar-end">
-        <CtaBtn text="Let’s Connect" />
+        <CtaBtn text="Let’s Connect" className="bg-black text-white" />
       </div>
       <NavBar navState={navState} handleNav={handleNav} />
     </div>

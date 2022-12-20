@@ -4,22 +4,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* fonts */
+@font-face {
+  font-family: 'radwave';
+  src: url('./assets/fonts/radwavefont-demo.otf');
+}
+
+@font-face {
+  font-family: 'whyte';
+  src: url(./assets/fonts/whyte/Whyte-Light.ttf) format('truetype'),
+    url(./assets/fonts/whyte/Whyte-Black.ttf) format('truetype') font-italic font-weight-bold,
+    url(./assets/fonts/whyte/Whyte-Regular.ttf) format('truetype') font-italic font-weight-bold,
+    url(./assets/fonts/whyte/Whyte-Medium.ttf) format('truetype') font-italic font-weight-bold,
+    url(./assets/fonts/whyte/Whyte-Bold.ttf) format('truetype') font-italic font-weight-bold,
+}
+
 /* COMPONENTS */
 
 @layer components {
-    .btn-white {
-        @apply bg-white rounded-full px-5 py-2 text-black font-medium
-    }
+  .btn-white {
+    @apply bg-white rounded-full px-5 py-1 text-black font-medium
+  }
 
-    .social-icon {
-        @apply w-12 h-12 transition-all cursor-pointer rounded-full flex justify-center items-center bg-gray-200
-    }
+  .social-icon {
+    @apply w-12 h-12 transition-all cursor-pointer rounded-full flex justify-center items-center bg-gray-200
+  }
 
-    .footer-link{
-      @apply hover:text-yt/80 transition-all
-    }
+  .footer-link {
+    @apply hover:text-yt/80 transition-all
+  }
 
-    .red-header {
-        @apply font-semibold text-red-600
-    }
+  .red-header {
+    @apply font-semibold text-red-600
+  }
+
+  .img-offset-border{
+    @apply relative before:absolute before:w-full before:h-full before:top-3 before:-left-3 before:border-2 before:rounded-2xl before:z-0 before:border-black z-0  hover:before:top-2 hover:before:-left-2 cursor-pointer before:transition-all transform
+  }
+
+  .product-label{
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    @apply -rotate-180 uppercase
+  }
 }
