@@ -8,7 +8,7 @@ import { SlatePara } from "../components/Micro";
 const Footer = () => (
   <div className="foolter bg-gray-100 section-container text-black">
     <div className="grid md:grid-cols-3 gap-6 md:gap-0">
-      <div className="flex flex-col max-w-xs">
+      <div className="flex flex-col max-w-xs" data-aos="fade-in">
         <div className="logo mb-4 md:mb-8">Skyted.</div>
         <p className="mb-4 md:mb-8">
           Based in Toulouse Fr, Skyted’s team is
@@ -18,7 +18,7 @@ const Footer = () => (
         <small className="text-gray-400">©skyted.inc - 2022</small>
       </div>
       <div>
-        <div className="flex flex-col">
+        <div className="flex flex-col" data-aos="fade-in">
           <div className="red-header text-lg mb-4 md:mb-8">Usefull Links</div>
           <div className="flex">
             <ul className="flex-1 flex flex-col gap-2">
@@ -53,7 +53,7 @@ const Footer = () => (
         </div>
       </div>
       <div>
-        <div className="flex flex-col justify-between h-full">
+        <div className="flex flex-col justify-between h-full" data-aos="fade-in">
           <div>
             <div className="red-header text-lg mb-4 md:mb-8">Socially</div>
             <div className="flex">

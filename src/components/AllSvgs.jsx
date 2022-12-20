@@ -139,6 +139,13 @@ export const TwitterIcon = (props) => (
   </svg>
 );
 
+export const CloseIcon = (props) => (
+  <svg {...props} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0.928786" y1="0.928933" x2="15.0709" y2="15.0711" stroke="white" strokeWidth="2" />
+    <line y1="-1" x2="20" y2="-1" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 0.22168 14.364)" stroke="white" strokeWidth="2" />
+  </svg>
+);
+
 export const TravellersIcon = (props) => (
   <svg {...props} viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_643_77)">
