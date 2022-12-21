@@ -48,12 +48,12 @@ function Services() {
     },
   ];
   return (
-    <main className="py-16 bg-white">
+    <main className="xl:py-16 pt-12 pb-0 bg-white">
       {
         services.map((service, i) => (
           <section className={`${i % 2 === 0 ? "bg-white" : "bg-[#F7FAFB]"} text-black section-container`} key={i}>
             <div>
-              <header className="text-center mb-12">
+              <header className="text-center xl:mb-12 mb-5">
                 <PageHeader title={service.title} />
                 <h6>{service.tagline}</h6>
               </header>

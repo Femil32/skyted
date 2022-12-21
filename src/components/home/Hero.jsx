@@ -18,10 +18,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={hero} className="hero-bg section-container h-screen pb-0">
+    <div ref={hero} className="hero-bg section-container min-h-screen pb-0">
       <div className="flex h-full w-full justify-center items-center flex-col gap-6">
         {/* Headline */}
-        <div className="h-full w-full flex gap-6 items-center flex-col justify-end">
+        <div className="h-full w-full flex gap-6 items-center flex-col justify-end pt-16">
           <div className="relative mb-12 text-center font-radwave text-5xl md:text-6xl text-gray-800 font-radwave-demo">
             <div className="w-full relative md:tracking-[-0.03em] font-bold md:leading-[76px] uppercase [background:linear-gradient(95.57deg,_#fff,_#a3a4a5_25.52%,_#fff_51.56%,_#a3a4a5_76.31%,_#fff)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block">
               <p className="[margin-block-start:0] [margin-block-end:0px]">
@@ -30,9 +30,9 @@ const Hero = () => {
               <p className="m-[0]">Everywhere. Anytime.</p>
             </div>
           </div>
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between items-center w-full">
             {/* stats */}
-            <article className="relative flex justify-center items-center md:block text-center">
+            <article className="relative flex justify-center items-center md:block text-center pt-12">
               <div className="md:mb-8 animate">
                 <h2 className="state-digit">56%</h2>
                 <p className="gray-discription">
@@ -53,25 +53,23 @@ const Hero = () => {
             </article>
 
             {/* mask man */}
-            <div className="w-32 lg:w-96 object-contain">
+            <div className="w-32 lg:w-[32rem] object-contain">
               <img src={MaskIMG} alt="Maskman" className="w-full h-full" />
             </div>
 
             {/* description */}
-            <div className="data">
+            <div className="data h-full self-baseline">
               <article className="md:text-left text-center md:max-w-xs">
-                <p className="text-gray">
-                  Based in Toulouse, France, we have a designed a disruptive sound
-                  absorbing open air mask. We are backed by AIRBUS and the European
-                  Space Agency to introduce inflight calls.
+                <p className="font-light text-light-gray/60">
+                  Based in Toulouse, France, we have a designed a disruptive sound absorbing open
+                  air mask. We are backed by AIRBUS and the European Space Agency to introduce
+                  inflight calls.
                 </p>
-                <Link to="/" className="underline block">Get more</Link>
               </article>
             </div>
 
           </div>
         </div>
-
       </div>
     </div>
   );

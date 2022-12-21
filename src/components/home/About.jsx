@@ -17,16 +17,16 @@ function About() {
   return (
     <section className="section-container bg-white text-black">
       <div>
-        <h5 className=" text-red-500 font-semibold mb-5" data-aos="fade-in">About Skyted</h5>
+        <h5 className="red-header mb-5" data-aos="fade-in">About Skyted</h5>
         <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12" data-aos="fade-in">
-          <PageHeader title="Your Expert In Speech Privacy" className="max-w-md" />
+          <PageHeader title="Your Expert In Speech Privacy" className="max-w-md tracking-wide" />
           <SlatePara
             text={`Developed using breakthrough Aerospace technology, our “voice silencer”
           solution allows silent and confidential calls in real and virtual world.
           Perfect for the hybrid work, it offers “new nomad” total comfort and speech
           privacy in aircraft, open work spaces, public transport and in the
           virtual world as metaverse and online games.`}
-            className="max-w-xl"
+            className="max-w-xl font-normal"
           />
         </div>
         <div className="" data-aos="fade-in">
@@ -42,7 +42,7 @@ function About() {
               ref={videoEl}
             />
           </div>
-          <span className="py-2 px-2 block text-[#001432]/50 text-xs md:text-sm text-left">
+          <span className="py-2 px-2 block text-gray text-bse md:text-lg text-left md:mt-4">
             Have you ever dreamt to be  totally free to be able to say what you want to say?
           </span>
         </div>

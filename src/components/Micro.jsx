@@ -2,12 +2,13 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoIMG from "../assets/imgs/red-logo.png";
+import LogoWhiteIMG from "../assets/imgs/logo-white.png";
+import LogoBlackIMG from "../assets/imgs/logo-black.png";
 import { RoundedMinus, RoundedPlus, ShareArrow } from "./AllSvgs";
 
 // PageHeader
 export const PageHeader = ({ title, className }) => (
-  <h2 className={`lg:text-5xl md:text-4xl text-3xl font-semibold mb:mb-8 mb-4 ${className}`}>
+  <h2 className={`xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-semibold mb:mb-8 mb-4 ${className}`}>
     {title}
   </h2>
 );
@@ -92,7 +93,7 @@ IconCard.defaultProps = {
 // custom input
 export const Input = ({
   type, placeholder, className, title,
-}) => <input type={type} title={title} placeholder={placeholder} className={`px-5 py-3 bg-white border-none outline-none rounded-lg ${className}`} />;
+}) => <input type={type} title={title} placeholder={placeholder} className={`px-5 py-3 border-none outline-none ${className}`} />;
 
 Input.propTypes = {
   type: PropTypes.string,
@@ -110,7 +111,7 @@ Input.defaultProps = {
 // custom textarea
 export const TextArea = ({
   placeholder, className, name, cols, rows,
-}) => <textarea name={name} placeholder={placeholder} className={`px-5 py-3 bg-white w-full rounded-lg ${className}`} cols={cols} rows={rows} />;
+}) => <textarea name={name} placeholder={placeholder} className={`px-5 py-3 w-full ${className}`} cols={cols} rows={rows} />;
 
 TextArea.propTypes = {
   className: PropTypes.string,
@@ -138,7 +139,7 @@ export const Detail = ({ summary, detail }) => (
         <RoundedMinus width="20" />
       </div>
     </summary>
-    <p className="opacity-40 mt-2 text-base font-medium mr-4">{detail}</p>
+    <p className="opacity-40 mt-4 text-base font-medium mr-4 max-w-md">{detail}</p>
   </details>
 );
 
@@ -152,11 +153,21 @@ Detail.defaultProps = {
   detail: "",
 };
 
-export const SkytedLogo = () => (
-  <div className="object-cover w-16 relative">
-    <img src={LogoIMG} alt="skyted" className="w-full h-full" />
+export const SkytedLogo = ({ className, isBlack }) => (
+  <div className={`${className} object-cover w-16 relative`}>
+    <img src={isBlack ? LogoBlackIMG : LogoWhiteIMG} alt="skyted" className="w-full h-full" />
   </div>
 );
+
+SkytedLogo.propTypes = {
+  className: PropTypes.string,
+  isBlack: PropTypes.bool,
+};
+
+SkytedLogo.defaultProps = {
+  className: "",
+  isBlack: false,
+};
 
 export const CustomIMG = ({
   src, alt, className, ImgClassName,

@@ -11,6 +11,8 @@ module.exports = {
         linkedin: "#0a66c2",
         yt: "#ff0000",
         twitter: "#1da1f2",
+        "dark-red": "#C5181F",
+        "dark-blue": "#1781B8",
       },
       fontFamily: {
         radwave: "radwave",

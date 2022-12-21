@@ -7,7 +7,7 @@ import HeadphoneManIMG from "../../assets/imgs/about/headphone-man.png";
 function MarketAndWhy() {
   return (
     <section className="section-container pt-0">
-      <div className="space-y-32">
+      <div className="xl:space-y-32 space-y-20">
         <ImgData
           title="About the market"
           description={`The arrival of the global pandemic in 2020, with the accompanying
