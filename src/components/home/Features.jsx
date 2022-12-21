@@ -25,7 +25,7 @@ function Features() {
           }
           link="/"
           linkText="Get More"
-          btnClassName="bg-[#1781B8] text-white"
+          btnClassName="bg-dark-blue text-white"
         />
         <IconCard
           icon={<OfficeIcon width="42" />}
@@ -36,7 +36,7 @@ function Features() {
           }
           link="/"
           linkText="Get More"
-          btnClassName="bg-[#1781B8] text-white"
+          btnClassName="bg-dark-blue text-white"
         />
         <IconCard
           icon={<MetaverseIcon width="42" />}
@@ -47,7 +47,7 @@ function Features() {
           }
           link="/"
           linkText="Get More"
-          btnClassName="bg-[#1781B8] text-white"
+          btnClassName="bg-dark-blue text-white"
         />
       </div>
     </section>

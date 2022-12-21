@@ -37,6 +37,11 @@ const NavBar = ({ navState, handleNav }) => {
       link: "/contact",
       state: {},
     },
+    {
+      title: "CES",
+      link: "/ces",
+      state: {},
+    },
   ];
 
   const nav = useRef();
@@ -115,7 +120,7 @@ const NavBar = ({ navState, handleNav }) => {
                       onClick={() => handleNav(true)}
                       to={link.link}
                       state={link.state}
-                      className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold text-6xl uppercase tracking-tight px-2`}
+                      className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold xl:text-6xl lg:text-3xl text-xl uppercase tracking-tight px-2`}
                     >
                       {link.title}
                     </NavLink>
@@ -125,22 +130,22 @@ const NavBar = ({ navState, handleNav }) => {
             </ul>
           </div>
           <aside className="border-l-2 border-gray-100/10 px-8 max-w-sm nav-link">
-            <h3 className="text-2xl mb-10">Skyted.inc</h3>
+            <h3 className="xl:text-2xl text-xl mb-10">Skyted.inc</h3>
             <div className="text-light-gray">
-              <address className="mb-6">
+              <address className="mb-6 lg:text-base text-sm">
                 B612 – Toulouse Aerospace Innovation
                 ParkToulouse, France
               </address>
               <a
                 href="mailto:skypted.puricare@contact.in"
-                className="underline block"
+                className="underline block lg:text-base text-sm"
               >
                 skypted.puricare@contact.in
               </a>
             </div>
           </aside>
         </div>
-        <div className="absolute bottom-24 right-28 max-w-lg nav-link">
+        <div className="absolute bottom-24 right-28 xl:max-w-lg lg:max-w-sm max-w-xs nav-link">
           <img src={LogoNav} alt="skyted" className="w-full h-full" />
         </div>
       </div>
