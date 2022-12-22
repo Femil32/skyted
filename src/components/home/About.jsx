@@ -17,8 +17,8 @@ function About() {
   return (
     <section className="section-container bg-white text-black">
       <div>
-        <h5 className="red-header mb-5" data-aos="fade-in">About Skyted</h5>
-        <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12" data-aos="fade-in">
+        <h5 className="red-header mb-5" >About Skyted</h5>
+        <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12" >
           <PageHeader title="Your Expert In Speech Privacy" className="max-w-md tracking-wide" />
           <SlatePara
             text={`Developed using breakthrough Aerospace technology, our “voice silencer”
@@ -29,7 +29,7 @@ function About() {
             className="max-w-xl font-normal"
           />
         </div>
-        <div className="" data-aos="fade-in">
+        <div className="" >
           <div className="flex relative object-cover overflow-hidden justify-center items-center rounded-3xl w-full ring">
             <video
               className="w-full h-full"
