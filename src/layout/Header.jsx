@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { CtaBtn, SkytedLogo } from "../components/Micro";
 import NavBar from "./NavBar";
 
 function Header() {
+  const location = useLocation();
+  const navbar = useRef();
+
   const [navState, setNavState] = useState({
     initial: false,
     isClicked: null,
   });
 
   const [isDisabled, setIsDisabled] = useState(false);
+  const [isBlackHeader, setIsBlackHeader] = useState(false);
 
   // useEffect(() => {
   //   setNavState({
@@ -51,24 +56,30 @@ function Header() {
     window.onscroll = () => {
       const currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+        navbar.current.style.top = "0";
       } else {
-        document.getElementById("navbar").style.top = "-80px";
+        navbar.current.style.top = "-80px";
       }
       if (currentScrollPos !== 0) {
-        document.getElementById("navbar").classList.add("showNav");
+        navbar.current.classList.add(isBlackHeader ? "showNavWhite" : "showNavBlack");
       } else if (currentScrollPos === 0) {
-        document.getElementById("navbar").classList.remove("showNav");
+        navbar.current.classList.remove(isBlackHeader ? "showNavWhite" : "showNavBlack");
       }
       prevScrollpos = currentScrollPos;
     };
-  }, []);
+  }, [isBlackHeader, location]);
+
+  useEffect(() => {
+    const { pathname } = location;
+    if (pathname.length > 1) setIsBlackHeader(true);
+    else setIsBlackHeader(false);
+  }, [location]);
 
   return (
-    <div id="navbar" className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 z-40 px-24 py-4 hidden md:flex">
+    <div id="navbar" ref={navbar} className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 z-40 px-24 py-4 hidden md:flex">
       <div className="navbar-start">
         <div className="dropdown">
-          <button type="button" className={`${navState.isClicked ? "text-white z-[99]" : "text-black"} text-white relative cursor-pointer h-6`} disabled={isDisabled} onClick={handleNav}>
+          <button type="button" className={`${navState.isClicked ? "text-white z-[99]" : "text-black"} ${isBlackHeader ? "text-black" : "text-white"} relative cursor-pointer h-6`} disabled={isDisabled} onClick={handleNav}>
             {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg> */}
             <span className={`${navState.isClicked ? "rotate-45 mb-0" : "mb-1"} relative bg-current w-5 h-[3px] block`} />
             <span className={`${navState.isClicked && "-rotate-45"} relative bg-current w-5 h-[3px] block`} />
@@ -76,10 +87,10 @@ function Header() {
         </div>
       </div>
       <div className=" absolute left-1/2 -translate-x-1/2">
-        <SkytedLogo className={'w-32'} />
+        <SkytedLogo className="w-32" isBlack={isBlackHeader} />
       </div>
       <div className="navbar-end">
-        <CtaBtn text="Let’s Connect" className="text-black bg-white xl:text-base text-sm" />
+        <CtaBtn text="Let’s Connect" className={`${isBlackHeader ? "text-white bg-black" : "text-black bg-white"} xl:text-base text-sm`} />
       </div>
       <NavBar navState={navState} handleNav={handleNav} />
     </div>

@@ -86,11 +86,6 @@ li.nav-link:hover{
   transition: all 250ms linear;
 }
 
-.showNav {
-  @apply top-0 outline-none backdrop-blur bg-[#121212]/70;
-  /* box-shadow: 0 5px 20px -15px #000000; */
-}
-
 .state-digit {
   @apply text-3xl md:text-5xl font-semibold mb-4 md:text-left
 }

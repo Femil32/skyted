@@ -1,5 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper";
 import { PageHeader } from "../Micro";
 
@@ -9,6 +9,7 @@ import "swiper/css";
 
 import ConsumerLogo from "@/assets/imgs/consumer-logo.png";
 import Kickstarter from "@/assets/imgs/kickstarter.png";
+import SwiperNavigation from "../common/SwiperNavigation";
 
 const slideData = [
   {
@@ -58,7 +59,14 @@ const slideData = [
   },
 ];
 
+const SwiperButtonNext = ({ children }) => {
+  const swiper = useSwiper();
+  return <button type="button" onClick={() => swiper.slideNext()}>{children}</button>;
+};
+
 function Events() {
+  // const swiper = useSwiper();
+
   return (
     <section className="md:py-[88px] py-10 px-6 w-full bg-white text-black">
       <div>
@@ -73,8 +81,8 @@ function Events() {
                 spaceBetween: 40,
               },
             }}
-            navigation
-            modules={[Navigation]}
+            // navigation
+            // modules={[Navigation]}
             centeredSlides="true"
             className="mySwiper"
           >
@@ -92,6 +100,11 @@ function Events() {
                 </div>
               </SwiperSlide>
             ))}
+            <div className="flex justify-center items-center pt-4">
+              <SwiperNavigation />
+            </div>
+            {/* <SwiperButtonNext>Slide</SwiperButtonNext> */}
+
           </Swiper>
         </div>
       </div>

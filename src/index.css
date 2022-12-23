@@ -27,6 +27,16 @@ p{
 /* COMPONENTS */
 
 @layer components {
+  .showNavBlack {
+    @apply top-0 outline-none backdrop-blur bg-[#121212]/70;
+    /* box-shadow: 0 5px 20px -15px #000000; */
+  }
+
+  .showNavWhite {
+    @apply top-0 outline-none backdrop-blur bg-white;
+    /* box-shadow: 0 5px 20px -15px #000000; */
+  }
+
   .text-gray{
     @apply text-[#001432]/50
   }
