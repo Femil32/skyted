@@ -1,24 +1,24 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React, { useEffect, useRef } from "react";
-import ExpertSpeech from "../../assets/video/expert-speech.mp4";
+import React from "react";
+import YoutubeEmbed from "../common/YoutubeEmbed";
 import { PageHeader, SlatePara } from "../Micro";
 
 function About() {
-  const videoEl = useRef(null);
+  // const videoEl = useRef(null);
 
-  const attemptPlay = () => {
-    videoEl?.current.play();
-  };
+  // const attemptPlay = () => {
+  //   videoEl?.current.play();
+  // };
 
-  useEffect(() => {
-    attemptPlay();
-  }, []);
+  // useEffect(() => {
+  //   attemptPlay();
+  // }, []);
 
   return (
     <section className="section-container bg-white text-black">
       <div>
-        <h5 className="red-header mb-5" >About Skyted</h5>
-        <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12" >
+        <h5 className="red-header mb-5">About Skyted</h5>
+        <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12">
           <PageHeader title="Your Expert In Speech Privacy" className="max-w-md tracking-wide" />
           <SlatePara
             text={`Developed using breakthrough Aerospace technology, our “voice silencer”
@@ -29,9 +29,9 @@ function About() {
             className="max-w-xl font-normal"
           />
         </div>
-        <div className="" >
+        <div className="">
           <div className="flex relative object-cover overflow-hidden justify-center items-center rounded-3xl w-full ring">
-            <video
+            {/* <video
               className="w-full h-full"
               playsInline
               loop
@@ -40,7 +40,8 @@ function About() {
               alt="ExpertSpeech"
               src={ExpertSpeech}
               ref={videoEl}
-            />
+            /> */}
+            <YoutubeEmbed embedId="178emOV9HbQ" className="h-[80vh] w-full" />
           </div>
           <span className="py-2 px-2 block text-gray text-bse md:text-lg text-left md:mt-4">
             Have you ever dreamt to be  totally free to be able to say what you want to say?
