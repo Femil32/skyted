@@ -87,11 +87,11 @@ li.nav-link:hover{
 }
 
 .state-digit {
-  @apply text-3xl md:text-5xl font-semibold mb-4 md:text-left
+  @apply text-xl md:text-5xl font-semibold mb-4 md:text-left
 }
 
 .gray-discription {
-  @apply max-w-[250px] relative text-gray-100 opacity-70 text-sm md:text-base md:text-left
+  @apply max-w-[250px] relative text-gray-100 opacity-70 text-xs md:text-base md:text-left
 }
 
 .section-container {

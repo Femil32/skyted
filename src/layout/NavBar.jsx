@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import LogoNav from "@/assets/imgs/logo-nav.png";
-import { CloseIcon } from "../components/AllSvgs";
 
 const NavBar = ({ navState, handleNav }) => {
   const navLinks = [
@@ -103,13 +102,10 @@ const NavBar = ({ navState, handleNav }) => {
     <nav ref={nav} className="main-nav transform transition-all w-full hidden overflow-hidden fixed top-0 left-0 h-screen z-50">
       <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" />
       <div className="fixed outer h-full w-screen  navbar-bg left-0 top-0 z-10" />
-      <div className="wrapper justify-between items-center section-container h-full w-full flex z-50 relative">
-        {/* <button type="button" className="mx-4 nav-link absolute top-8 left-26 -translate-x-1/2 text-white" onClick={handleNav}>
-          <CloseIcon width={12} />
-        </button> */}
-        <div className="flex relative justify-between w-full items-start">
+      <div className="wrapper md:justify-between justify-center items-center section-container h-full w-full flex z-50 relative flex-col md:flex-row max-sm:gap-10">
+        <div className="flex relative md:justify-between justify-center w-full items-start text-center sm:text-left">
           <div className="">
-            <ul className="nav-links space-y-4 leading-3">
+            <ul className="nav-links md:space-y-4 space-y-2 leading-3">
               {
                 navLinks.map((link, i) => (
                   <li
@@ -129,7 +125,7 @@ const NavBar = ({ navState, handleNav }) => {
               }
             </ul>
           </div>
-          <aside className="border-l-2 border-gray-100/10 px-8 max-w-sm nav-link">
+          <aside className="border-l-2 border-gray-100/10 px-8 max-w-sm nav-link hidden md:block">
             <h3 className="xl:text-2xl text-xl mb-10">Skyted.inc</h3>
             <div className="text-light-gray">
               <address className="mb-6 lg:text-base text-sm">
@@ -145,7 +141,7 @@ const NavBar = ({ navState, handleNav }) => {
             </div>
           </aside>
         </div>
-        <div className="absolute bottom-24 right-28 xl:max-w-lg lg:max-w-sm max-w-xs nav-link">
+        <div className="md:absolute bottom-24 right-28 xl:max-w-lg lg:max-w-sm max-sm:w-44 nav-link">
           <img src={LogoNav} alt="skyted" className="w-full h-full" />
         </div>
       </div>

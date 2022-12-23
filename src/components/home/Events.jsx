@@ -59,11 +59,6 @@ const slideData = [
   },
 ];
 
-const SwiperButtonNext = ({ children }) => {
-  const swiper = useSwiper();
-  return <button type="button" onClick={() => swiper.slideNext()}>{children}</button>;
-};
-
 function Events() {
   // const swiper = useSwiper();
 
@@ -75,15 +70,17 @@ function Events() {
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
+            centeredSlides
+            loop="true"
             breakpoints={{
               768: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 40,
               },
             }}
             // navigation
             // modules={[Navigation]}
-            centeredSlides="true"
+            // centeredSlides="true"
             className="mySwiper"
           >
             {slideData.map((slide, i) => (
