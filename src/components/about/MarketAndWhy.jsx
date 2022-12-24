@@ -7,8 +7,10 @@ import HeadphoneManIMG from "../../assets/imgs/about/headphone-man.png";
 function MarketAndWhy() {
   return (
     <section className="section-container pt-0">
-      <div className="xl:space-y-32 space-y-20">
+      <div className="xl:space-y-32 md:space-y-20 space-y-8">
         <ImgData
+          imgClasses="max-md:order-1"
+          dataClasses="max-md:order-2"
           title="About the market"
           description={`The arrival of the global pandemic in 2020, with the accompanying
             proliferation of remote and hybrid work, has underscored the need for such a device
@@ -19,7 +21,7 @@ function MarketAndWhy() {
           alt="MaskManIMG"
         />
         <ImgData
-          dataClasses="order-2 pl-6"
+          dataClasses="order-2 md:pl-6"
           title="Why now?"
           description={(
             <>

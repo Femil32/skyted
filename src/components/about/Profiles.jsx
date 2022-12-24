@@ -13,7 +13,7 @@ function Profiles() {
           </div>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 max-md:items-center">
             <h6 className="text-twitter">About</h6>
             <h2 className="xl:text-5xl lg:text-4xl sm:text-3xl text-2xl ">Stephane HERSEN</h2>
             <p className="text-gray-400">
@@ -25,7 +25,7 @@ function Profiles() {
             Seasoned CEO with Start -up Executive Job with tech companies
             as Head of Sales APAC for Airbus Singapore CTO.
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 max-md:justify-center">
             <div className="cursor-pointer w-12 h-12 flex justify-center items-center backdrop-blur-xl bg-blue-900/20 rounded-full overflow-hidden">
               <LeftArrowIcon width={20} />
             </div>

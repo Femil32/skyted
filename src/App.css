@@ -87,13 +87,46 @@ li.nav-link:hover{
 }
 
 .state-digit {
-  @apply text-3xl md:text-5xl font-semibold mb-4 md:text-left
+  @apply text-xl md:text-5xl font-semibold mb-1  md:mb-4 md:text-left
 }
 
 .gray-discription {
-  @apply max-w-[250px] relative text-gray-100 opacity-70 text-sm md:text-base md:text-left
+  @apply max-w-[250px] relative text-gray-100 opacity-70 text-xs md:text-base md:text-left
 }
 
 .section-container {
   @apply lg:px-24 lg:py-[88px] py-8 px-6 w-full
+}
+
+
+/* product */
+.tank{
+  position:relative;
+  margin:50px;
+}
+
+.tank .middle{
+  width:600px;
+  height:80px;
+  background-color:#444;
+  position:absolute;
+}
+
+.tank .top{
+  width: 600px;
+  height: 125px;
+  background-color: #666;
+  border-radius: 300px /63px;
+  position: absolute;
+  top: -60px;
+}
+
+.tank .bottom{
+  width: 600px;
+  height: 125px;
+  background-color:#444;
+  border-radius: 300px /63px;
+  position:absolute;
+  top:20px;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.75)
 }

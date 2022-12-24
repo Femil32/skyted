@@ -62,8 +62,10 @@ function Header() {
       }
       if (currentScrollPos !== 0) {
         navbar.current.classList.add(isBlackHeader ? "showNavWhite" : "showNavBlack");
-      } else if (currentScrollPos === 0) {
-        navbar.current.classList.remove(isBlackHeader ? "showNavWhite" : "showNavBlack");
+      }
+      if (currentScrollPos === 0) {
+        navbar.current.classList.remove("showNavWhite");
+        navbar.current.classList.remove("showNavBlack");
       }
       prevScrollpos = currentScrollPos;
     };
@@ -76,7 +78,7 @@ function Header() {
   }, [location]);
 
   return (
-    <div id="navbar" ref={navbar} className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 z-40 px-24 py-4 hidden md:flex">
+    <div id="navbar" ref={navbar} className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 z-40 md:px-24 px-6 justify-between ">
       <div className="navbar-start">
         <div className="dropdown">
           <button type="button" className={`${navState.isClicked ? "text-white z-[99]" : "text-black"} ${isBlackHeader ? "text-black" : "text-white"} relative cursor-pointer h-6`} disabled={isDisabled} onClick={handleNav}>
@@ -86,10 +88,10 @@ function Header() {
           </button>
         </div>
       </div>
-      <div className=" absolute left-1/2 -translate-x-1/2">
-        <SkytedLogo className="w-32" isBlack={isBlackHeader} />
+      <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2">
+        <SkytedLogo className="md:w-32 w-18" isBlack={isBlackHeader} />
       </div>
-      <div className="navbar-end">
+      <div className="hidden md:inline-flex navbar-end ">
         <CtaBtn text="Let’s Connect" className={`${isBlackHeader ? "text-white bg-black" : "text-black bg-white"} xl:text-base text-sm`} />
       </div>
       <NavBar navState={navState} handleNav={handleNav} />

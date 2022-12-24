@@ -6,7 +6,6 @@ import Header from "./Header";
 function Layout() {
   return (
     <div className="overflow-hidden">
-      {/* <NavBar isNavOpen={navState} setIsNavOpen={handleNav} /> */}
       <Header />
       <Outlet />
       <Footer />
