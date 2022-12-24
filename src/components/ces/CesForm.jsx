@@ -3,7 +3,7 @@ import { CtaBtn, Input } from "../Micro";
 
 function CesForm() {
   return (
-    <div className="section-container pt-0">
+    <div className="section-container md:pt-0">
       <form action="" className="p-8 rounded-3xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
         <h2 className="text-lg md:text-2xl font-medium md:mb-4 text-black">Sign up here to become our Influencer</h2>
         <div className="flex gap-8 flex-col md:flex-row">

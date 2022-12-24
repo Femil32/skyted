@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 // pages
 import Home from "./pages/Home";
 import Product from "./pages/Product";
+import ProfileKit from "./pages/ProfileKit";
 import Services from "./pages/Services";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/ces" element={<CES />} />
           <Route path="/product" element={<Product />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/profile-kit" element={<ProfileKit />} />
         </Route>
         <Route index path="*" element={<p> not found</p>} />
       </Routes>

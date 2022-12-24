@@ -6,7 +6,7 @@ function Influencer() {
   return (
     <section className="section-container">
       <div>
-        <PageHeader title="Join our Influencer Club" className="text-center mb-24" />
+        <PageHeader title="Join our Influencer Club" className="text-center md:mb-24 mb-12" />
         <div>
           <CustomIMG src={InfluencerImg} alt="InfluencerImg" className="rounded-3xl" />
           <p className="mt-5 tracking-wider">

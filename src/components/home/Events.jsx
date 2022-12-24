@@ -1,6 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { PageHeader } from "../Micro";
 
 // Import Swiper styles
@@ -100,8 +99,6 @@ function Events() {
             <div className="flex justify-center items-center pt-4">
               <SwiperNavigation />
             </div>
-            {/* <SwiperButtonNext>Slide</SwiperButtonNext> */}
-
           </Swiper>
         </div>
       </div>

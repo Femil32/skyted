@@ -58,8 +58,8 @@ function Services() {
                 <h6>{service.tagline}</h6>
               </header>
               <ImgData
-                dataClasses={`${i % 2 === 0 ? "order-1" : "order-2 pl-10"}`}
-                imgClasses={`${i % 2 === 0 ? "order-2" : "order-1"}`}
+                dataClasses={`${i % 2 === 0 ? "md:order-1" : "md:order-2"} md:pl-10 max-md:px-4`}
+                imgClasses={`${i % 2 === 0 ? "md:order-2" : "md:order-1"}`}
                 src={service.img}
                 alt={service.title}
                 description={(

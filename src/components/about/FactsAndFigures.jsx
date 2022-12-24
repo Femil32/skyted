@@ -25,7 +25,7 @@ function FactsAndFigures() {
       <div>
         <div className="flex flex-col justify-center items-center">
           <PageHeader title="Facts & figures" />
-          <span className="text-gray-400 lg:text-base text-sm">Hybrid Work has a huge impact on the way we communicate</span>
+          <p className="text-gray-400 lg:text-base text-sm block relative max-md:text-center">Hybrid Work has a huge impact on the way we communicate</p>
         </div>
         <div className="flex md:flex-nowrap flex-wrap gap-5 md:justify-between justify-center max-w-7xl xl:my-16 lg:my-12 md:my-10 my-8">
           {facts.map((fact) => (

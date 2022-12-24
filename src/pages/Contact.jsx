@@ -14,15 +14,15 @@ function Contact() {
         <section className="flex md:flex-nowrap flex-wrap xl:gap-24 lg:gap-16 md:gap-12 gap-10 section-container">
           <form action="" className="blur-bg flex-1 lg:p-10 p-7 rounded-2xl flex flex-col gap-6">
             <div>
-              <Input type="text" placeholder="Name" title="name" className="w-full backdrop-blur-lg bg-white/20 lg:placeholder:text-base placeholder:text-sm" />
+              <Input type="text" placeholder="Name" title="name" className="w-full rounded-xl backdrop-blur-lg bg-white/20 lg:placeholder:text-base placeholder:text-sm" />
             </div>
             <div>
-              <Input type="email" placeholder="Email" title="email" className="w-full backdrop-blur-lg bg-white/20 lg:placeholder:text-base placeholder:text-sm" />
+              <Input type="email" placeholder="Email" title="email" className="w-full rounded-xl backdrop-blur-lg bg-white/20 lg:placeholder:text-base placeholder:text-sm" />
             </div>
             <div>
-              <TextArea placeholder="Message" name="message" className="w-full backdrop-blur-lg bg-white/20 lg:placeholder:text-base placeholder:text-sm resize-none" rows={5} />
+              <TextArea placeholder="Message" name="message" className="w-full rounded-xl backdrop-blur-lg bg-white/20 lg:placeholder:text-base placeholder:text-sm resize-none" rows={5} />
             </div>
-            <div className="md:mt-3 mt-0">
+            <div className="md:mt-3 mt-0 max-md:mx-auto">
               <button type="submit" className="lg:px-12 px-10 rounded-xl lg:py-3 py-2.5 md:text-base text-sm bg-twitter/90 relative">Submit</button>
             </div>
           </form>

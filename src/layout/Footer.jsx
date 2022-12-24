@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import {
   FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon, YoutubeIcon,
 } from "../components/AllSvgs";
-import { SkytedLogo, SlatePara } from "../components/Micro";
+import { SkytedLogo } from "../components/Micro";
 
 const Footer = () => (
   <div className="foolter bg-gray-100 section-container text-black">
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
-      <div className="flex flex-col md:max-w-xs">
+      <div className="flex flex-col max-md:items-center md:max-w-xs">
         <div className="logo mb-4 md:mb-8 md:text-left text-center">
-        <SkytedLogo className={'w-32'} isBlack />
+          <SkytedLogo className="w-32" isBlack />
         </div>
         <p className="mb-4 md:mb-8 xl:text-base text-sm md:text-left text-center">
           Based in Toulouse Fr, Skyted’s team is

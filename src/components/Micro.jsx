@@ -130,7 +130,7 @@ TextArea.defaultProps = {
 
 export const Detail = ({ summary, detail }) => (
   <details className="cursor-pointer group">
-    <summary className="flex justify-between items-center font-medium text-2xl">
+    <summary className="flex justify-between items-center font-medium text-lg md:text-2xl">
       <span>{summary}</span>
       <div className="group-open:hidden">
         <RoundedPlus width="20" />

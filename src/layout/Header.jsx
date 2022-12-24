@@ -62,8 +62,10 @@ function Header() {
       }
       if (currentScrollPos !== 0) {
         navbar.current.classList.add(isBlackHeader ? "showNavWhite" : "showNavBlack");
-      } else if (currentScrollPos === 0) {
-        navbar.current.classList.remove(isBlackHeader ? "showNavWhite" : "showNavBlack");
+      }
+      if (currentScrollPos === 0) {
+        navbar.current.classList.remove("showNavWhite");
+        navbar.current.classList.remove("showNavBlack");
       }
       prevScrollpos = currentScrollPos;
     };

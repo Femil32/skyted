@@ -6,7 +6,7 @@ import PlaneMan from "../../assets/imgs/ces/planman.png";
 function Users() {
   return (
     <section className="section-container py-16">
-      <div className="flex gap-12 w-full justify-center">
+      <div className="flex gap-12 w-full justify-center max-md:flex-col">
         <div className="max-w-lg">
           <UsersCard
             header="Business Line"

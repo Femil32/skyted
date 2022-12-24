@@ -5,8 +5,8 @@ import Cse2023 from "../../assets/imgs/ces/ces.png";
 function Hero() {
   return (
     <section className="section-container">
-      <div className="flex gap-2 py-12 w-full">
-        <div className="flex flex-col gap-6 w-3/5">
+      <div className="flex gap-2 py-12 w-full max-md:flex-col max-md:gap-8">
+        <div className="flex flex-col gap-6 md:w-3/5">
           <h6 className="red-header">Consumer Technology Association</h6>
           <h1 className="text-5xl font-bold max-w-2xl leading-[55px]">
             Come and try the technology at the
@@ -26,14 +26,14 @@ function Hero() {
               forecasted @CES 2023.`}
             />
           </div>
-          <div className="space-x-3 mt-4">
-            <CtaBtn text="CES Media Kit" className="text-white bg-twitter" />
-            <CtaBtn text="Book an appintment with Calendy" className="text-white bg-yt" />
-          </div>
         </div>
         <div className="flex justify-center items-center">
           <CustomIMG src={Cse2023} alt="Cse2023" className="max-w-md" />
         </div>
+      </div>
+      <div className="md:space-x-3 max-md:space-y-3 mt-4 max-md:text-center">
+        <CtaBtn text="CES Media Kit" className="text-white bg-twitter" />
+        <CtaBtn text="Book an appintment with Calendy" className="text-white bg-yt" />
       </div>
     </section>
   );

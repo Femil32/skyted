@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { RoundedMinus, RoundedPlus } from "../AllSvgs";
 import { Detail, PageHeader, SlatePara } from "../Micro";
 
 function FAQ() {
@@ -31,7 +30,7 @@ function FAQ() {
       <div className="flex gap-6 md:gap-0 flex-col md:flex-row">
         <div className="flex-1">
           <div className="max-w-lg">
-            <span className="red-header mb-8 text-xl" >The FAQs</span>
+            <span className="red-header mb-8 text-xl">The FAQs</span>
             <PageHeader title="You want to know more about us?" />
             <SlatePara text="Everything you need to know about the product and billing.
               Can’t find the answer you’re looking for? Please check."
@@ -39,7 +38,7 @@ function FAQ() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col gap-4 md:gap-8 transition-all" >
+          <div className="flex flex-col gap-4 md:gap-8 transition-all">
             {allFaq.map((faq, i) => <Detail key={i} summary={faq.summary} detail={faq.detail} />)}
           </div>
         </div>

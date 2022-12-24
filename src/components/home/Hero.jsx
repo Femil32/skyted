@@ -91,9 +91,9 @@ const Hero = () => {
               </p>
             </article>
           </div>
-          <div className="flex justify-center items-center w-full">
+          <div className="flex justify-center items-center w-full gap-4">
             {/* stats */}
-            <article className="relative flex justify-center items-center  text-center">
+            <article className="relative flex flex-col justify-center items-center  text-center gap-4 py-4">
               <div className=" animate">
                 <h2 className="state-digit">56%</h2>
                 <p className="gray-discription">
@@ -102,20 +102,19 @@ const Hero = () => {
                   to virtual meets
                 </p>
               </div>
-              {/* mask man */}
-              <div className="w-52 lg:w-[32rem] object-contain">
-                <img src={MaskIMG} alt="Maskman" className="w-full h-full" />
-              </div>
               <div className="animate">
                 <h2 className="state-digit">1B</h2>
                 <p className="gray-discription">
                   daily participants on video
                   conferencing solutions (Zoom,
                   Google, Microsoft etc).
-
                 </p>
               </div>
             </article>
+            {/* mask man */}
+            <div className="w-68 lg:w-[32rem] object-contain">
+              <img src={MaskIMG} alt="Maskman" className="w-full h-full" />
+            </div>
           </div>
         </div>
       </div>
