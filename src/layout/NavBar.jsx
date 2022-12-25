@@ -123,6 +123,29 @@ const NavBar = ({ navState, handleNav }) => {
                   </li>
                 ))
               }
+
+              <li
+                className="nav-link"
+              >
+                <NavLink
+                  onClick={() => handleNav(true)}
+                  to="/campaign"
+                  className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold text-base uppercase tracking-tight px-2`}
+                >
+                  campaign
+                </NavLink>
+              </li>
+              <li
+                className="nav-link"
+              >
+                <NavLink
+                  onClick={() => handleNav(true)}
+                  to="/profile-kit"
+                  className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold text-base uppercase tracking-tight px-2`}
+                >
+                  Profile Kit
+                </NavLink>
+              </li>
             </ul>
           </div>
           <aside className="border-l-2 border-gray-100/10 px-8 max-w-sm nav-link hidden md:block">

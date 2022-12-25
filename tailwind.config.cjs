@@ -20,6 +20,9 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
+      borderRadius: {
+        "4xl": "2.5rem",
+      },
     },
   },
   // eslint-disable-next-line import/no-extraneous-dependencies, global-require

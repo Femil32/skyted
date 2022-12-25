@@ -4,6 +4,7 @@ import "./App.css";
 // Layout
 import Layout from "./layout";
 import About from "./pages/About";
+import Campaign from "./pages/Campaign";
 import CES from "./pages/CES";
 import Contact from "./pages/Contact";
 // pages
@@ -11,6 +12,7 @@ import Home from "./pages/Home";
 import Product from "./pages/Product";
 import ProfileKit from "./pages/ProfileKit";
 import Services from "./pages/Services";
+import Temp from "./pages/Temp";
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/services" element={<Services />} />
           <Route path="/profile-kit" element={<ProfileKit />} />
+          <Route path="/campaign" element={<Campaign />} />
         </Route>
+        <Route path="/temp" element={<Temp />} />
         <Route index path="*" element={<p> not found</p>} />
       </Routes>
     </Suspense>

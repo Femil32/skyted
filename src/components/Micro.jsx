@@ -128,8 +128,10 @@ TextArea.defaultProps = {
   rows: 10,
 };
 
-export const Detail = ({ summary, detail }) => (
-  <details className="cursor-pointer group">
+export const Detail = ({
+  summary, detail, detailClassname, className,
+}) => (
+  <details className={`${className} cursor-pointer group`}>
     <summary className="flex justify-between items-center font-medium text-lg md:text-2xl">
       <span>{summary}</span>
       <div className="group-open:hidden">
@@ -139,18 +141,22 @@ export const Detail = ({ summary, detail }) => (
         <RoundedMinus width="20" />
       </div>
     </summary>
-    <p className="opacity-40 mt-4 text-base font-medium mr-4 max-w-md">{detail}</p>
+    <p className={`${detailClassname} opacity-40 mt-4 text-base font-medium mr-4`}>{detail}</p>
   </details>
 );
 
 Detail.propTypes = {
   summary: PropTypes.string,
   detail: PropTypes.string,
+  className: PropTypes.string,
+  detailClassname: PropTypes.string,
 };
 
 Detail.defaultProps = {
   summary: "",
   detail: "",
+  className: "",
+  detailClassname: "max-w-md",
 };
 
 export const SkytedLogo = ({ className, isBlack }) => (
