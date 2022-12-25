@@ -15,7 +15,7 @@ export const textIntro = (elem) => {
     {
       yPercent: 0,
       opacity: 1,
-    }
+    },
   );
 };
 
