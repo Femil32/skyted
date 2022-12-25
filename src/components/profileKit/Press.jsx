@@ -9,7 +9,7 @@ import News1IMG from "../../assets/imgs/profileKit/news-1.png";
 import News2IMG from "../../assets/imgs/profileKit/news-2.png";
 import News3IMG from "../../assets/imgs/profileKit/news-3.png";
 import News4IMG from "../../assets/imgs/profileKit/news-4.png";
-import MaskNoire from "../../assets/imgs/masque-noire.png";
+import MaskNoire from "../../assets/imgs/bluemask.png";
 
 const Press = () => {
   // store swiper instances
