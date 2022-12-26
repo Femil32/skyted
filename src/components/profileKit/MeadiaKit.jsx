@@ -4,10 +4,10 @@ import MediaKitIMG from "../../assets/imgs/meadia-kit.png";
 
 function MeadiaKit() {
   return (
-    <section className="section-container">
-      <div className="flex justify-center items-center flex-col gap-8 pt-12">
-        <PageHeader title="Our Media Kit" />
-        <CustomIMG src={MediaKitIMG} alt="skyted" className="w-32" />
+    <section className="section-container max-lg:mb-10">
+      <div className="flex justify-center items-center flex-col lg:gap-8 gap-4 pt-12">
+        <PageHeader data-aos="fade-in" data-aos-delay="300" title="Our Media Kit" />
+        <CustomIMG data-aos="fade-in" data-aos-delay="300" src={MediaKitIMG} alt="skyted" className="w-32" />
       </div>
     </section>
   );

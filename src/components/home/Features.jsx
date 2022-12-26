@@ -6,6 +6,7 @@ function Features() {
   return (
     <section className="section-container bg-white text-black">
       <PageHeader
+        data-aos="fade-in"
         title={(
           <>
             <span className="block whitespace-nowrap mb-2">Get back your</span>
@@ -16,7 +17,7 @@ function Features() {
       />
       <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-8 md:gap-20 py-6">
         <IconCard
-
+          data-aos="fade-in"
           icon={<TravellersIcon width="42" />}
           title="Travellers"
           description={
@@ -28,6 +29,7 @@ function Features() {
           btnClassName="bg-dark-blue text-white"
         />
         <IconCard
+          data-aos="fade-in"
           icon={<OfficeIcon width="42" />}
           title="Office & Call Center"
           description={
@@ -39,6 +41,7 @@ function Features() {
           btnClassName="bg-dark-blue text-white"
         />
         <IconCard
+          data-aos="fade-in"
           icon={<MetaverseIcon width="42" />}
           title="Metaverse & Gamers"
           description={

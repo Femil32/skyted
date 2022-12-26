@@ -9,20 +9,20 @@ const Footer = () => (
   <div className="foolter bg-gray-100 section-container text-black">
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
       <div className="flex flex-col max-md:items-center md:max-w-xs">
-        <div className="logo mb-4 md:mb-8 md:text-left text-center">
+        <div data-aos="fade-in" className="logo mb-4 md:mb-8 md:text-left text-center">
           <SkytedLogo className="w-32" isBlack />
         </div>
-        <p className="mb-4 md:mb-8 xl:text-base text-sm md:text-left text-center">
+        <p data-aos="fade-in" className="mb-4 md:mb-8 xl:text-base text-sm md:text-left text-center">
           Based in Toulouse Fr, Skyted’s team is
           obsessed with speechless calls. We are
           backed by Airbus dev.
         </p>
-        <small className="text-gray-400 md:text-left text-center">©skyted.inc - 2022</small>
+        <small data-aos="fade-in" className="text-gray-400 md:text-left text-center">©skyted.inc - 2022</small>
       </div>
       <div>
         <div className="flex flex-col">
-          <div className="red-header text-lg xl:mb-8 lg:mb-6 mb-5 md:text-left text-center">Usefull Links</div>
-          <div className="flex">
+          <div data-aos="fade-in" className="red-header text-lg xl:mb-8 lg:mb-6 mb-5 md:text-left text-center">Usefull Links</div>
+          <div data-aos="fade-in" className="flex">
             <ul className="flex-1 flex flex-col gap-2 md:items-start items-center ">
               <li>
                 <Link to="/" className="footer-link xl:text-base text-sm">Home</Link>
@@ -57,8 +57,8 @@ const Footer = () => (
       <div className="lg:col-span-1 md:col-span-2 lg:mx-0 mx-auto">
         <div className="flex flex-col justify-between h-full">
           <div>
-            <div className="red-header text-lg lg:mb-6 mb-5 lg:text-left text-center">Socially</div>
-            <div className="flex">
+            <div data-aos="fade-in" className="red-header text-lg lg:mb-6 mb-5 lg:text-left text-center">Socially</div>
+            <div data-aos="fade-in" className="flex">
               <ul className="flex md:flex-nowrap flex-wrap xl:gap-6 gap-4 ">
                 <li className="social-icon hover:bg-fb hover:text-white">
                   <FacebookIcon />
@@ -78,7 +78,7 @@ const Footer = () => (
               </ul>
             </div>
           </div>
-          <h6 className="flex text-sm lg:justify-start justify-center gap-2 lg:mt-0 mt-3">
+          <h6 data-aos="fade-in" className="flex text-sm lg:justify-start justify-center gap-2 lg:mt-0 mt-3">
             <span>Design by</span>
             <a href="https://digipie.net/" target="_blank" rel="noreferrer" className="font-bold hover:text-yt transition-all">Digipie</a>
           </h6>

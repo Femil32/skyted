@@ -30,21 +30,20 @@ function Product() {
 
   return (
     <section className="section-container">
-      <div className="flex justify-center items-center flex-col gap-8">
+      <div className="flex justify-center items-center flex-col gap-4 lg:gap-8">
         <PageHeader title="Our Product" />
-        <div className="flex justify-center items-center gap-9">
+        <div className="flex justify-center items-center gap-9 max-md:flex-col">
           {
             products?.map((product) => (
               <div key={product.id} className="p-1 overflow-hidden max-w-lg">
-                <CustomIMG src={product.imgUrl} alt="mask" className="w-full rounded-3xl" />
+                <CustomIMG data-aos="fade-in" src={product.imgUrl} alt="mask" className="w-full rounded-3xl" />
                 <div className="mt-8">
-                  <h4 className="text-xl mb-4">{product.title}</h4>
-                  <p className="text-sm">{product.description}</p>
+                  <h4 data-aos="fade-in" className="text-xl mb-4">{product.title}</h4>
+                  <p data-aos="fade-in" className="text-sm">{product.description}</p>
                 </div>
               </div>
             ))
           }
-
         </div>
       </div>
     </section>

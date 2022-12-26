@@ -7,8 +7,8 @@ import LogoBlackIMG from "../assets/imgs/logo-black.png";
 import { RoundedMinus, RoundedPlus, ShareArrow } from "./AllSvgs";
 
 // PageHeader
-export const PageHeader = ({ title, className }) => (
-  <h2 className={`xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-semibold mb:mb-8 mb-4 ${className}`}>
+export const PageHeader = ({ title, className, ...args }) => (
+  <h2 className={`xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-semibold mb:mb-8 mb-4 ${className}`} {...args}>
     {title}
   </h2>
 );
@@ -23,8 +23,8 @@ PageHeader.defaultProps = {
 };
 
 // SlatePara
-export const SlatePara = ({ text, className }) => (
-  <p className={`text-[#001432]/50 font-semibold ${className}`}>
+export const SlatePara = ({ text, className, ...args }) => (
+  <p className={`text-[#001432]/50 font-semibold ${className}`} {...args}>
     {text}
   </p>
 );
@@ -39,8 +39,8 @@ SlatePara.defaultProps = {
 };
 
 // CTA button
-export const CtaBtn = ({ text, className }) => (
-  <button type="button" className={`btn-white group shadow-sm  ${className}`}>
+export const CtaBtn = ({ text, className, ...args }) => (
+  <button type="button" className={`btn-white group shadow-sm  ${className}`} {...args}>
     <span className="inline-block mr-2">{text}</span>
     <ShareArrow width={12} />
   </button>
@@ -57,9 +57,9 @@ CtaBtn.defaultProps = {
 
 // IconCard
 export const IconCard = ({
-  icon, title, description, link, linkText, className, btnClassName,
+  icon, title, description, link, linkText, className, btnClassName, ...args
 }) => (
-  <div className={`${className} p-6 ring-1 shadow-md md:ring-0 md:shadow-none  rounded-xl flex-1`}>
+  <div className={`${className} p-6 ring-1 shadow-md md:ring-0 md:shadow-none  rounded-xl flex-1`} {...args}>
     <div className="flex h-full justify-center items-start flex-col gap-5">
       <div>{icon}</div>
       <h6 className="text-lg font-semibold">{title}</h6>
@@ -92,8 +92,8 @@ IconCard.defaultProps = {
 
 // custom input
 export const Input = ({
-  type, placeholder, className, title,
-}) => <input type={type} title={title} placeholder={placeholder} className={`px-5 py-3 border-none outline-none ${className}`} />;
+  type, placeholder, className, title, ...args
+}) => <input type={type} title={title} placeholder={placeholder} className={`px-5 py-3 border-none outline-none ${className}`} {...args} />;
 
 Input.propTypes = {
   type: PropTypes.string,
@@ -110,8 +110,8 @@ Input.defaultProps = {
 
 // custom textarea
 export const TextArea = ({
-  placeholder, className, name, cols, rows,
-}) => <textarea name={name} placeholder={placeholder} className={`px-5 py-3 w-full ${className}`} cols={cols} rows={rows} />;
+  placeholder, className, name, cols, rows, ...args
+}) => <textarea name={name} placeholder={placeholder} className={`px-5 py-3 w-full ${className}`} cols={cols} rows={rows} {...args} />;
 
 TextArea.propTypes = {
   className: PropTypes.string,
@@ -129,9 +129,9 @@ TextArea.defaultProps = {
 };
 
 export const Detail = ({
-  summary, detail, detailClassname, className,
+  summary, detail, detailClassname, className, ...args
 }) => (
-  <details className={`${className} cursor-pointer group`}>
+  <details className={`${className} cursor-pointer group`} {...args}>
     <summary className="flex justify-between items-center font-medium text-lg md:text-2xl">
       <span>{summary}</span>
       <div className="group-open:hidden">
@@ -159,8 +159,8 @@ Detail.defaultProps = {
   detailClassname: "max-w-md",
 };
 
-export const SkytedLogo = ({ className, isBlack }) => (
-  <div className={`${className} object-cover w-16 relative`}>
+export const SkytedLogo = ({ className, isBlack, ...args }) => (
+  <div className={`${className} object-cover w-16 relative`} {...args}>
     <img src={isBlack ? LogoBlackIMG : LogoWhiteIMG} alt="skyted" className="w-full h-full" />
   </div>
 );
@@ -176,9 +176,9 @@ SkytedLogo.defaultProps = {
 };
 
 export const CustomIMG = ({
-  src, alt, className, ImgClassName,
+  src, alt, className, ImgClassName, ...args
 }) => (
-  <div className={`${className} overflow-hidden`}>
+  <div className={`${className} overflow-hidden`} {...args}>
     <img src={src} alt={alt} className={`${ImgClassName} w-full h-full`} />
   </div>
 );

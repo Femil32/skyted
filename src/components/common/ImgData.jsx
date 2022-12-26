@@ -1,12 +1,12 @@
-import React, { Children } from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { CustomIMG, PageHeader } from "../Micro";
 
 function ImgData({
-  src, alt, title, description, dataClasses, imgClasses, children,
+  src, alt, title, description, dataClasses, imgClasses, children, ...args
 }) {
   return (
-    <div className="flex md:flex-nowrap flex-wrap justify-center md:gap-12 gap-8 items-center">
+    <div className="flex md:flex-nowrap flex-wrap justify-center md:gap-12 gap-8 items-center" {...args}>
       <div className={`${dataClasses} md:w-1/2`}>
         <PageHeader title={title} />
         <p className="max-w-lg xl:mt-12 lg:mt-8 mt-2 xl:text-xl sm:text-base text-sm text-gray-500">{description}</p>

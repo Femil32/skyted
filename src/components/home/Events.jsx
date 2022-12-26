@@ -64,7 +64,7 @@ function Events() {
   return (
     <section className="md:py-[88px] py-10 px-6 w-full bg-white text-black">
       <div>
-        <PageHeader className="text-center" title="Coming up next..." />
+        <PageHeader data-aos="fade-in" className="text-center" title="Coming up next..." />
         <div className="py-8 relative">
           <Swiper
             slidesPerView={1}

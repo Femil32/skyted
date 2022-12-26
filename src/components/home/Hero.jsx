@@ -1,6 +1,5 @@
 import { gsap } from "gsap";
 import React, { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import MaskIMG from "../../assets/imgs/mask.png";
 
 const Hero = () => {
