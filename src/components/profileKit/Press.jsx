@@ -26,10 +26,10 @@ const Press = () => {
   ]);
 
   return (
-    <section className="section-container py-0">
-      <PageHeader title="Press Release" className="text-center" />
-      <div className="flex gap-12 h-[650px] py-12">
-        <div className="w-4/5">
+    <section className="section-container py-0 mb-10">
+      <PageHeader data-aos="fade-in" data-aos-delay="300" title="Press Release" className="text-center" />
+      <div className="flex max-lg:flex-col gap-8 lg:gap-12 lg:h-[650px] h-auto lg:py-12 py-4">
+        <div data-aos="fade-in" data-aos-delay="300" className="lg:w-4/5">
           <Swiper
             autoplay={{
               delay: 2500,
@@ -43,20 +43,26 @@ const Press = () => {
             onSlideChange={(e) => setActiveSlide(e.activeIndex)}
           >
             {swiperImgs.map((img, i) => (
-              <SwiperSlide key={i} className="bg-transparent rounded-3xl overflow-hidden">
+              <SwiperSlide key={i} className="bg-transparent rounded-xl lg:rounded-3xl overflow-hidden">
                 <CustomIMG src={img} alt="news" className="w-full h-full" />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        <div className="w-1/5">
+        <div data-aos="fade-in" data-aos-delay="300" className="lg:w-1/5">
           <Swiper
             slidesPerView={4}
-            spaceBetween={30}
+            spaceBetween={20}
+            breakpoints={{
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                direction: "vertical",
+              },
+            }}
             modules={[Controller]}
             onSwiper={setSecondSwiper}
             controller={{ control: firstSwiper }}
-            direction="vertical"
             className="h-full"
           >
             {swiperImgs.map((img, j) => (
@@ -68,15 +74,15 @@ const Press = () => {
                   setActiveSlide(j);
                 }}
               >
-                <CustomIMG src={img} alt="news" className={`${j === activeSlide ? "border-red-600" : "border-transparent"} border-2  w-full h-full rounded-3xl overflow-hidden`} />
+                <CustomIMG src={img} alt="news" className={`${j === activeSlide ? "border-red-600" : "border-transparent"} border-2  w-full h-full rounded-xl lg:rounded-3xl overflow-hidden`} />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 max-lg:mt-6">
         <CustomIMG src={MaskNoire} alt="mask" className="w-16 p-3 px-4 bg-[#FFCCB7] rounded-2xl" />
-        <p className="text-xl">Skyted is currently designing a new headset designed.</p>
+        <p className="text-lg lg:text-xl">Skyted is currently designing a new headset designed.</p>
       </div>
     </section>
   );

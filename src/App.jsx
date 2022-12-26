@@ -1,6 +1,10 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import AOS from "aos";
+
+// importing aos
 import "./App.css";
+import "aos/dist/aos.css";
 // Layout
 import Layout from "./layout";
 import About from "./pages/About";
@@ -15,6 +19,10 @@ import Services from "./pages/Services";
 import Temp from "./pages/Temp";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Suspense fallback="Loading ...">
       <Routes>

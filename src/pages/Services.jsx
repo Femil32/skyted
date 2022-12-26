@@ -54,10 +54,11 @@ function Services() {
           <section className={`${i % 2 === 0 ? "bg-white" : "bg-[#F7FAFB]"} text-black section-container`} key={i}>
             <div>
               <header className="text-center xl:mb-12 mb-5">
-                <PageHeader title={service.title} />
-                <h6>{service.tagline}</h6>
+                <PageHeader data-aos="fade-in" title={service.title} />
+                <h6 data-aos="fade-in">{service.tagline}</h6>
               </header>
               <ImgData
+                data-aos="fade-in"
                 dataClasses={`${i % 2 === 0 ? "md:order-1" : "md:order-2"} md:pl-10 max-md:px-4`}
                 imgClasses={`${i % 2 === 0 ? "md:order-2" : "md:order-1"}`}
                 src={service.img}

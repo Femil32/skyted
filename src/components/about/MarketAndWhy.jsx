@@ -9,6 +9,7 @@ function MarketAndWhy() {
     <section className="section-container pt-0">
       <div className="xl:space-y-32 md:space-y-20 space-y-8">
         <ImgData
+          data-aos="fade-in"
           imgClasses="max-md:order-1"
           dataClasses="max-md:order-2"
           title="About the market"
@@ -21,6 +22,7 @@ function MarketAndWhy() {
           alt="MaskManIMG"
         />
         <ImgData
+          data-aos="fade-in"
           dataClasses="order-2 md:pl-6"
           title="Why now?"
           description={(

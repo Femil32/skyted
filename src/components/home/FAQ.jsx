@@ -30,16 +30,18 @@ function FAQ() {
       <div className="flex gap-6 md:gap-0 flex-col md:flex-row">
         <div className="flex-1">
           <div className="max-w-lg">
-            <span className="red-header mb-8 text-xl">The FAQs</span>
-            <PageHeader title="You want to know more about us?" />
-            <SlatePara text="Everything you need to know about the product and billing.
+            <span data-aos="fade-in" className="red-header mb-8 text-xl">The FAQs</span>
+            <PageHeader data-aos="fade-in" title="You want to know more about us?" />
+            <SlatePara
+              data-aos="fade-in"
+              text="Everything you need to know about the product and billing.
               Can’t find the answer you’re looking for? Please check."
             />
           </div>
         </div>
         <div className="flex-1">
           <div className="flex flex-col gap-4 md:gap-8 transition-all">
-            {allFaq.map((faq, i) => <Detail key={i} summary={faq.summary} detail={faq.detail} />)}
+            {allFaq.map((faq, i) => <Detail data-aos="fade-in" key={i} summary={faq.summary} detail={faq.detail} />)}
           </div>
         </div>
       </div>

@@ -28,32 +28,32 @@ function PreOrder() {
 
   return (
     <section className="section-container">
-      <div className="mx-16">
-        <PageHeader title="Pre-order at huge discounts" className="text-center" />
-        <div className="grid grid-cols-2 gap-8 py-12">
-          <div className="bg-gradient-radial from-white to-cyan-100 rounded-2xl p-12 h-full flex flex-col items-start">
+      <div className="lg:mx-16">
+        <PageHeader data-aos="fade-in" title="Pre-order at huge discounts" className="text-center" />
+        <div className="grid lg:grid-cols-2 gap-8 py-12">
+          <div className="bg-gradient-radial from-white to-cyan-100 rounded-2xl p-8 lg:p-12 h-full flex flex-col items-start">
             <div>
-              <h4 className="red-header mb-4">How to sign up for the Kickstarter Launch?</h4>
-              <p>
+              <h4 data-aos="fade-in" className="red-header mb-4">How to sign up for the Kickstarter Launch?</h4>
+              <p data-aos="fade-in" >
                 We are planning to launch the Kickstarter
                 campaign in March 2023 where we will be
                 offering a huge discount off retail to all our early adopters.
                 However, the ...Read more
               </p>
             </div>
-            <CtaBtn text="Get huge discounts on launch day" className="bg-dark-blue text-white my-auto" />
+            <CtaBtn data-aos="fade-in" text="Get huge discounts on launch day" className="bg-dark-blue text-white my-auto max-lg:mt-6" />
           </div>
-          <div className="bg-gradient-radial from-white to-blue-100 rounded-2xl p-12">
+          <div className="bg-gradient-radial from-white to-blue-100 rounded-2xl p-8 lg:p-12">
             <div className="mb-8">
-              <h4 className="red-header mb-4">Why Kickstarter?</h4>
-              <p>
+              <h4 data-aos="fade-in" className="red-header mb-4">Why Kickstarter?</h4>
+              <p data-aos="fade-in" >
                 We believe that our crowdfunding model is the best way to cut the
                 middlemen and distribution. This allows us to ...Read more
               </p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 max-lg:gap-10 max-md:flex-col">
               {reasons.map((reason, i) => (
-                <div key={i} className="flex-1 text-center flex flex-col justify-between gap-4">
+                <div data-aos="fade-in" key={i} className="flex-1 text-center flex flex-col justify-between gap-4">
                   <CustomIMG src={reason.icon} alt="thums-up" className="w-16 mx-auto" />
                   <div className="text-center my-auto">
                     <h6 className="text-dark-blue">{reason.title}</h6>
