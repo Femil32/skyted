@@ -35,7 +35,7 @@ function About() {
             <YoutubeEmbed embedId="178emOV9HbQ" className="h-[80vh] w-full" />
           </div>
           <span className="py-2 px-2 block text-gray text-bse md:text-lg text-left md:mt-4">
-            Have you ever dreamt to be  totally free to be able to say what you want to say?
+            Have you ever dreamt of talking to people with total freedom?
           </span>
         </div>
       </div>

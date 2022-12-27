@@ -111,7 +111,7 @@ Input.defaultProps = {
 // custom textarea
 export const TextArea = ({
   placeholder, className, name, cols, rows, ...args
-}) => <textarea name={name} placeholder={placeholder} className={`px-5 py-3 w-full ${className}`} cols={cols} rows={rows} {...args} />;
+}) => <textarea name={name} placeholder={placeholder} className={`px-5 py-3 w-full outline-none ${className}`} cols={cols} rows={rows} {...args} />;
 
 TextArea.propTypes = {
   className: PropTypes.string,

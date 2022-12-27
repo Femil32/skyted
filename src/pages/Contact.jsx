@@ -12,7 +12,7 @@ function Contact() {
     <main className="bg-white">
       <div className="xl:py-8 py-14">
         <section className="flex md:flex-nowrap flex-wrap xl:gap-24 lg:gap-16 md:gap-12 gap-10 section-container">
-          <form action="" data-aos-delay="450" className="blur-bg flex-1 lg:p-10 p-7 rounded-2xl flex flex-col gap-6">
+          <form data-aos="fade-in" data-aos-delay="500" className="blur-bg flex-1 lg:p-10 p-7 rounded-2xl flex flex-col gap-6">
             <div>
               <Input data-aos="fade-in" data-aos-delay="500" type="text" placeholder="Name" title="name" className="w-full rounded-xl backdrop-blur-lg bg-white/20 lg:placeholder:text-base placeholder:text-sm" />
             </div>
@@ -49,9 +49,9 @@ function Contact() {
             </div>
           </div>
         </section>
-        <section className="bg-red-800">
+        {/* <section className="bg-red-800">
           <div>
-            {/* <Map
+            <Map
               google={this.props.google}
               zoom={14}
               style={mapStyles}
@@ -61,10 +61,10 @@ function Contact() {
                   lng: 36.8233,
                 }
               }
-            /> */}
+            />
             Map goes here
           </div>
-        </section>
+        </section> */}
       </div>
     </main>
   );

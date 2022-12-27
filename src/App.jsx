@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import AOS from "aos";
 
 // importing aos
@@ -14,14 +14,20 @@ import Contact from "./pages/Contact";
 // pages
 import Home from "./pages/Home";
 import Product from "./pages/Product";
-import ProfileKit from "./pages/ProfileKit";
+import MediaKit from "./pages/MediaKit";
 import Services from "./pages/Services";
 import Temp from "./pages/Temp";
 
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <Suspense fallback="Loading ...">
@@ -33,7 +39,7 @@ function App() {
           <Route path="/ces" element={<CES />} />
           <Route path="/product" element={<Product />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/profile-kit" element={<ProfileKit />} />
+          <Route path="/media-kit" element={<MediaKit />} />
           <Route path="/campaign" element={<Campaign />} />
         </Route>
         <Route path="/temp" element={<Temp />} />

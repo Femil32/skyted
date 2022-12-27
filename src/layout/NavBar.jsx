@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
-import PropTypes from "prop-types";
 import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 import LogoNav from "@/assets/imgs/logo-nav.png";
 
 const NavBar = ({ navState, handleNav }) => {
@@ -26,11 +26,11 @@ const NavBar = ({ navState, handleNav }) => {
       link: "/services",
       state: {},
     },
-    {
-      title: "News",
-      link: "/news",
-      state: {},
-    },
+    // {
+    //   title: "News",
+    //   link: "/news",
+    //   state: {},
+    // },
     {
       title: "Contact",
       link: "/contact",
@@ -48,7 +48,6 @@ const NavBar = ({ navState, handleNav }) => {
   useEffect(() => {
     const t1 = gsap.timeline();
     if (navState.isClicked === false) {
-      console.log(navState);
       t1.fromTo(".nav-link", {
         yPercent: 0,
         opacity: 1,
@@ -56,7 +55,7 @@ const NavBar = ({ navState, handleNav }) => {
         stagger: 0.05,
         yPercent: -20,
         opacity: 0,
-      }).to([".outer", ".inner"], {
+      }).to([".outer"], {
         stagger: {
           amount: 0.07,
         },
@@ -80,7 +79,7 @@ const NavBar = ({ navState, handleNav }) => {
           display: "block",
         },
       });
-      t1.fromTo([".inner", ".outer"], {
+      t1.fromTo([".outer"], {
         height: 0,
       }, {
         stagger: 0.2,
@@ -99,8 +98,8 @@ const NavBar = ({ navState, handleNav }) => {
   }, [navState]);
 
   return (
-    <nav ref={nav} className="main-nav transform transition-all w-full hidden overflow-hidden fixed top-0 left-0 h-screen z-50">
-      <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" />
+    <nav ref={nav} className="main-nav transform transition-all w-full hidden overflow-hidden fixed top-0 left-0 bottom-0 right-0 h-screen z-50">
+      {/* <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" /> */}
       <div className="fixed outer h-full w-screen  navbar-bg left-0 top-0 z-10" />
       <div className="wrapper md:justify-between justify-center items-center section-container h-full w-full flex z-50 relative flex-col md:flex-row max-sm:gap-10">
         <div className="flex relative md:justify-between justify-center w-full items-start text-center sm:text-left">
@@ -132,7 +131,7 @@ const NavBar = ({ navState, handleNav }) => {
                   to="/campaign"
                   className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold text-base uppercase tracking-tight px-2`}
                 >
-                  campaign
+                  Kick Starter
                 </NavLink>
               </li>
               <li
@@ -140,10 +139,10 @@ const NavBar = ({ navState, handleNav }) => {
               >
                 <NavLink
                   onClick={() => handleNav(true)}
-                  to="/profile-kit"
+                  to="/media-kit"
                   className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold text-base uppercase tracking-tight px-2`}
                 >
-                  Profile Kit
+                  Media Kit
                 </NavLink>
               </li>
             </ul>
@@ -172,9 +171,9 @@ const NavBar = ({ navState, handleNav }) => {
   );
 };
 
-NavBar.propTypes = {
-  handleNav: PropTypes.func.isRequired,
-  navState: PropTypes.oneOfType([PropTypes.object]).isRequired,
-};
-
 export default NavBar;
+
+NavBar.propTypes = {
+  navState: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  handleNav: PropTypes.func.isRequired,
+};

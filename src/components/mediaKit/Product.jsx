@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { CustomIMG, PageHeader } from "../Micro";
 // imgs
+import MaskBlackIMG from "../../assets/imgs/profileKit/mask-black.png";
 import MaskSideIMG from "../../assets/imgs/profileKit/mask-side.png";
-import MaskFrontIMG from "../../assets/imgs/profileKit/mask-front.png";
 
 function Product() {
   const [products, setProducts] = useState([
     {
       id: 0,
-      imgUrl: MaskSideIMG,
+      imgUrl: MaskBlackIMG,
       title: "SKYTED Audio – Silent Headset",
       description: `Skyted is currently designing a new headset designed
       to support passenger in their next travel. Combi Lorem ipsum dolor sit amet,
@@ -18,7 +18,7 @@ function Product() {
     },
     {
       id: 1,
-      imgUrl: MaskFrontIMG,
+      imgUrl: MaskSideIMG,
       title: "SKYTED Audio – Silent Headset",
       description: `Skyted is currently designing a new headset designed
       to support passenger in their next travel. Combi Lorem ipsum dolor sit amet,

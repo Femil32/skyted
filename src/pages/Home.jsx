@@ -1,6 +1,5 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-import React, { useEffect } from "react";
+import React from "react";
+
 // pages
 import About from "../components/home/About";
 import ContactUS from "../components/home/ContactUS";
@@ -9,10 +8,12 @@ import Factors from "../components/home/Factors";
 import FAQ from "../components/home/FAQ";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
+import Patners from "../components/home/Patners";
 
 const Home = () => (
   <main>
     <Hero />
+    <Patners />
     <About />
     <Features />
     <Factors />

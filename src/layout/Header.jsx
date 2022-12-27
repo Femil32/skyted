@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CtaBtn, SkytedLogo } from "../components/Micro";
 import NavBar from "./NavBar";
 
@@ -57,19 +57,19 @@ function Header() {
       const currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         navbar.current.style.top = "0";
-      } else {
+      } else if (navState.isClicked !== true) {
         navbar.current.style.top = "-80px";
       }
       if (currentScrollPos !== 0) {
-        navbar.current.classList.add(isBlackHeader ? "showNavWhite" : "showNavBlack");
+        navbar.current.classList.add(isBlackHeader ? ("showNavWhite ", "bg-[#F7FAFB]") : "showNavBlack");
       }
       if (currentScrollPos === 0) {
-        navbar.current.classList.remove("showNavWhite");
+        navbar.current.classList.remove("showNavWhite", "bg-[#F7FAFB]");
         navbar.current.classList.remove("showNavBlack");
       }
       prevScrollpos = currentScrollPos;
     };
-  }, [isBlackHeader, location]);
+  }, [isBlackHeader, location, navState]);
 
   useEffect(() => {
     const { pathname } = location;
@@ -92,7 +92,9 @@ function Header() {
         <SkytedLogo className="md:w-32 w-18" isBlack={isBlackHeader} />
       </div>
       <div className="hidden md:inline-flex navbar-end ">
-        <CtaBtn text="Let’s Connect" className={`${isBlackHeader ? "text-white bg-black" : "text-black bg-white"} xl:text-base text-sm`} />
+        <Link to="/contact">
+          <CtaBtn text="Let’s Connect" className={`${isBlackHeader ? "text-white bg-black" : "text-black bg-white"} xl:text-base text-sm`} />
+        </Link>
       </div>
       <NavBar navState={navState} handleNav={handleNav} />
     </div>
