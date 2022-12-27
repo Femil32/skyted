@@ -73,17 +73,14 @@ function Events() {
             loop="true"
             breakpoints={{
               768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 40,
               },
             }}
-            // navigation
-            // modules={[Navigation]}
-            // centeredSlides="true"
             className="mySwiper"
           >
             {slideData.map((slide, i) => (
-              <SwiperSlide key={i} className="w-full md:max-w-[425px] min-h-[600px]">
+              <SwiperSlide key={i} className="w-full md:max-w-[590px] min-h-[590px]">
                 <div className="flex flex-col justify-center items-start gap-4">
                   <div className="w-full">
                     <img src={slide.slideImg} alt="ConsumerLogo" />
@@ -96,7 +93,7 @@ function Events() {
                 </div>
               </SwiperSlide>
             ))}
-            <div className="flex justify-center items-center pt-4">
+            <div className="flex justify-center items-center mt-12">
               <SwiperNavigation />
             </div>
           </Swiper>

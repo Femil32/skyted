@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={hero} className="hero-bg flex section-container min-h-screen pb-0">
+    <div ref={hero} className="section-container hero-bg flex min-h-screen pb-0">
       <div className="flex md:h-full w-full justify-center items-center flex-col gap-6">
         {/* Headline */}
         <div className="h-full w-full md:flex gap-6 items-center flex-col justify-end pt-16 hidden">
@@ -35,13 +35,13 @@ const Hero = () => {
               <div className="md:mb-8 animate">
                 <h2 className="state-digit">56%</h2>
                 <p className="gray-discription">
-                  92 million US workforce is
-                  working remotely leading
-                  to virtual meets
+                  92 million US workforce is working remotely leading to
+                  virtual meets in airport lounges, shared
+                  work spaces, at home etc.
                 </p>
               </div>
               <div className="animate">
-                <h2 className="state-digit">1B</h2>
+                <h2 className="state-digit">1 Billion</h2>
                 <p className="gray-discription">
                   daily participants on video
                   conferencing solutions (Zoom,

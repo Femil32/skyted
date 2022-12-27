@@ -24,8 +24,8 @@ function Features() {
             `Whether you are on the flight, in the car or
             waiting in the lounge area we have got you...`
           }
-          link="/"
-          linkText="Get More"
+          link="/services"
+          linkText="Learn more"
           btnClassName="bg-dark-blue text-white"
         />
         <IconCard
@@ -36,8 +36,8 @@ function Features() {
             `Hybrid work has create lots of stress has we
             were used to work silently for months during...`
           }
-          link="/"
-          linkText="Get More"
+          link="/services"
+          linkText="Learn more"
           btnClassName="bg-dark-blue text-white"
         />
         <IconCard
@@ -48,8 +48,8 @@ function Features() {
             `Are you tired to wake up the whole family
             when you play night games?`
           }
-          link="/"
-          linkText="Get More"
+          link="/services"
+          linkText="Learn more"
           btnClassName="bg-dark-blue text-white"
         />
       </div>

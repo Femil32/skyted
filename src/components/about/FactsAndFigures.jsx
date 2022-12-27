@@ -27,7 +27,7 @@ function FactsAndFigures() {
           <PageHeader data-aos="fade-in" title="Facts & figures" />
           <p data-aos="fade-in" className="text-gray-400 lg:text-base text-sm block relative max-md:text-center">Hybrid Work has a huge impact on the way we communicate</p>
         </div>
-        <div className="flex md:flex-nowrap flex-wrap gap-5 md:justify-between justify-center max-w-7xl xl:my-16 lg:my-12 md:my-10 my-8">
+        <div className="flex md:flex-nowrap flex-wrap gap-5 md:justify-between justify-center max-w-7xl mx-auto xl:my-16 lg:my-12 md:my-10 my-8">
           {facts.map((fact) => (
             <div className="max-w-xs text-center w-full">
               <h2 data-aos="fade-in" className="text-twitter xl:mb-10 md:mb-8 mb-5 font-bold xl:text-5xl lg:text-4xl sm:text-3xl text-2xl">{fact.title}</h2>

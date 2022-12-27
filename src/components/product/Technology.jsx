@@ -39,7 +39,7 @@ function Technology() {
           <h1 className="product-label mx-auto lg:text-6xl md:text-5xl text-4xl text-gray-200 font-radwave relative">Technology</h1>
         </div>
         <div className="row-span-full col-span-7">
-          <PageHeader title="Creating new communication pain points in crowded, on-the-go environments." className="xl:mb-14 lg:mb-12 md:mb-10 mb-8" />
+          <PageHeader title="Solving communication problems in crowded, on-the-go environments." className="xl:mb-14 lg:mb-12 md:mb-10 mb-8" />
           <div className="grid md:grid-cols-2 md:grid-rows-2 lg:gap-10 gap-5">
             {techData.map((data, i) => (
               <div key={i} className="flex justify-start xl:gap-12 gap-5 items-center xl:px-12 md:px-8 px-5 md:py-12 py-8 xl:py-16 bg-[#001432]/10 rounded-3xl">
