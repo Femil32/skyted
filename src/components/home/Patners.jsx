@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 import { CustomIMG, PageHeader } from "../Micro";
 
 // imgs
@@ -23,17 +24,33 @@ function Patners() {
     },
   ]);
   return (
-    <section className="section-container lg:py-[60px] bg-white text-black border-b">
-      <div className="grid grid-cols-12">
-        <div className="col-span-4 flex items-center">
+    <section className="section-wrapper lg:py-[60px] bg-white text-black border-b">
+      <div className="md:grid flex flex-col grid-cols-12 section-container">
+        <div className="col-span-4 flex items-center max-md:justify-center">
           <PageHeader title="Our Partners" />
         </div>
         <div className="col-span-7 col-start-6">
           <Swiper
-            slidesPerView={3}
+            slidesPerView={2}
+            spaceBetween={50}
             centeredSlides
             loop="true"
             className="mySwiper"
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              728: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            }}
           >
             {patners.map((patner, i) => (
               <SwiperSlide key={i} className="max-w-sm overflow-hidden h-24 flex justify-center items-center">

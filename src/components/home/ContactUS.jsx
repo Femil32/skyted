@@ -5,7 +5,7 @@ import {
 
 function ContactUS() {
   return (
-    <section className="section-container bg-white text-black">
+    <section className="section-wrapper section-container bg-white text-black">
       <PageHeader data-aos="fade-in" title="Contact us" className="text-center mb-12" />
       <form action="" className="p-8 rounded-2xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
         <h2 data-aos="fade-in" className="text-lg md:text-2xl text-[#001432]/80 font-medium md:mb-4">Get in touch with us</h2>

@@ -52,8 +52,11 @@ li.nav-link:hover{
   @apply max-w-[250px] relative text-gray-100 opacity-70 text-xs md:text-base md:text-left
 }
 
-.section-container {
+.section-wrapper {
   @apply lg:px-24 lg:py-[88px] py-8 px-6 w-full
+}
+.section-container {
+  @apply container mx-auto 3xl:px-0
 }
 
 

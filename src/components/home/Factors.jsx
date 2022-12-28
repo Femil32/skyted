@@ -24,8 +24,8 @@ const points = [
 
 function Factors() {
   return (
-    <section className="blur-bg section-container">
-      <div className="flex flex-col md:flex-row justify-center items-center">
+    <section className="blur-bg section-wrapper">
+      <div className="flex flex-col md:flex-row justify-center items-center section-container">
         <div className="md:w-3/5 order-2 md:order-1">
           <div data-aos="fade-in" className="mb-3 max-w-xl">
             <h6 className="text-xl font-medium text-dark-blue">Discover Key Factors</h6>

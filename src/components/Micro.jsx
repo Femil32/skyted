@@ -184,7 +184,7 @@ export const CustomIMG = ({
 );
 
 CustomIMG.propTypes = {
-  src: PropTypes.element.isRequired,
+  src: PropTypes.oneOfType([PropTypes.node]).isRequired,
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
   ImgClassName: PropTypes.string,

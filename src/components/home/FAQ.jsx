@@ -26,7 +26,7 @@ function FAQ() {
   ]);
 
   return (
-    <section className="section-container bg-white text-black">
+    <section className="section-wrapper section-container bg-white text-black">
       <div className="flex gap-6 md:gap-0 flex-col md:flex-row">
         <div className="flex-1">
           <div className="max-w-lg">

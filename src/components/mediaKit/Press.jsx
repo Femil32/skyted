@@ -41,14 +41,14 @@ const Press = () => {
   ]);
 
   return (
-    <section className="section-container py-0 mb-10">
+    <section className="section-wrapper section-container py-0 mb-10">
       <div className="flex flex-col justify-center items-center mb-16">
         <PageHeader data-aos="fade-in" data-aos-delay="300" title="Press Release" className="text-center" />
         <a href="https://drive.google.com/file/d/1ve3d4awVstp8AgUhJSwM0p7-MzT30dXJ/view" target="_blank" rel="noreferrer">
           <CtaBtn text="Learn more" className="mx-auto inline-block bg-twitter text-white" />
         </a>
       </div>
-      <div className="flex gap-8">
+      <div className="flex gap-12">
         <div className="w-1/2 grid grid-cols-2 gap-12">
           {allPress.map((press) => (
             <div className="w-full h-full" key={press.id}>

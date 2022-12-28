@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import AOS from "aos";
 
@@ -19,10 +19,25 @@ import Services from "./pages/Services";
 import Temp from "./pages/Temp";
 
 function App() {
+  const samt = useRef(0);
   const location = useLocation();
+
+  const AOSfn = () => {
+    if (samt.current <= 10) {
+      samt.current += 1;
+    } else {
+      samt.current = 0;
+      AOS.refresh();
+    }
+  };
 
   useEffect(() => {
     AOS.init();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", AOSfn);
+    return () => window.removeEventListener("scroll");
   }, []);
 
   useEffect(() => {

@@ -6,8 +6,8 @@ import HeadphoneManIMG from "../../assets/imgs/about/headphone-man.png";
 
 function MarketAndWhy() {
   return (
-    <section className="section-container pt-0">
-      <div className="xl:space-y-32 md:space-y-20 space-y-8">
+    <section className="section-wrapper section-container">
+      <div className="xl:space-y-32 md:space-y-20 space-y-16">
         <ImgData
           data-aos="fade-in"
           imgClasses="max-md:order-1"
@@ -23,7 +23,7 @@ function MarketAndWhy() {
         />
         <ImgData
           data-aos="fade-in"
-          dataClasses="order-2 md:pl-6"
+          dataClasses="order-2 lg:pl-6"
           title="Why now?"
           description={(
             <>

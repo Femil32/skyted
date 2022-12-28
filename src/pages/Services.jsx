@@ -48,10 +48,10 @@ function Services() {
     },
   ];
   return (
-    <main className="xl:py-16 pt-12 pb-0 bg-white">
+    <main className="xl:py-16 pt-12 pb-0 bg-white section-container">
       {
         services.map((service, i) => (
-          <section className={`${i % 2 === 0 ? "bg-white" : "bg-[#F7FAFB]"} text-black section-container`} key={i}>
+          <section className={`${i % 2 === 0 ? "bg-white" : "bg-[#F7FAFB]"} text-black section-wrapper`} key={i}>
             <div>
               <header className="text-center xl:mb-12 mb-5">
                 <PageHeader data-aos="fade-in" title={service.title} />

@@ -15,7 +15,7 @@ function About() {
   // }, []);
 
   return (
-    <section className="section-container bg-white text-black">
+    <section className="section-wrapper section-container bg-white text-black">
       <div>
         <h5 data-aos="fade-in" className="red-header mb-5">About Skyted</h5>
         <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12">
@@ -32,7 +32,7 @@ function About() {
         </div>
         <div data-aos="fade-in">
           <div className="flex relative object-cover overflow-hidden justify-center items-center rounded-3xl w-full ring">
-            <YoutubeEmbed embedId="178emOV9HbQ" className="h-[80vh] w-full" />
+            <YoutubeEmbed embedId="178emOV9HbQ" className="md:h-[80vh] h-96 w-full" />
           </div>
           <span className="py-2 px-2 block text-gray text-bse md:text-lg text-left md:mt-4">
             Have you ever dreamt of talking to people with total freedom?

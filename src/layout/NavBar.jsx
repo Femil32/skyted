@@ -101,7 +101,7 @@ const NavBar = ({ navState, handleNav }) => {
     <nav ref={nav} className="main-nav transform transition-all w-full hidden overflow-hidden fixed top-0 left-0 bottom-0 right-0 h-screen z-50">
       {/* <div className="fixed inner h-full w-screen bg-blue-600 left-0 top-0 z-10" /> */}
       <div className="fixed outer h-full w-screen  navbar-bg left-0 top-0 z-10" />
-      <div className="wrapper md:justify-between justify-center items-center section-container h-full w-full flex z-50 relative flex-col md:flex-row max-sm:gap-10">
+      <div className="wrapper section-container md:justify-between justify-center items-center section-wrapper h-full w-full flex z-50 relative flex-col md:flex-row max-sm:gap-10">
         <div className="flex relative md:justify-between justify-center w-full items-start text-center sm:text-left">
           <div className="">
             <ul className="nav-links md:space-y-4 space-y-2 leading-3">
