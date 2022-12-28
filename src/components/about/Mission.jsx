@@ -6,7 +6,7 @@ import { CustomIMG } from "../Micro";
 
 function Mission() {
   return (
-    <section className="section-container xl:py-[88px] lg:py-16 md:py-12 py-10">
+    <section className="section-wrapper section-container xl:py-[88px] lg:py-16 md:py-12 py-10">
       <ImgData
         data-aos="fade-in"
         title="Mission of Skyted"

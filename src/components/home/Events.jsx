@@ -93,7 +93,7 @@ function Events() {
                 </div>
               </SwiperSlide>
             ))}
-            <div className="flex justify-center items-center mt-12">
+            <div className="flex justify-center items-center md:mt-12">
               <SwiperNavigation />
             </div>
           </Swiper>

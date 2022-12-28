@@ -6,8 +6,8 @@ import {
 import { SkytedLogo } from "../components/Micro";
 
 const Footer = () => (
-  <div className="section-container bg-gray-100 text-black">
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+  <div className="section-wrapper bg-gray-100 text-black mt-auto">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 section-container">
       <div className="flex flex-col max-md:items-center md:max-w-xs">
         <div data-aos="fade-in" className="logo mb-4 md:mb-8 md:text-left text-center">
           <SkytedLogo className="w-32" isBlack />
@@ -78,7 +78,7 @@ const Footer = () => (
               </ul>
             </div>
           </div>
-          <h6 data-aos="fade-in" data-aos-offset="0" className="text-sm lg:mt-0 mt-3 max-md:text-center">
+          <h6 data-aos="fade-in" data-aos-offset="1" className="text-sm lg:mt-0 mt-8 md:mt-3 max-lg:text-center">
             <span>
               Design by
               {" "}

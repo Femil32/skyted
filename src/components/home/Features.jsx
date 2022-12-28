@@ -4,7 +4,7 @@ import { IconCard, PageHeader } from "../Micro";
 
 function Features() {
   return (
-    <section className="section-container bg-white text-black">
+    <section className="section-wrapper section-container bg-white text-black">
       <PageHeader
         data-aos="fade-in"
         title={(

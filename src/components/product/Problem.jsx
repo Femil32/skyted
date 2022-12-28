@@ -7,7 +7,7 @@ import WithoutMaskIMG from "../../assets/imgs/product/without-mask.png";
 
 function Problem() {
   return (
-    <section className="section-container pt-[70px] xl:pb-[93px] pb-10">
+    <section className="section-wrapper section-container pt-[150px] xl:pb-[93px] pb-10">
       <div className="grid grid-cols-10">
         <div className="row-span-full col-span-2 flex flex-col gap-4 ">
           <span className="block flex-1 mx-auto border-2 bg-black border-black " />

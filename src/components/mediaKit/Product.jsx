@@ -29,7 +29,7 @@ function Product() {
   ]);
 
   return (
-    <section className="section-container">
+    <section className="section-wrapper section-container">
       <div className="flex justify-center items-center flex-col gap-4 lg:gap-8">
         <PageHeader title="Our Product" />
         <div className="flex justify-center items-center gap-9 max-md:flex-col">

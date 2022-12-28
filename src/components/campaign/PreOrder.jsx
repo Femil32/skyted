@@ -27,8 +27,8 @@ function PreOrder() {
   ]);
 
   return (
-    <section className="section-container">
-      <div className="lg:mx-16">
+    <section className="section-wrapper section-container">
+      <div className="lg:mx-16 xl:mx-0">
         <PageHeader data-aos="fade-in" title="Pre-order at huge discounts" className="text-center" />
         <div className="grid lg:grid-cols-2 gap-8 py-12">
           <div className="bg-gradient-radial from-white to-cyan-100 rounded-2xl p-8 lg:p-12 h-full flex flex-col items-start">

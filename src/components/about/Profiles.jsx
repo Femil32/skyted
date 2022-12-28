@@ -5,7 +5,7 @@ import { LeftArrowIcon } from "../AllSvgs";
 
 function Profiles() {
   return (
-    <section className="section-container blur-bg text-white">
+    <section className="section-wrapper blur-bg text-white">
       <div className="flex md:flex-nowrap flex-wrap justify-center items-center xl:gap-24 lg:gap-16 gap-10 max-w-5xl mx-auto w-full">
         <div className="flex">
           <div data-aos="fade-in" className="backdrop-blur-lg bg-white/10 p-6 rounded-[250px] overflow-hidden">

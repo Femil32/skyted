@@ -4,7 +4,7 @@ import InfluencerImg from "../../assets/imgs/ces/influencer.png";
 
 function Influencer() {
   return (
-    <section className="section-container">
+    <section className="section-wrapper section-container">
       <div>
         <PageHeader data-aos="fade-in" title="Join our Influencer Club" className="text-center md:mb-24 mb-12" />
         <div>

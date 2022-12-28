@@ -32,7 +32,7 @@ function Technology() {
   ]);
 
   return (
-    <section className="section-container">
+    <section className="section-wrapper section-container">
       <div className="grid grid-cols-10">
         <div className="row-span-full col-span-2 flex flex-col gap-4 ">
           <span className="block flex-1 mx-auto border-2 bg-black border-black " />
