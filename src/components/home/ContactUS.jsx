@@ -20,10 +20,10 @@ function ContactUS() {
           <Input
             data-aos="fade-in"
             className="flex-1 bg-white text-black rounded-2xl"
-            pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+            pattern={/(7|8|9)\d{9}/}
             placeholder="Mobile Number"
-            type="text"
-            title="Must be Url"
+            type="number"
+            title="Must be 10 digit"
             required
           />
         </div>
