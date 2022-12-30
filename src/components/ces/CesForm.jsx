@@ -19,7 +19,7 @@ function CesForm() {
             className="flex-1 bg-white text-black rounded-2xl"
             pattern={/(7|8|9)\d{9}/}
             placeholder="Phone number"
-            type="tel"
+            type="number"
             title="Must be 10 digit"
             required
           />

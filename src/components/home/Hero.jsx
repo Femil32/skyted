@@ -43,7 +43,7 @@ const Hero = () => {
                 </p>
               </div>
               <div className="animate">
-                <h2 className="state-digit">1 B</h2>
+                <h2 className="state-digit">1 Billion</h2>
                 <p className="gray-discription">
                   daily participants on video conferencing solutions (Zoom,
                   Google, Microsoft etc).
