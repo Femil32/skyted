@@ -4,8 +4,8 @@ import Cse2023 from "../../assets/imgs/ces/ces.png";
 
 function Hero() {
   return (
-    <section className="section-wrapper section-container">
-      <div className="flex gap-2 py-12 w-full max-md:flex-col max-md:gap-8">
+    <section className="section-wrapper ">
+      <div className="section-container flex gap-2 py-12 w-full max-md:flex-col max-md:gap-8">
         <div className="flex flex-col gap-6 md:w-3/5">
           <h6 data-aos="fade-in" data-aos-delay="500" className="red-header">Consumer Technology Association</h6>
           <h1 data-aos="fade-in" data-aos-delay="500" className="text-5xl font-bold max-w-2xl leading-[55px]">

@@ -10,6 +10,21 @@ details>summary::-webkit-details-marker {
   display: none;
 }
 
+.scrollbar-track{
+  background-color: transparent !important;
+}
+
+.scrollbar-track-y{
+  width:12px !important;
+}
+
+
+.scrollbar-thumb{
+  width:12px !important;
+  background-color: black !important;
+  border-radius: 0 !important;
+}
+
 
 /* 1. Hero */
 .hero-bg {
@@ -56,7 +71,7 @@ li.nav-link:hover{
   @apply lg:px-24 lg:py-[88px] py-8 px-6 w-full
 }
 .section-container {
-  @apply container mx-auto 3xl:px-0
+  @apply container mx-auto
 }
 
 

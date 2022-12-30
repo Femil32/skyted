@@ -26,8 +26,8 @@ function FAQ() {
   ]);
 
   return (
-    <section className="section-wrapper section-container bg-white text-black">
-      <div className="flex gap-6 md:gap-0 flex-col md:flex-row">
+    <section className="section-wrapper  bg-white text-black">
+      <div className="section-container flex gap-6 md:gap-0 flex-col md:flex-row">
         <div className="flex-1">
           <div className="max-w-lg">
             <span data-aos="fade-in" className="red-header mb-8 text-xl">The FAQs</span>

@@ -3,8 +3,8 @@ import { CtaBtn, Input } from "../Micro";
 
 function CesForm() {
   return (
-    <div className="section-wrapper section-container md:pt-0">
-      <form action="" className="p-8 rounded-3xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
+    <div className="section-wrapper md:pt-0">
+      <form action="" className="section-container p-8 rounded-3xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
         <h2 data-aos="fade-in" className="text-lg md:text-2xl font-medium md:mb-4 text-black">Sign up here to become our Influencer</h2>
         <div className="flex gap-8 flex-col md:flex-row">
           <Input data-aos="fade-in" className="flex-1 bg-white rounded-2xl" placeholder="Your full name" type="text" title="full_name" />

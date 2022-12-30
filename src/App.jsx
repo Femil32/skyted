@@ -1,10 +1,9 @@
-import React, { Suspense, useEffect, useRef } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
-import AOS from "aos";
+import React, { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 
 // importing aos
-import "./App.css";
 import "aos/dist/aos.css";
+import "./App.css";
 // Layout
 import Layout from "./layout";
 import About from "./pages/About";
@@ -13,39 +12,14 @@ import CES from "./pages/CES";
 import Contact from "./pages/Contact";
 // pages
 import Home from "./pages/Home";
-import Product from "./pages/Product";
 import MediaKit from "./pages/MediaKit";
+import Product from "./pages/Product";
 import Services from "./pages/Services";
 import Temp from "./pages/Temp";
 
 function App() {
-  const samt = useRef(0);
-  const location = useLocation();
-
-  const AOSfn = () => {
-    if (samt.current <= 10) {
-      samt.current += 1;
-    } else {
-      samt.current = 0;
-      AOS.refresh();
-    }
-  };
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", AOSfn);
-    return () => window.removeEventListener("scroll");
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
   return (
-    <Suspense fallback="Loading ...">
+    <Suspense fallback="Loading...">
       <Routes>
         <Route element={<Layout />}>
           <Route index path="/" element={<Home />} />

@@ -6,8 +6,8 @@ import ImgData from "../common/ImgData";
 
 function Influencer() {
   return (
-    <section className="section-wrapper section-container">
-      <div className="flex justify-center items-center flex-col lg:gap-8 lg:py-12">
+    <section className="section-wrapper">
+      <div className="section-container flex justify-center items-center flex-col lg:gap-8 lg:py-12">
         <div className="flex justify-center flex-col items-center mb-8">
           <PageHeader data-aos="fade-in" title="Join our Influencer Club" />
           <p data-aos="fade-in">

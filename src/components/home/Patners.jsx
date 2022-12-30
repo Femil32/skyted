@@ -54,7 +54,7 @@ function Patners() {
           >
             {patners.map((patner, i) => (
               <SwiperSlide key={i} className="max-w-sm overflow-hidden h-24 flex justify-center items-center">
-                <CustomIMG src={patner.imgUrl} className="w-44" ImgClassName=" mix-blend-color-burn object-contain" />
+                <CustomIMG src={patner.imgUrl} alt="patner" className="w-44" ImgClassName=" mix-blend-color-burn object-contain" />
               </SwiperSlide>
             ))}
           </Swiper>

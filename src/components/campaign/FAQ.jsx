@@ -25,8 +25,8 @@ function FAQ() {
     },
   ]);
   return (
-    <section className="section-wrapper section-container">
-      <div className="lg:mx-16 xl:mx-0">
+    <section className="section-wrapper">
+      <div className="section-container lg:mx-16 xl:mx-0">
         <PageHeader data-aos="fade-in" title="Frenquently Asked Questions" className="text-center" />
         <div className="flex flex-col gap-4 md:gap-8 transition-all divide-y-2 lg:py-12 py-6">
           {faqs.map((faq, i) => <Detail data-aos="fade-in" key={i} summary={faq.summary} detail={faq.detail} className="pt-8" detailClassname="w-full pr-8" />)}
