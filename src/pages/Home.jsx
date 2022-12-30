@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "../components/campaign/Form";
 
 // pages
 import About from "../components/home/About";
@@ -13,6 +14,7 @@ import Patners from "../components/home/Patners";
 const Home = () => (
   <main>
     <Hero />
+    <Form setMargins />
     <Patners />
     <About />
     <Features />

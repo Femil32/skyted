@@ -32,8 +32,8 @@ function Technology() {
   ]);
 
   return (
-    <section className="section-wrapper ">
-      <div className="section-container grid grid-cols-10">
+    <section className="section-container">
+      <div className="grid grid-cols-10">
         <div className="row-span-full col-span-2 flex flex-col gap-4 ">
           <span className="block flex-1 mx-auto border-2 bg-black border-black " />
           <h1 className="product-label mx-auto lg:text-6xl md:text-5xl text-4xl text-gray-200 font-radwave relative">Technology</h1>

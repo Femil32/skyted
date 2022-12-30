@@ -1,18 +1,18 @@
 import React from "react";
-import { CtaBtn, PageHeader } from "../Micro";
+import { CtaBtn, Input, PageHeader } from "../Micro";
 // imgs
 import InfluencerIMG from "../../assets/imgs/profileKit/influencer.png";
 import ImgData from "../common/ImgData";
 
 function Influencer() {
   return (
-    <section className="section-wrapper">
-      <div className="section-container flex justify-center items-center flex-col lg:gap-8 lg:py-12">
+    <section className="section-container">
+      <div className="flex justify-center items-center flex-col lg:gap-8 lg:py-12">
         <div className="flex justify-center flex-col items-center mb-8">
           <PageHeader data-aos="fade-in" title="Join our Influencer Club" />
           <p data-aos="fade-in">
-            We offer you the possibility to promote our product before
-            teh kick strater community.
+            We offer you the possibility to promote our product before teh kick
+            strater community.
           </p>
         </div>
         <ImgData
@@ -24,7 +24,30 @@ function Influencer() {
           dataClasses="max-md:order-2 max-md:text-center"
           imgClasses="max-md:order-1"
         >
-          <CtaBtn text="Calendly Games" className="bg-dark-blue text-white mt-8" />
+          <div className="p-8 rounded-2xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden mt-5">
+            <div>
+              <Input
+                data-aos="fade-in"
+                data-aos-delay="500"
+                type="email"
+                placeholder="Email"
+                title="email"
+                className="w-full rounded-xl backdrop-blur-lg bg-white lg:placeholder:text-base placeholder:text-sm"
+              />
+            </div>
+            <div>
+              <Input
+                data-aos="fade-in"
+                data-aos-delay="500"
+                type="text"
+                placeholder="Name"
+                title="name"
+                className="w-full rounded-xl backdrop-blur-lg bg-white lg:placeholder:text-base placeholder:text-sm"
+              />
+            </div>
+
+            <CtaBtn text="Join Us" className="bg-dark-blue text-white" />
+          </div>
         </ImgData>
       </div>
     </section>

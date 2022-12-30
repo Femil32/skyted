@@ -1,6 +1,8 @@
-import Scrollbar from "smooth-scrollbar";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Scrollbar from "smooth-scrollbar";
 import OverscrollPlugin from "smooth-scrollbar/plugins/overscroll";
+import PropTypes from "prop-types";
 
 const overscrollOptions = {
   enable: true,
@@ -10,27 +12,21 @@ const overscrollOptions = {
   glowColor: "#fff",
 };
 
-//   const overscrollOptions = {
-//     enable: true,
-//     effect: 'glow',
-//     damping: 0.1,
-//     maxOverscroll: 200,
-//     glowColor: '#222a2d',
-//   };
-
 const options = {
+  alwaysShowTracks: true,
   damping: 0.07,
   plugins: {
     overscroll: { ...overscrollOptions },
   },
-
 };
 
-const Scroll = () => {
+const Scroll = ({ setScrollbar }) => {
+  const location = useLocation();
+
   useEffect(() => {
     Scrollbar.use(OverscrollPlugin);
-
-    const myScrollbar = Scrollbar.init(document.querySelector("#content"), options);
+    const myScrollbar = Scrollbar.init(document.querySelector("#scrollbar"), options);
+    setScrollbar(myScrollbar);
 
     [].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
       myScrollbar.addListener(() => {
@@ -41,11 +37,15 @@ const Scroll = () => {
     });
 
     return () => {
-      if (Scrollbar) Scrollbar.destroy(document.querySelector("#content"));
+      if (Scrollbar) Scrollbar.destroy(document.querySelector("#scrollbar"));
     };
-  }, []);
+  }, [location, setScrollbar]);
 
   return null;
+};
+
+Scroll.propTypes = {
+  setScrollbar: PropTypes.func.isRequired,
 };
 
 export default Scroll;

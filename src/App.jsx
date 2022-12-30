@@ -1,9 +1,10 @@
-import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { Suspense, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import AOS from "aos";
 
 // importing aos
-import "aos/dist/aos.css";
 import "./App.css";
+import "aos/dist/aos.css";
 // Layout
 import Layout from "./layout";
 import About from "./pages/About";
@@ -12,14 +13,24 @@ import CES from "./pages/CES";
 import Contact from "./pages/Contact";
 // pages
 import Home from "./pages/Home";
-import MediaKit from "./pages/MediaKit";
 import Product from "./pages/Product";
+import MediaKit from "./pages/MediaKit";
 import Services from "./pages/Services";
 import Temp from "./pages/Temp";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <Suspense fallback="Loading...">
+    <Suspense fallback="Loading ...">
       <Routes>
         <Route element={<Layout />}>
           <Route index path="/" element={<Home />} />

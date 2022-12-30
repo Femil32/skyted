@@ -7,15 +7,15 @@ import WithoutMaskIMG from "../../assets/imgs/product/without-mask.png";
 
 function Problem() {
   return (
-    <section className="section-wrapper  pt-[150px] xl:pb-[93px] pb-10">
-      <div className="section-container grid grid-cols-10">
+    <section className="section-container pt-[70px] xl:pb-[93px] pb-10">
+      <div className="grid grid-cols-10">
         <div className="row-span-full col-span-2 flex flex-col gap-4 ">
           <span className="block flex-1 mx-auto border-2 bg-black border-black " />
           <h1 className="product-label mx-auto lg:text-6xl md:text-5xl text-4xl text-gray-200 font-radwave relative">Problem</h1>
         </div>
         <div className="row-span-full col-span-7">
           <div>
-            <PageHeader title="With this warable, Skyted reaches from -25 to -40 dB sound reduction" />
+            <PageHeader title="With this wearable, Skyted reaches from -25 to -40 dB sound reduction" />
             <h6 className="lg:text-base text-sm">Sound simulation at 1 m - view top head</h6>
           </div>
           <div>

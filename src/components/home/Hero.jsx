@@ -17,12 +17,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={hero} className="section-wrapper hero-bg flex min-h-screen pb-0">
-      <div className="flex md:h-full w-full justify-center items-center flex-col gap-6 section-container">
+    <div
+      ref={hero}
+      className="section-container hero-bg flex min-h-screen pb-0"
+    >
+      <div className="flex md:h-full w-full justify-center items-center flex-col gap-6">
         {/* Headline */}
         <div className="h-full w-full md:flex gap-6 items-center flex-col justify-end pt-16 hidden">
           <div className="relative mb-12 text-center font-radwave text-5xl md:text-6xl text-gray-800 font-radwave-demo">
-            <div data-aos="fade-in" data-aos-delay="200" className="w-full relative md:tracking-[-0.03em] font-bold md:leading-[76px] uppercase [background:linear-gradient(95.57deg,_#fff,_#a3a4a5_25.52%,_#fff_51.56%,_#a3a4a5_76.31%,_#fff)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block">
+            <div className="w-full relative md:tracking-[-0.03em] font-bold md:leading-[76px] uppercase [background:linear-gradient(95.57deg,_#fff,_#a3a4a5_25.52%,_#fff_51.56%,_#a3a4a5_76.31%,_#fff)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block">
               <p className="[margin-block-start:0] [margin-block-end:0px]">
                 Silent Calls. Silent Games.
               </p>
@@ -32,41 +35,37 @@ const Hero = () => {
           <div className="flex justify-between items-center w-full">
             {/* stats */}
             <article className="relative flex justify-center items-center md:block text-center pt-12">
-              <div className="md:mb-8">
-                <h2 data-aos="fade-in" data-aos-delay="300" className="state-digit">56%</h2>
-                <p data-aos="fade-in" data-aos-delay="300" className="gray-discription">
-                  92 million US workforce is working remotely leading to
-                  virtual meets in airport lounges, shared
-                  work spaces, at home etc.
+              <div className="md:mb-8 animate">
+                <h2 className="state-digit">56%</h2>
+                <p className="gray-discription">
+                  92 million US workforce is working remotely leading to virtual
+                  meets in airport lounges, shared work spaces, at home etc
                 </p>
               </div>
-              <div className="">
-                <h2 data-aos="fade-in" data-aos-delay="400" data-aos-offset="10" className="state-digit">1 Billion</h2>
-                <p data-aos="fade-in" data-aos-delay="400" data-aos-offset="10" className="gray-discription">
-                  daily participants on video
-                  conferencing solutions (Zoom,
+              <div className="animate">
+                <h2 className="state-digit">1 B</h2>
+                <p className="gray-discription">
+                  daily participants on video conferencing solutions (Zoom,
                   Google, Microsoft etc).
-
                 </p>
               </div>
             </article>
 
             {/* mask man */}
-            <div data-aos="fade-in" data-aos-delay="500" className="w-32 lg:w-[32rem] object-contain">
+            <div className="w-32 lg:w-[32rem] object-contain">
               <img src={MaskIMG} alt="Maskman" className="w-full h-full" />
             </div>
 
             {/* description */}
             <div className="data h-full self-baseline">
               <article className="md:text-left text-center md:max-w-xs">
-                <p data-aos="fade-in" data-aos-delay="300" className="font-light text-light-gray/60">
-                  Based in Toulouse, France, we have a designed a disruptive sound absorbing open
-                  air mask. We are backed by AIRBUS and the European Space Agency to introduce
-                  inflight calls.
+                <p className="font-light text-light-gray/60">
+                  Based in Toulouse, France, we have a designed a disruptive
+                  sound absorbing open air mask. We are backed by AIRBUS and the
+                  European Space Agency to introduce inflight calls.
                 </p>
               </article>
             </div>
-
           </div>
         </div>
 
@@ -84,28 +83,26 @@ const Hero = () => {
           <div className="data h-full self-baseline">
             <article className=" text-center">
               <p className="font-light text-light-gray/60">
-                Based in Toulouse, France, we have a designed a disruptive sound absorbing open
-                air mask. We are backed by AIRBUS and the European Space Agency to introduce
-                inflight calls.
+                Based in Toulouse, France, we have a designed a disruptive sound
+                absorbing open air mask. We are backed by AIRBUS and the
+                European Space Agency to introduce inflight calls.
               </p>
             </article>
           </div>
           <div className="flex justify-center items-center w-full gap-4">
             {/* stats */}
             <article className="relative flex flex-col justify-center items-center  text-center gap-4 py-4">
-              <div className="">
+              <div className=" animate">
                 <h2 className="state-digit">56%</h2>
                 <p className="gray-discription">
-                  92 million US workforce is
-                  working remotely leading
-                  to virtual meets
+                  92 million US workforce is working remotely leading to virtual
+                  meets in airport lounges, shared work spaces, at home etc
                 </p>
               </div>
-              <div className="">
+              <div className="animate">
                 <h2 className="state-digit">1B</h2>
                 <p className="gray-discription">
-                  daily participants on video
-                  conferencing solutions (Zoom,
+                  daily participants on video conferencing solutions (Zoom,
                   Google, Microsoft etc).
                 </p>
               </div>

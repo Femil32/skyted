@@ -6,8 +6,8 @@ import {
 import { SkytedLogo } from "../components/Micro";
 
 const Footer = () => (
-  <div className="section-wrapper bg-gray-100 text-black mt-auto">
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 section-container">
+  <div className="section-container bg-gray-100 text-black">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
       <div className="flex flex-col max-md:items-center md:max-w-xs">
         <div data-aos="fade-in" className="logo mb-4 md:mb-8 md:text-left text-center">
           <SkytedLogo className="w-32" isBlack />
@@ -45,7 +45,7 @@ const Footer = () => (
                 <Link to="/media-kit" className="footer-link xl:text-base text-sm">Media Kit</Link>
               </li>
               <li>
-                <Link to="/campaign" className="footer-link xl:text-base text-sm">Kick Starter</Link>
+                <Link to="/campaign" className="footer-link xl:text-base text-sm">Kickstarter</Link>
               </li>
               <li>
                 <Link to="/contact" className=" xl:text-base text-sm">Contact</Link>
@@ -60,25 +60,25 @@ const Footer = () => (
             <div data-aos="fade-in" data-aos-offset="0" className="red-header text-lg lg:mb-6 mb-5 lg:text-left text-center">Socially</div>
             <div data-aos="fade-in" data-aos-offset="0" className="flex">
               <ul className="flex md:flex-nowrap flex-wrap xl:gap-6 gap-4 ">
-                <li className="social-icon hover:bg-fb hover:text-white">
+                <a className="social-icon hover:bg-fb hover:text-white" href="https://www.facebook.com/#" target="_blank" rel="noreferrer">
                   <FacebookIcon />
-                </li>
-                <li className="social-icon hover:bg-insta hover:text-white">
+                </a>
+                <a className="social-icon hover:bg-insta hover:text-white" href="https://www.instagram.com/#" target="_blank" rel="noreferrer">
                   <InstagramIcon />
-                </li>
-                <li className="social-icon hover:bg-linkedin hover:text-white">
+                </a>
+                <a className="social-icon hover:bg-linkedin hover:text-white" href="https://www.linkedin.com/#" target="_blank" rel="noreferrer">
                   <LinkedInIcon />
-                </li>
-                <li className="social-icon hover:bg-yt hover:text-white">
+                </a>
+                <a className="social-icon hover:bg-yt hover:text-white" href="https://www.youtube.com/#" target="_blank" rel="noreferrer">
                   <YoutubeIcon />
-                </li>
-                <li className="social-icon hover:bg-twitter hover:text-white">
+                </a>
+                <a className="social-icon hover:bg-twitter hover:text-white" href="https://www.twitter.com/#" target="_blank" rel="noreferrer">
                   <TwitterIcon />
-                </li>
+                </a>
               </ul>
             </div>
           </div>
-          <h6 data-aos="fade-in" data-aos-offset="1" className="text-sm lg:mt-0 mt-8 md:mt-3 max-lg:text-center">
+          <h6 data-aos="fade-in" data-aos-offset="0" className="text-sm lg:mt-0 mt-3 max-md:text-center">
             <span>
               Design by
               {" "}

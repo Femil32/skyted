@@ -1,4 +1,5 @@
 import React from "react";
+import ContactUS from "../components/home/ContactUS";
 import Influencer from "../components/mediaKit/Influencer";
 import MeadiaKit from "../components/mediaKit/MeadiaKit";
 import Press from "../components/mediaKit/Press";
@@ -11,6 +12,7 @@ function MediaKit() {
       <Press />
       <Product />
       <Influencer />
+      <ContactUS />
     </main>
   );
 }

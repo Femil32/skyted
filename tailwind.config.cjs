@@ -23,9 +23,6 @@ module.exports = {
       borderRadius: {
         "4xl": "2.5rem",
       },
-      screens: {
-        "3xl": "1537px",
-      },
     },
   },
   // eslint-disable-next-line import/no-extraneous-dependencies, global-require

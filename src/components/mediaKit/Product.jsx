@@ -9,41 +9,44 @@ function Product() {
     {
       id: 0,
       imgUrl: MaskBlackIMG,
-      title: "SKYTED Audio – Silent Headset",
+      title: "Gamer Line – Silent Mask Headset",
       description: `Skyted is currently designing a new headset designed
-      to support passenger in their next travel. Combi Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit. Tenetur iure esse quaerat, error vero nobis itaque
-      magnam veniam tempore nemo at optio facere magni cumque, repellat impedit
-      voluptatibus sint molestias.`,
+      to support passenger in their next travel...More`,
     },
     {
       id: 1,
       imgUrl: MaskSideIMG,
-      title: "SKYTED Audio – Silent Headset",
+      title: "Business Line – Silent Mask Headset",
       description: `Skyted is currently designing a new headset designed
-      to support passenger in their next travel. Combi Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit. Tenetur iure esse quaerat, error vero nobis itaque
-      magnam veniam tempore nemo at optio facere magni cumque, repellat impedit
-      voluptatibus sint molestias.`,
+      to support passenger in their next travel. Combiget in
+      touch wih us to promote how we could support Silent
+      calls and silent games.`,
     },
   ]);
 
   return (
-    <section className="section-wrapper ">
-      <div className="section-container flex justify-center items-center flex-col gap-4 lg:gap-8">
+    <section className="section-container">
+      <div className="flex justify-center items-center flex-col gap-4 lg:gap-8">
         <PageHeader title="Our Product" />
         <div className="flex justify-center items-center gap-9 max-md:flex-col">
-          {
-            products?.map((product) => (
-              <div key={product.id} className="p-1 overflow-hidden max-w-lg">
-                <CustomIMG data-aos="fade-in" src={product.imgUrl} alt="mask" className="w-full rounded-3xl" />
-                <div className="mt-8">
-                  <h4 data-aos="fade-in" className="text-xl mb-4">{product.title}</h4>
-                  <p data-aos="fade-in" className="text-sm">{product.description}</p>
-                </div>
+          {products?.map((product) => (
+            <div key={product.id} className="p-1 overflow-hidden max-w-lg">
+              <CustomIMG
+                data-aos="fade-in"
+                src={product.imgUrl}
+                alt="mask"
+                className="w-full rounded-3xl"
+              />
+              <div className="mt-8">
+                <h4 data-aos="fade-in" className="text-xl mb-4">
+                  {product.title}
+                </h4>
+                <p data-aos="fade-in" className="text-sm">
+                  {product.description}
+                </p>
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
       </div>
     </section>
