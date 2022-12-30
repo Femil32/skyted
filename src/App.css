@@ -76,7 +76,7 @@ li.nav-link:hover{
 }
 
 .section-container {
-  @apply lg:px-24  py-8 px-6 w-full container mx-auto
+  @apply lg:px-24  py-8 px-6 w-full
 }
 
 
