@@ -3,8 +3,8 @@ import { CtaBtn, Input } from "../Micro";
 
 function Form() {
   return (
-    <section className="section-wrapper section-container py-0">
-      <form action="" className="lg:p-8 p-6 xl:mx-0 lg:mx-16 rounded-3xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
+    <section className="section-wrapper py-0">
+      <form action="" className=" section-container lg:p-8 p-6 xl:mx-0 lg:mx-16 rounded-3xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
         <h2 data-aos="fade-in" className="text-lg md:text-2xl font-medium md:mb-4 text-black">
           Sign up below to be the first to know about our Kickstarter
           {" "}

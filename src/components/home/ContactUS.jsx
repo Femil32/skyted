@@ -5,22 +5,24 @@ import {
 
 function ContactUS() {
   return (
-    <section className="section-wrapper section-container bg-white text-black">
-      <PageHeader data-aos="fade-in" title="Contact us" className="text-center mb-12" />
-      <form action="" className="p-8 rounded-2xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
-        <h2 data-aos="fade-in" className="text-lg md:text-2xl text-[#001432]/80 font-medium md:mb-4">Get in touch with us</h2>
-        <div className="flex gap-8 flex-col md:flex-row">
-          <Input data-aos="fade-in" className="flex-1 bg-white rounded-2xl" placeholder="Your full name" type="text" title="full_name" />
-          <Input data-aos="fade-in" className="flex-1 bg-white rounded-2xl" placeholder="Your email address" type="text" title="email" />
-          <Input data-aos="fade-in" className="flex-1 bg-white rounded-2xl" placeholder="Website" type="text" title="website" />
-        </div>
-        <div>
-          <TextArea data-aos="fade-in" placeholder="Write your comment here..." name="comment" className="bg-white rounded-2xl" rows={3} />
-        </div>
-        <div className="mx-auto">
-          <CtaBtn data-aos="fade-in" text="Submit" className="inline-block mx-auto bg-dark-blue text-white" />
-        </div>
-      </form>
+    <section className="section-wrapper  bg-white text-black">
+      <div className="section-container">
+        <PageHeader data-aos="fade-in" title="Contact us" className="text-center mb-12" />
+        <form action="" className="p-8 rounded-2xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden">
+          <h2 data-aos="fade-in" className="text-lg md:text-2xl text-[#001432]/80 font-medium md:mb-4">Get in touch with us</h2>
+          <div className="flex gap-8 flex-col md:flex-row">
+            <Input data-aos="fade-in" className="flex-1 bg-white rounded-2xl" placeholder="Your full name" type="text" title="full_name" />
+            <Input data-aos="fade-in" className="flex-1 bg-white rounded-2xl" placeholder="Your email address" type="text" title="email" />
+            <Input data-aos="fade-in" className="flex-1 bg-white rounded-2xl" placeholder="Website" type="text" title="website" />
+          </div>
+          <div>
+            <TextArea data-aos="fade-in" placeholder="Write your comment here..." name="comment" className="bg-white rounded-2xl" rows={3} />
+          </div>
+          <div className="mx-auto">
+            <CtaBtn data-aos="fade-in" text="Submit" className="inline-block mx-auto bg-dark-blue text-white" />
+          </div>
+        </form>
+      </div>
     </section>
   );
 }

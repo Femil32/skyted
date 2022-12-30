@@ -5,8 +5,8 @@ import Chair from "../../assets/imgs/about/chair.png";
 
 function Hero() {
   return (
-    <section className="section-wrapper section-container pb-0 py-20 md:pt-24 md:pb-0">
-      <div className="w-full grid sm:grid-cols-12 sm:gap-0 gap-10 border-b-2 lg:pb-24 sm:pb-16 pb-10">
+    <section className="section-wrapper  pb-0 py-20 md:pt-24 md:pb-0">
+      <div className="section-container w-full grid sm:grid-cols-12 sm:gap-0 gap-10 border-b-2 lg:pb-24 sm:pb-16 pb-10">
         <div className="sm:col-span-6 overflow-hidden flex flex-col h-full">
           <h1 data-aos="fade-in" className="xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-bold lg:mb-16 md:mb-12 mb-10">
             <span className="text-twitter">Skyted</span>

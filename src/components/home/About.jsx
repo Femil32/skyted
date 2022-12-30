@@ -15,8 +15,8 @@ function About() {
   // }, []);
 
   return (
-    <section className="section-wrapper section-container bg-white text-black">
-      <div>
+    <section className="section-wrapper  bg-white text-black">
+      <div className="section-container">
         <h5 data-aos="fade-in" className="red-header mb-5">About Skyted</h5>
         <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-12">
           <PageHeader data-aos="fade-in" title="Your Expert In Speech Privacy" className="max-w-md tracking-wide" />

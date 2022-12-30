@@ -21,8 +21,8 @@ function FactsAndFigures() {
     },
   ];
   return (
-    <section className="section-wrapper section-container">
-      <div>
+    <section className="section-wrapper">
+      <div className="section-container">
         <div className="flex flex-col justify-center items-center">
           <PageHeader data-aos="fade-in" title="Facts & figures" />
           <p data-aos="fade-in" className="text-gray-400 lg:text-base text-sm block relative max-md:text-center">Hybrid Work has a huge impact on the way we communicate</p>

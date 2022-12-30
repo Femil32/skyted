@@ -27,14 +27,14 @@ function PreOrder() {
   ]);
 
   return (
-    <section className="section-wrapper section-container">
-      <div className="lg:mx-16 xl:mx-0">
+    <section className="section-wrapper">
+      <div className="section-container lg:mx-16 xl:mx-0">
         <PageHeader data-aos="fade-in" title="Pre-order at huge discounts" className="text-center" />
         <div className="grid lg:grid-cols-2 gap-8 py-12">
           <div className="bg-gradient-radial from-white to-cyan-100 rounded-2xl p-8 lg:p-12 h-full flex flex-col items-start">
             <div>
               <h4 data-aos="fade-in" className="red-header mb-4">How to sign up for the Kickstarter Launch?</h4>
-              <p data-aos="fade-in" >
+              <p data-aos="fade-in">
                 We are planning to launch the Kickstarter
                 campaign in March 2023 where we will be
                 offering a huge discount off retail to all our early adopters.
@@ -46,7 +46,7 @@ function PreOrder() {
           <div className="bg-gradient-radial from-white to-blue-100 rounded-2xl p-8 lg:p-12">
             <div className="mb-8">
               <h4 data-aos="fade-in" className="red-header mb-4">Why Kickstarter?</h4>
-              <p data-aos="fade-in" >
+              <p data-aos="fade-in">
                 We believe that our crowdfunding model is the best way to cut the
                 middlemen and distribution. This allows us to ...Read more
               </p>

@@ -1,32 +1,39 @@
-import React, { useLayoutEffect, useRef } from "react";
-import { Outlet } from "react-router-dom";
-import { gsap } from "gsap-trial";
-import ScrollTrigger from "gsap-trial/ScrollTrigger";
-import ScrollSmoother from "gsap-trial/ScrollSmoother";
+import React, { useEffect, useRef } from "react";
+import AOS from "aos";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
+import Scroll from "../components/common/SmoothScroll";
 
 function Layout() {
-  const el = useRef();
-  const q = gsap.utils.selector(el);
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  const samt = useRef(0);
+  const location = useLocation();
 
-  useLayoutEffect(() => {
-    const smoother = ScrollSmoother.create({
-      content: ".content",
-      smooth: 2,
-      normalizeScroll: true,
-      ignoreMobileResize: true,
-      effects: true,
-    });
+  const AOSfn = () => {
+    if (samt.current <= 10) {
+      samt.current += 1;
+    } else {
+      samt.current = 0;
+      AOS.refresh();
+    }
+  };
 
-    return () => {
-      smoother.kill();
-    };
+  useEffect(() => {
+    AOS.init();
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("scroll", AOSfn);
+    return () => window.removeEventListener("scroll", AOSfn);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <div className="overflow-hidden">
+    <div className="flex flex-col h-screen" id="content">
+      <Scroll />
       <Header />
       <div className="content">
         <Outlet />
