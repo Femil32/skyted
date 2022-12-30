@@ -1,11 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+/* eslint-disable no-unsafe-optional-chaining */
+import React, {
+  useCallback, useEffect, useRef, useState,
+} from "react";
 import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import { CtaBtn, SkytedLogo } from "../components/Micro";
 import NavBar from "./NavBar";
 
-function Header() {
+function Header({ scrollbar }) {
   const location = useLocation();
   const navbar = useRef();
+  const prevpos = useRef(0);
 
   const [navState, setNavState] = useState({
     initial: false,
@@ -14,12 +19,6 @@ function Header() {
 
   const [isDisabled, setIsDisabled] = useState(false);
   const [isBlackHeader, setIsBlackHeader] = useState(false);
-
-  // useEffect(() => {
-  //   setNavState({
-  //     isClicked: false,
-  //   });
-  // }, [location]);
 
   const disableNav = () => {
     setIsDisabled(!isDisabled);
@@ -51,14 +50,17 @@ function Header() {
     }
   };
 
-  useEffect(() => {
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = () => {
-      const currentScrollPos = window.pageYOffset;
+  const handleHeader = useCallback(
+    () => {
+      const { y } = scrollbar?.offset;
+      let prevScrollpos = prevpos.current;
+      const currentScrollPos = y;
       if (prevScrollpos > currentScrollPos) {
         navbar.current.style.top = "0";
+        prevpos.current = y;
       } else {
         navbar.current.style.top = "-80px";
+        prevpos.current = y;
       }
       if (currentScrollPos !== 0) {
         navbar.current.classList.add(isBlackHeader ? "showNavWhite" : "showNavBlack");
@@ -68,8 +70,16 @@ function Header() {
         navbar.current.classList.remove("showNavBlack");
       }
       prevScrollpos = currentScrollPos;
-    };
-  }, [isBlackHeader, location]);
+    },
+    [isBlackHeader, scrollbar?.offset],
+  );
+
+  useEffect(() => {
+    scrollbar?.addListener(handleHeader);
+    // window.addEventListener("scroll", handleHeader);
+    // window.addEventListener("scroll", (handleHeader));
+    return () => scrollbar?.removeListener(handleHeader);
+  }, [handleHeader, scrollbar]);
 
   useEffect(() => {
     const { pathname } = location;
@@ -79,7 +89,7 @@ function Header() {
 
   return (
     <div id="navbar" ref={navbar} className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 left-0 w-full z-40 lg:px-24 px-6 justify-between ">
-      <div className="section-container">
+      <div className="section-container p-0">
         <div className="navbar-start">
           <div className="dropdown">
             <button type="button" className={`${navState.isClicked ? "text-white z-[99]" : "text-black"} ${isBlackHeader ? "text-black" : "text-white"} relative cursor-pointer h-6`} disabled={isDisabled} onClick={handleNav}>
@@ -100,5 +110,9 @@ function Header() {
     </div>
   );
 }
+
+Header.propTypes = {
+  scrollbar: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};
 
 export default Header;

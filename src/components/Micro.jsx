@@ -2,13 +2,20 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoWhiteIMG from "../assets/imgs/logo-white.png";
 import LogoBlackIMG from "../assets/imgs/logo-black.png";
-import { RoundedMinus, RoundedPlus, ShareArrow } from "./AllSvgs";
+import LogoWhiteIMG from "../assets/imgs/logo-white.png";
+import {
+  Download, RoundedMinus, RoundedPlus, ShareArrow,
+} from "./AllSvgs";
 
 // PageHeader
-export const PageHeader = ({ title, className, ...args }) => (
-  <h2 className={`xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-semibold mb:mb-8 mb-4 ${className}`} {...args}>
+export const PageHeader = ({
+  title, className, down, ...args
+}) => (
+  <h2
+    className={`xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-semibold mb:mb-8 mb-4 ${className}`}
+    {...args}
+  >
     {title}
   </h2>
 );
@@ -39,27 +46,46 @@ SlatePara.defaultProps = {
 };
 
 // CTA button
-export const CtaBtn = ({ text, className, ...args }) => (
-  <button type="button" className={`btn-white group shadow-sm  ${className}`} {...args}>
+export const CtaBtn = ({
+  type, text, className, down, ...args
+}) => (
+  <button
+    // eslint-disable-next-line react/button-has-type
+    type={type}
+    className={`btn-white group shadow-sm  ${className}`}
+    {...args}
+  >
     <span className="inline-block mr-2">{text}</span>
-    <ShareArrow width={12} />
+    {down ? <Download width={15} /> : <ShareArrow width={12} />}
   </button>
 );
 
 CtaBtn.propTypes = {
+  type: PropTypes.string,
   text: PropTypes.string,
   className: PropTypes.string,
 };
 CtaBtn.defaultProps = {
+  type: "button",
   text: "Button",
   className: "shdow-white",
 };
 
 // IconCard
 export const IconCard = ({
-  icon, title, description, link, linkText, className, btnClassName, ...args
+  icon,
+  title,
+  description,
+  link,
+  linkText,
+  className,
+  btnClassName,
+  ...args
 }) => (
-  <div className={`${className} p-6 ring-1 shadow-md md:ring-0 md:shadow-none  rounded-xl flex-1`} {...args}>
+  <div
+    className={`${className} p-6 ring-1 shadow-md md:ring-0 md:shadow-none  rounded-xl flex-1`}
+    {...args}
+  >
     <div className="flex h-full justify-center items-start flex-col gap-5">
       <div>{icon}</div>
       <h6 className="text-lg font-semibold">{title}</h6>
@@ -92,17 +118,29 @@ IconCard.defaultProps = {
 
 // custom input
 export const Input = ({
-  type, placeholder, className, title, ...args
-}) => <input type={type} title={title} placeholder={placeholder} className={`px-5 py-3 border-none outline-none ${className}`} {...args} />;
+  type, name, placeholder, className, title, ...args
+}) => (
+  <input
+    type={type}
+    title={title}
+    name={name ?? title}
+    placeholder={placeholder}
+    className={`px-5 py-3 border-none outline-none ${className}`}
+    autoComplete="off"
+    {...args}
+  />
+);
 
 Input.propTypes = {
   type: PropTypes.string,
+  name: PropTypes.string,
   className: PropTypes.string,
   placeholder: PropTypes.string,
   title: PropTypes.string,
 };
 Input.defaultProps = {
   type: "text",
+  name: null,
   className: "",
   placeholder: "Enter here",
   title: "",
@@ -110,8 +148,22 @@ Input.defaultProps = {
 
 // custom textarea
 export const TextArea = ({
-  placeholder, className, name, cols, rows, ...args
-}) => <textarea name={name} placeholder={placeholder} className={`px-5 py-3 w-full outline-none ${className}`} cols={cols} rows={rows} {...args} />;
+  placeholder,
+  className,
+  name,
+  cols,
+  rows,
+  ...args
+}) => (
+  <textarea
+    name={name}
+    placeholder={placeholder}
+    className={`px-5 py-3 w-full outline-none ${className}`}
+    cols={cols}
+    rows={rows}
+    {...args}
+  />
+);
 
 TextArea.propTypes = {
   className: PropTypes.string,
@@ -129,7 +181,11 @@ TextArea.defaultProps = {
 };
 
 export const Detail = ({
-  summary, detail, detailClassname, className, ...args
+  summary,
+  detail,
+  detailClassname,
+  className,
+  ...args
 }) => (
   <details className={`${className} cursor-pointer group`} {...args}>
     <summary className="flex justify-between items-center font-medium text-lg md:text-2xl">
@@ -141,7 +197,11 @@ export const Detail = ({
         <RoundedMinus width="20" />
       </div>
     </summary>
-    <p className={`${detailClassname} opacity-40 mt-4 text-base font-medium mr-4`}>{detail}</p>
+    <p
+      className={`${detailClassname} opacity-40 mt-4 text-base font-medium mr-4`}
+    >
+      {detail}
+    </p>
   </details>
 );
 
@@ -161,7 +221,11 @@ Detail.defaultProps = {
 
 export const SkytedLogo = ({ className, isBlack, ...args }) => (
   <div className={`${className} object-cover w-16 relative`} {...args}>
-    <img src={isBlack ? LogoBlackIMG : LogoWhiteIMG} alt="skyted" className="w-full h-full" />
+    <img
+      src={isBlack ? LogoBlackIMG : LogoWhiteIMG}
+      alt="skyted"
+      className="w-full h-full"
+    />
   </div>
 );
 
@@ -184,7 +248,7 @@ export const CustomIMG = ({
 );
 
 CustomIMG.propTypes = {
-  src: PropTypes.oneOfType([PropTypes.node]).isRequired,
+  src: PropTypes.element.isRequired,
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
   ImgClassName: PropTypes.string,

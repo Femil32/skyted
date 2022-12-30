@@ -8,8 +8,8 @@ function Campaign() {
   return (
     <main className="bg-white text-black">
       <Banner />
-      <Form />
       <PreOrder />
+      <Form />
       <FAQ />
     </main>
   );

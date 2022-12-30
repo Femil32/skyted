@@ -1,4 +1,5 @@
 import React from "react";
+import ContactUS from "../components/home/ContactUS";
 import Hero from "../components/product/Hero";
 import Problem from "../components/product/Problem";
 import Technology from "../components/product/Technology";
@@ -9,6 +10,7 @@ function Product() {
       <Hero />
       <Problem />
       <Technology />
+      <ContactUS />
     </main>
   );
 }

@@ -10,6 +10,7 @@ details>summary::-webkit-details-marker {
   display: none;
 }
 
+
 .scrollbar-track{
   background-color: transparent !important;
 }
@@ -23,6 +24,13 @@ details>summary::-webkit-details-marker {
   width:12px !important;
   background-color: black !important;
   border-radius: 0 !important;
+}
+
+.scroll-content{
+  height: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 
@@ -60,18 +68,15 @@ li.nav-link:hover{
 }
 
 .state-digit {
-  @apply text-xl md:text-5xl font-semibold mb-1  md:mb-4 md:text-left
+  @apply text-xl  md:text-5xl font-semibold mb-1  md:mb-4 md:text-left text-white
 }
 
 .gray-discription {
   @apply max-w-[250px] relative text-gray-100 opacity-70 text-xs md:text-base md:text-left
 }
 
-.section-wrapper {
-  @apply lg:px-24 lg:py-[88px] py-8 px-6 w-full
-}
 .section-container {
-  @apply container mx-auto
+  @apply lg:px-24  py-8 px-6 w-full container mx-auto
 }
 
 

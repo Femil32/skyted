@@ -4,6 +4,7 @@ import Hero from "../components/about/Hero";
 import MarketAndWhy from "../components/about/MarketAndWhy";
 import Mission from "../components/about/Mission";
 import Profiles from "../components/about/Profiles";
+import ContactUS from "../components/home/ContactUS";
 
 function About() {
   return (
@@ -13,6 +14,7 @@ function About() {
       <Profiles />
       <FactsAndFigures />
       <MarketAndWhy />
+      <ContactUS />
     </main>
   );
 }
