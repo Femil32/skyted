@@ -1,7 +1,6 @@
 import React from "react";
-import { CustomIMG } from "../Micro";
 import CeoIMG from "../../assets/imgs/about/ceo.png";
-import { LeftArrowIcon } from "../AllSvgs";
+import { CustomIMG } from "../Micro";
 
 function Profiles() {
   return (

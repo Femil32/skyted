@@ -5,7 +5,7 @@ function FAQ() {
   const [faqs, setFaqs] = useState([
     {
       summary: "Where can we find Skyted Mask?",
-      detail: "Yes. Skyted technology incorporates 100 of resonators and can be customize to any particular voice;We plan to customize masks to some customers with a wide selection of materials, Absorption power and mask design.",
+      detail: "You can pre-order for our mask on Kickstarter. We plan to launch a Kickstarter campaign in March 2023.",
     },
     {
       summary: "How does the pairing work?",
@@ -13,11 +13,11 @@ function FAQ() {
     },
     {
       summary: "Do you plan to launch a VIP Line?",
-      detail: "Yes. Skyted technology incorporates 100 of resonators and can be customize to any particular voice;We plan to customize masks to some customers with a wide selection of materials, Absorption power and mask design.",
+      detail: "Through voice frequency analysis, Skyted can custom design a bespoke product for any user.",
     },
     {
       summary: "What kind of sound reduction can we expect?",
-      detail: "Yes. Skyted technology incorporates 100 of resonators and can be customize to any particular voice;We plan to customize masks to some customers with a wide selection of materials, Absorption power and mask design.",
+      detail: "We will soon release sound absorption data calculated by the French Aerospace Lab, Onera.",
     },
     {
       summary: "What is the product made of?",

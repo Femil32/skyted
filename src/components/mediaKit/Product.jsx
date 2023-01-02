@@ -10,17 +10,13 @@ function Product() {
       id: 0,
       imgUrl: MaskBlackIMG,
       title: "Gamer Line – Silent Mask Headset",
-      description: `Skyted is currently designing a new headset designed
-      to support passenger in their next travel...More`,
+      description: "Inspired by the pure love for video gaming, Skyted launches a mask designed specifically for gamers. A comfortable, easy to breathe through soundproof mask that allows you to play games anywhere, anytime. Scream and shout without the worry of disturbing anyone.",
     },
     {
       id: 1,
       imgUrl: MaskSideIMG,
       title: "Business Line – Silent Mask Headset",
-      description: `Skyted is currently designing a new headset designed
-      to support passenger in their next travel. Combiget in
-      touch wih us to promote how we could support Silent
-      calls and silent games.`,
+      description: "A mask that silences your voice and helps you make confidential calls in noisy crowded environments. Developed using open air technology which makes it comfortable to wear and make calls anytime anywhere.",
     },
   ]);
 

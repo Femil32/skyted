@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Controller, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { CtaBtn, CustomIMG, PageHeader } from "../Micro";
 import "swiper/css";
+import { CtaBtn, CustomIMG, PageHeader } from "../Micro";
 
 // imgs
 import News1IMG from "../../assets/imgs/profileKit/news1.png";
@@ -10,7 +8,6 @@ import News2IMG from "../../assets/imgs/profileKit/news2.png";
 import News3IMG from "../../assets/imgs/profileKit/news3.png";
 import News4IMG from "../../assets/imgs/profileKit/news4.png";
 import News5IMG from "../../assets/imgs/profileKit/news5.png";
-import MaskNoire from "../../assets/imgs/bluemask.png";
 
 const Press = () => {
   // store swiper instances
@@ -44,7 +41,7 @@ const Press = () => {
 
   return (
     <section className="section-container py-0 mb-10">
-      <div className="flex flex-col justify-center items-center mb-16">
+      <div className="flex flex-col justify-center items-center mb-16 pt-24">
         <PageHeader
           data-aos="fade-in"
           data-aos-delay="300"

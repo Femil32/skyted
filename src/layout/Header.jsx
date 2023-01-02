@@ -100,7 +100,7 @@ function Header({ scrollbar }) {
           </div>
         </div>
         <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2">
-          <SkytedLogo className="md:w-32 w-18" isBlack={isBlackHeader} />
+          <SkytedLogo isRed isHome={location.pathname.length === 1} />
         </div>
         <div className="hidden md:inline-flex navbar-end ">
           <CtaBtn text="Let’s Connect" className={`${isBlackHeader ? "text-white bg-black" : "text-black bg-white"} xl:text-base text-sm`} />

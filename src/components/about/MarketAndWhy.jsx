@@ -25,7 +25,7 @@ function MarketAndWhy() {
           data-aos="fade-in"
           dataClasses="order-2 md:pl-6"
           title="Why now?"
-          description={
+          description={(
             <>
               <p>
                 Skyted is laser focused to absorb or convert the Voice energy to
@@ -46,7 +46,7 @@ function MarketAndWhy() {
                 pain point and give back freedom of speech to everybody.
               </p>
             </>
-          }
+          )}
           src={HeadphoneManIMG}
           alt="HeadphoneManIMG"
         />

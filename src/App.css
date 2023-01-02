@@ -159,3 +159,30 @@ body {
   height: 300px;
   margin: 20px 0;
 } */
+
+
+/* influence */
+#mc_embed_signup{
+  background:#fff;
+   clear:left;
+   font:14px Helvetica,
+   Arial,sans-serif;
+  width:600px;
+}
+
+.product-bg{
+  background: url('./assets/imgs/product/hero-bg.png'), url('./assets/imgs/product/bg-gray.png');
+  background-position: left center, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: contain cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-bg {
+    background: url('./assets/imgs/product/hero-bg-center.png'), url('./assets/imgs/product/bg-gray.png');
+    background-position: top center , center;
+    background-size: contain ,contain;
+  background-repeat: no-repeat, repeat;
+
+  }
+}

@@ -4,7 +4,7 @@ import { PageHeader } from "../Micro";
 function FactsAndFigures() {
   const facts = [
     {
-      title: "1 Billion",
+      title: "1 billion",
       description: `Daily meeting participants on main
         video confencing solutions (Zoom,
         Google, Microsoft, Cisco)`,

@@ -2,8 +2,11 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
+// logos
 import LogoBlackIMG from "../assets/imgs/logo-black.png";
 import LogoWhiteIMG from "../assets/imgs/logo-white.png";
+import LogoRedIMG from "../assets/imgs/red-logo.png";
+import LogoRoundBlackIMG from "../assets/imgs/logo.png";
 import {
   Download, RoundedMinus, RoundedPlus, ShareArrow,
 } from "./AllSvgs";
@@ -123,7 +126,6 @@ export const Input = ({
   <input
     type={type}
     title={title}
-    name={name ?? title}
     placeholder={placeholder}
     className={`px-5 py-3 border-none outline-none ${className}`}
     autoComplete="off"
@@ -219,10 +221,13 @@ Detail.defaultProps = {
   detailClassname: "max-w-md",
 };
 
-export const SkytedLogo = ({ className, isBlack, ...args }) => (
-  <div className={`${className} object-cover w-16 relative`} {...args}>
+export const SkytedLogo = ({
+  className, isBlack, isRed, isHome, ...args
+}) => (
+  <div className={`${className} object-contain ${isRed ? "w-14" : "md:w-32 w-18"} relative`} {...args}>
     <img
-      src={isBlack ? LogoBlackIMG : LogoWhiteIMG}
+      src={LogoRedIMG}
+      // src={isBlack ? LogoBlackIMG : (isRed ? (isHome ? LogoRoundBlackIMG : LogoRedIMG) : LogoWhiteIMG)}
       alt="skyted"
       className="w-full h-full"
     />
@@ -232,11 +237,15 @@ export const SkytedLogo = ({ className, isBlack, ...args }) => (
 SkytedLogo.propTypes = {
   className: PropTypes.string,
   isBlack: PropTypes.bool,
+  isRed: PropTypes.bool,
+  isHome: PropTypes.bool,
 };
 
 SkytedLogo.defaultProps = {
   className: "",
   isBlack: false,
+  isRed: false,
+  isHome: false,
 };
 
 export const CustomIMG = ({
