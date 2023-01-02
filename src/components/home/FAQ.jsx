@@ -12,21 +12,17 @@ function FAQ() {
     {
       summary: "Where can we find Skyted Mask?",
       detail:
-        "1 The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
+        "You can pre-order for our mask on Kickstarter. We plan to launch a Kickstarter campaign in March 2023.",
     },
     {
       summary: "What kind of sound reduction can we expect?",
       detail:
-        "2 The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
+        "We will soon release sound absorption data calculated by the French Aerospace Lab, Onera.",
     },
-    // {
-    //   summary: "Do you plan to launch a VIP Line?",
-    //   detail: "3 The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
-    // },
     {
       summary: "Do you plan to launch a VIP Line?",
       detail:
-        "The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
+        "Through voice frequency analysis, Skyted can custom design a bespoke product for any user.",
     },
   ]);
 
@@ -44,14 +40,14 @@ function FAQ() {
             />
             <SlatePara
               data-aos="fade-in"
-              text={
+              text={(
                 <div>
                   Everything you want to know about is right here at your
                   fingertips. If we haven’t answered your question, email us at
                   &nbsp;
                   <a href="mailto:info@skyted.io">info@skyted.io</a>
                 </div>
-              }
+              )}
             />
           </div>
         </div>

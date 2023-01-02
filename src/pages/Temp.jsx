@@ -1,71 +1,55 @@
-import React, { useState } from "react";
-import { Controller } from "swiper";
-import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
 
-import News1IMG from "../assets/imgs/profileKit/news-1.png";
-import News2IMG from "../assets/imgs/profileKit/news-2.png";
-import News3IMG from "../assets/imgs/profileKit/news-3.png";
-import News4IMG from "../assets/imgs/profileKit/news-4.png";
-import { CustomIMG } from "../components/Micro";
+const Temp = () => (
 
-const Temp = () => {
-  // store swiper instances
-  const [firstSwiper, setFirstSwiper] = useState(null);
-  const [secondSwiper, setSecondSwiper] = useState(null);
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  // eslint-disable-next-line no-unused-vars
-  const [swiperImgs, setSwiperImgs] = useState([
-    News1IMG,
-    News2IMG,
-    News3IMG,
-    News4IMG,
-  ]);
-
-  return (
-    <main className="flex gap-4 px-6 h-[650px]">
-      <div className="w-4/5">
-        <Swiper
-          spaceBetween={30}
-          modules={[Controller]}
-          onSwiper={setFirstSwiper}
-          controller={{ control: secondSwiper }}
-          className="h-full"
-        >
-          {swiperImgs.map((img, i) => (
-            <SwiperSlide key={i} className="bg-transparent rounded-3xl overflow-hidden">
-              <CustomIMG src={img} alt="news" className="w-full h-full" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  <div id="mc_embed_signup">
+    <form action="https://alumnair.us1.list-manage.com/subscribe/post?u=13691f994582aaf2190f0c8d2&amp;id=b807faeffb&amp;f_id=007233e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
+      <div id="mc_embed_signup_scroll">
+        <h2>General</h2>
+        <div className="indicates-required">
+          <span className="asterisk">*</span>
+          {" "}
+          indicates required
+        </div>
+        <div className="mc-field-group">
+          <label htmlFor="mce-FNAME">Full Name </label>
+          <input type="text" name="FNAME" className="" id="mce-FNAME" />
+          <span id="mce-FNAME-HELPERTEXT" className="helper_text" />
+        </div>
+        <div className="mc-field-group">
+          <label htmlFor="mce-EMAIL">
+            Email Address
+            {" "}
+            <span className="asterisk">*</span>
+          </label>
+          <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" required />
+          <span id="mce-EMAIL-HELPERTEXT" className="helper_text" />
+        </div>
+        <div className="mc-field-group size1of2">
+          <label htmlFor="mce-MMERGE3">Mobile Number </label>
+          <input type="text" name="MMERGE3" className="" id="mce-MMERGE3" />
+          <span id="mce-MMERGE3-HELPERTEXT" className="helper_text" />
+        </div>
+        <div className="mc-field-group">
+          <label htmlFor="mce-MMERGE2">Comment </label>
+          <input type="text" name="MMERGE2" className="" id="mce-MMERGE2" />
+          <span id="mce-MMERGE2-HELPERTEXT" className="helper_text" />
+        </div>
+        <div hidden="true"><input type="hidden" name="tags" value="5620685" /></div>
+        <div id="mce-responses" className="clear foot">
+          <div className="response" id="mce-error-response" style={{ display: "none" }} />
+          <div className="response" id="mce-success-response" style={{ display: "none" }} />
+        </div>
+        <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true"><input type="text" name="b_13691f994582aaf2190f0c8d2_b807faeffb" tabIndex="-1" /></div>
+        <div className="optionalParent">
+          <div className="clear foot">
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button" />
+          </div>
+        </div>
       </div>
-      <div className="w-1/5">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          modules={[Controller]}
-          onSwiper={setSecondSwiper}
-          controller={{ control: firstSwiper }}
-          direction="vertical"
-          className="h-full"
-        >
-          {swiperImgs.map((img, j) => (
-            <SwiperSlide
-              className="bg-transparent "
-              key={j}
-              onClick={() => {
-                firstSwiper.slideTo(j);
-                setActiveSlide(j);
-              }}
-            >
-              <CustomIMG src={img} alt="news" className={`${j === activeSlide ? "border-red-600" : "border-transparent"} border-2  w-full h-full rounded-3xl overflow-hidden`} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </main>
-  );
-};
+    </form>
+  </div>
+
+);
 
 export default Temp;

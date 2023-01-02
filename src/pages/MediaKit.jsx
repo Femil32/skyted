@@ -1,14 +1,13 @@
 import React from "react";
 import ContactUS from "../components/home/ContactUS";
 import Influencer from "../components/mediaKit/Influencer";
-import MeadiaKit from "../components/mediaKit/MeadiaKit";
 import Press from "../components/mediaKit/Press";
 import Product from "../components/mediaKit/Product";
 
 function MediaKit() {
   return (
     <main className="bg-white text-black">
-      <MeadiaKit />
+      {/* <MeadiaKit /> */}
       <Press />
       <Product />
       <Influencer />
