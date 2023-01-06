@@ -38,8 +38,8 @@ const Hero = () => {
               <div className="md:mb-8 animate">
                 <h2 className="state-digit">56%</h2>
                 <p className="gray-discription">
-                  92 million US workforce is working remotely leading to virtual
-                  meets in airport lounges, shared work spaces, at home etc
+                  In the US 92 million people are working remotely, meaning virtual
+                  meetings in airport lounges, shared work spaces, at home etc.
                 </p>
               </div>
               <div className="animate">
@@ -60,9 +60,9 @@ const Hero = () => {
             <div className="data h-full self-baseline">
               <article className="md:text-left text-center md:max-w-xs">
                 <p className="font-light text-light-gray/60">
-                  Based in Toulouse, France, we have a designed a disruptive
-                  sound absorbing open air mask. We are backed by AIRBUS and the
-                  European Space Agency to introduce inflight calls.
+                  Based in Toulouse, France, we have designed a disruptive sound
+                  absorbing open air mask. We are backed by AIRBUS and the European
+                  Space Agency to achieve our vision of silent inflight calls.
                 </p>
               </article>
             </div>
@@ -83,9 +83,9 @@ const Hero = () => {
           <div className="data h-full self-baseline">
             <article className=" text-center">
               <p className="font-light text-light-gray/60">
-                Based in Toulouse, France, we have a designed a disruptive sound
-                absorbing open air mask. We are backed by AIRBUS and the
-                European Space Agency to introduce inflight calls.
+                Based in Toulouse, France, we have designed a disruptive
+                sound absorbing open air mask. We are backed by AIRBUS and the European
+                Space Agency to achieve our vision of silent inflight calls.
               </p>
             </article>
           </div>
@@ -95,8 +95,8 @@ const Hero = () => {
               <div className=" animate">
                 <h2 className="state-digit">56%</h2>
                 <p className="gray-discription">
-                  92 million US workforce is working remotely leading to virtual
-                  meets in airport lounges, shared work spaces, at home etc
+                  In the US 92 million people are working remotely, meaning virtual
+                  meetings in airport lounges, shared work spaces, at home etc.
                 </p>
               </div>
               <div className="animate">

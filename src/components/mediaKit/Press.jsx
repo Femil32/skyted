@@ -19,23 +19,27 @@ const Press = () => {
       id: 0,
       imgUrl: News2IMG,
       description: "Skyted is currently designing a new headset designed.",
+      link: "https://thegadgetflow.com/portfolio/skyted-speech-privacy-mask-eliminates-sound-for-private-calls-in-real-virtual-worlds/",
     },
     {
       id: 1,
       imgUrl: News3IMG,
       description:
         "Skyted invente un casque pour passer des appels en public sans.",
+      link: "https://www.mirror.co.uk/news/us-news/tech-inventions-kick-2023-baby-28876632",
     },
     {
       id: 2,
       imgUrl: News4IMG,
       description: "Skyted is currently designing a new headset designed.",
+      link: "https://www.reuters.com/news/picture/fresh-tech-unveiled-at-ces-idUSRTSER34M",
     },
     {
       id: 3,
       imgUrl: News5IMG,
       description:
         "Skyted invente un casque pour passer des appels en public sans.",
+      link: "https://www.telegraph.co.uk/business/2023/01/04/fruit-scanner-help-shoppers-determine-when-avocados-ripe/",
     },
   ]);
 
@@ -67,15 +71,15 @@ const Press = () => {
       <div className="flex gap-8">
         <div className="w-1/2 grid grid-cols-2 gap-12">
           {allPress.map((press) => (
-            <div className="w-full h-full" key={press.id}>
+            <a href={press.link} target="_blank" className="w-full h-full group" key={press.id} rel="noreferrer">
               <div>
                 <CustomIMG
                   src={press.imgUrl}
                   className="overflow-hidden rounded-xl mb-4 shadow-2xl"
                 />
               </div>
-              <p className="text-lg font-medium">{press.description}</p>
-            </div>
+              <p className="text-lg font-medium group-hover:text-blue-500 transition-all">{press.description}</p>
+            </a>
           ))}
         </div>
         <div className="w-1/2">
