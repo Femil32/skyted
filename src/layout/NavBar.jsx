@@ -59,6 +59,11 @@ const NavBar = ({ navState, handleNav }) => {
       link: "/contact",
       state: {},
     },
+    {
+      title: "News",
+      link: "/news",
+      state: {},
+    },
   ];
 
   const nav = useRef();

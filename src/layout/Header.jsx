@@ -89,7 +89,7 @@ function Header({ scrollbar }) {
 
   return (
     <div id="navbar" ref={navbar} className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 left-0 w-full z-40 lg:px-24 px-6 justify-between py-6">
-      <div className="section-container p-0">
+      <div className="section-container p-0 max-md:justify-between">
         <div className="navbar-start">
           <div className="dropdown">
             <button type="button" className={`${navState.isClicked ? "text-white z-[99]" : "text-black"} ${isBlackHeader ? "text-black" : "text-white"} relative cursor-pointer h-6`} disabled={isDisabled} onClick={handleNav}>

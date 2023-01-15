@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import AOS from "aos";
 
@@ -7,16 +7,20 @@ import "./App.css";
 import "aos/dist/aos.css";
 // Layout
 import Layout from "./layout";
-import About from "./pages/About";
-import Campaign from "./pages/Campaign";
-import CES from "./pages/CES";
-import Contact from "./pages/Contact";
+import Loader from "./components/common/Loader";
+
+const About = lazy(() => import("./pages/About"));
+const Campaign = lazy(() => import("./pages/Campaign"));
+const CES = lazy(() => import("./pages/CES"));
+const Contact = lazy(() => import("./pages/Contact"));
 // pages
-import Home from "./pages/Home";
-import Product from "./pages/Product";
-import MediaKit from "./pages/MediaKit";
-import Services from "./pages/Services";
-import Temp from "./pages/Temp";
+const Home = lazy(() => import("./pages/Home"));
+const Product = lazy(() => import("./pages/Product"));
+const MediaKit = lazy(() => import("./pages/MediaKit"));
+const Services = lazy(() => import("./pages/Services"));
+const Temp = lazy(() => import("./pages/Temp"));
+const News = lazy(() => import("./pages/News"));
+const SingleBlog = lazy(() => import("./pages/SingleBlog"));
 
 function App() {
   const location = useLocation();
@@ -30,7 +34,7 @@ function App() {
   }, [location]);
 
   return (
-    <Suspense fallback="Loading ...">
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route element={<Layout />}>
           <Route index path="/" element={<Home />} />
@@ -41,6 +45,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/media-kit" element={<MediaKit />} />
           <Route path="/campaign" element={<Campaign />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:id" element={<SingleBlog />} />
         </Route>
         <Route path="/temp" element={<Temp />} />
         <Route index path="*" element={<p> not found</p>} />
