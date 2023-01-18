@@ -9,6 +9,7 @@ import Factors from "../components/home/Factors";
 import FAQ from "../components/home/FAQ";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
+import MeadiaOutlets from "../components/home/MeadiaOutlets";
 import Patners from "../components/home/Patners";
 
 const Home = () => (
@@ -17,6 +18,7 @@ const Home = () => (
     <Form setMargins />
     <Patners />
     <About />
+    <MeadiaOutlets />
     <Features />
     <Factors />
     <Events />

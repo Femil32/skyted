@@ -10,18 +10,17 @@ const points = [
   },
   {
     point:
-      "Compared to Covid mask: the airflow can move without constraints in and out of the mask as it does from a jet Engine.",
+      "●Compared to a COVID mask: the airflow can move without constraints in and out of the mask as it does from a jet engine.",
+  },
+  {
+    point: "By using cutting edge aerospace & acoustic technology, Skyted is able to reduce mask size by 1/10th of competitor mask size.",
+  },
+  {
+    point: "Product is manufactured with bio sourced or recycled materials.",
   },
   {
     point:
-      "  By using cutting edge aerospace & acoustic technology, Skyted is able to reduce mask size by 1/10th of competitor mask size.",
-  },
-  {
-    point: "Product is manufactured with bio sourced or recycled material.",
-  },
-  {
-    point:
-      "Product is earbud agnostic and can pair with any phone or call operators like Zoom through a Bluetooth connection.",
+      "Product is earbud agnostic and can pair with any phone or video conferencing such Zoom through a Bluetooth connection.",
   },
 ];
 

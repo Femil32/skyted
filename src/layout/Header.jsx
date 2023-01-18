@@ -59,7 +59,7 @@ function Header({ scrollbar }) {
         navbar.current.style.top = "0";
         prevpos.current = y;
       } else {
-        navbar.current.style.top = "-80px";
+        navbar.current.style.top = "-88px";
         prevpos.current = y;
       }
       if (currentScrollPos !== 0) {
@@ -88,8 +88,8 @@ function Header({ scrollbar }) {
   }, [location]);
 
   return (
-    <div id="navbar" ref={navbar} className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 left-0 w-full z-40 lg:px-24 px-6 justify-between ">
-      <div className="section-container p-0">
+    <div id="navbar" ref={navbar} className="navbar border-0 outline-0 transition-all duration-700 fixed top-0 left-0 w-full z-40 lg:px-24 px-6 justify-between py-6">
+      <div className="section-container p-0 max-md:justify-between">
         <div className="navbar-start">
           <div className="dropdown">
             <button type="button" className={`${navState.isClicked ? "text-white z-[99]" : "text-black"} ${isBlackHeader ? "text-black" : "text-white"} relative cursor-pointer h-6`} disabled={isDisabled} onClick={handleNav}>
@@ -100,7 +100,7 @@ function Header({ scrollbar }) {
           </div>
         </div>
         <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2">
-          <SkytedLogo isRed isHome={location.pathname.length === 1} />
+          <SkytedLogo isRed isHome={location.pathname.length === 1} className="w-20" />
         </div>
         <div className="hidden md:inline-flex navbar-end ">
           <CtaBtn text="Let’s Connect" className={`${isBlackHeader ? "text-white bg-black" : "text-black bg-white"} xl:text-base text-sm`} />

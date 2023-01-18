@@ -23,23 +23,22 @@ function Form(setMargins) {
               data-aos="fade-in"
               className="text-lg md:text-2xl font-medium md:mb-4 text-black"
             >
-              Get early bird discounts
+              Reserve Skyted at CES Price
               <p className="w-full md:max-w-[500px] text-base mt-4">
-                We’re launching soon. Sign up today and be the first to
-                get huge discounts on launch day.
+                We&apos;re launching soon on Kickstarter. Sign up today and reserve skyted mask
+                at CES price. CES price is only valid till 8th January 2023.
               </p>
             </h2>
           </div>
           <div className="flex align self-center">
             <div>
               <div className="mc-field-group">
-
                 <input
                   data-aos="fade-in"
                   type="email"
                   name="EMAIL"
                   id="mce-EMAIL"
-                  className="px-5 py-3 border-none outline-none min-w-[28rem] required email flex-1 bg-white text-black rounded-2xl py-4 h-11 text-base mr-4"
+                  className="px-5 border-none outline-none min-w-[28rem] required email flex-1 bg-white text-black rounded-2xl py-4 h-11 text-base mr-4"
                   placeholder="Email"
                   required
                 />
@@ -57,7 +56,7 @@ function Form(setMargins) {
               id="mc-embedded-subscribe"
               type="submit"
               text="Sign up today"
-              className=" bg-dark-blue text-white"
+              className=" bg-dark-blue text-white rounded-2xl"
               style={{ margin: 0 }}
             />
           </div>

@@ -31,7 +31,7 @@ function Hero() {
               className="text-black"
               data-aos="fade-in"
               data-aos-delay="500"
-              text="Come and see us on booth 61211-10 (5th Jan’23-8th Jan’23) at Eureka Park to get a glimpse of our project. Please delete other line."
+              text="Come and see us on booth 61211-10 (5th Jan’23 - 31th Jan’23) at Eureka Park to get a glimpse of our project. Please delete other line."
             />
             <SlatePara
               data-aos="fade-in"

@@ -9,7 +9,7 @@ function FAQ() {
     },
     {
       summary: "How does the pairing work?",
-      detail: "Yes. Skyted technology incorporates 100 of resonators and can be customize to any particular voice;We plan to customize masks to some customers with a wide selection of materials, Absorption power and mask design.",
+      detail: "The mask integrates a Pcb that can pair with any phone, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
     },
     {
       summary: "Do you plan to launch a VIP Line?",

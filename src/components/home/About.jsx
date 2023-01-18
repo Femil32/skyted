@@ -28,12 +28,7 @@ function About() {
           />
           <SlatePara
             data-aos="fade-in"
-            text={`Developed using breakthrough Aerospace technology, our “voice silencer” solution provides absolute
-            soundlessness for private and confidential calls in both the real and virtual worlds. Perfect for the hybrid
-            workplace, Skyted provides the “new nomads” with total comfort and speech privacy in aircrafts, open
-            workspaces and on public transport as well as in the virtual world through both the Metaverse and
-            online gaming.
-            `}
+            text="Developed using breakthrough aerospace technology, our “voice silencer” solution contains sound for private and confidential calls in both the real and virtual worlds. Perfect for the hybrid workplace, Skyted provides the “new nomads” with total comfort and speech privacy in aircraft, open workspaces and on public transport as well as in the virtual world through both the Metaverse and online gaming."
             className="max-w-xl font-normal"
           />
         </div>

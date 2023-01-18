@@ -59,6 +59,11 @@ const NavBar = ({ navState, handleNav }) => {
       link: "/contact",
       state: {},
     },
+    {
+      title: "News",
+      link: "/news",
+      state: {},
+    },
   ];
 
   const nav = useRef();
@@ -138,14 +143,14 @@ const NavBar = ({ navState, handleNav }) => {
       <div className="wrapper md:justify-between justify-center items-center section-container h-full w-full flex z-50 relative flex-col md:flex-row max-sm:gap-10">
         <div className="flex relative md:justify-between justify-center w-full items-start text-center sm:text-left">
           <div className="">
-            <ul className="nav-links md:space-y-4 space-y-2 leading-3">
+            <ul className="nav-links md:space-y-3 space-y-2 leading-3">
               {navLinks.map((link, i) => (
                 <li key={i} className="nav-link">
                   <NavLink
                     onClick={() => handleNav(true)}
                     to={link.link}
                     state={link.state}
-                    className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold xl:text-6xl lg:text-3xl text-xl uppercase
+                    className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold xl:text-5xl lg:text-3xl text-xl uppercase
                       tracking-tight px-2`}
                   >
                     {link.title}
@@ -182,7 +187,7 @@ const NavBar = ({ navState, handleNav }) => {
                 href="mailto:info@skypted.io"
                 className="underline block lg:text-base text-sm"
               >
-                info@skypted.io
+                info@skyted.io
               </a>
             </div>
           </aside>

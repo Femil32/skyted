@@ -6,8 +6,7 @@ function FAQ() {
   const [allFaq, setAllFaq] = useState([
     {
       summary: "How does the pairing work?",
-      detail:
-        "The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
+      detail: "The mask integrates a Pcb that can pair with any phone, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
     },
     {
       summary: "Where can we find Skyted Mask?",
