@@ -1,7 +1,8 @@
 import React from "react";
+import { parseHtml } from "../../helpers";
 import { PageHeader } from "../Micro";
 
-function FactsAndFigures() {
+function FactsAndFigures({ response }) {
   const facts = [
     {
       title: "1 billion",
@@ -24,19 +25,26 @@ function FactsAndFigures() {
     <section className="section-container">
       <div>
         <div className="flex flex-col justify-center items-center">
-          <PageHeader title="Facts & figures" />
-          <p className="text-gray-400 lg:text-base text-sm block relative max-md:text-center">Hybrid Work has a huge impact on the way we communicate</p>
+          <PageHeader title={response?.Title} />
+          <p className="text-gray-400 lg:text-base text-sm block relative max-md:text-center">{response?.Description}</p>
         </div>
         <div className="flex md:flex-nowrap flex-wrap gap-5 md:justify-between justify-center max-w-7xl mx-auto xl:my-16 lg:my-12 md:my-10 my-8">
-          {facts.map((fact) => (
+          {response?.FactList?.map((fact) => (
             <div className="max-w-xs text-center w-full">
-              <h2 className="text-twitter xl:mb-10 md:mb-8 mb-5 font-bold xl:text-5xl lg:text-4xl sm:text-3xl text-2xl">{fact.title}</h2>
-              <p className="xl:text-xl lg:text-lg md:text-base text-sm">{fact.description}</p>
+              <h2 className="text-twitter xl:mb-10 md:mb-8 mb-5 font-bold xl:text-5xl lg:text-4xl sm:text-3xl text-2xl">{fact.FactListTitle}</h2>
+              <p className="xl:text-xl lg:text-lg md:text-base text-sm">{fact.FactListDescription}</p>
             </div>
           ))}
         </div>
         <div className="flex md:flex-nowrap flex-wrap xl:gap-16 lg:gap-12 gap-10">
-          <div className="md:flex-1 lg:p-10 p-5 xl:text-xl lg:text-lg md:text-base text-sm rounded-2xl bg-gradient-radial from-white to-cyan-100">
+          {response?.FiguresListing?.map((figure, i) => (
+            <div className={`md:flex-1 lg:p-10 p-5 xl:text-xl lg:text-lg md:text-base text-sm rounded-2xl bg-gradient-radial ${i % 2 === 0 ? "from-white to-cyan-100" : "from-white to-blue-100"}`}>
+              <p className="max-w-sm tracking-wide md:leading-[35px] leading-[28px]">
+                {parseHtml(figure?.FiguresText)}
+              </p>
+            </div>
+          ))}
+          {/* <div className="md:flex-1 lg:p-10 p-5 xl:text-xl lg:text-lg md:text-base text-sm rounded-2xl bg-gradient-radial from-white to-cyan-100">
             <p className="max-w-sm tracking-wide md:leading-[35px] leading-[28px]">
               Millions of workers are handling calls in adverse conditions
               <br />
@@ -51,7 +59,7 @@ function FactsAndFigures() {
               <br />
               Voice is pollution post mike recording.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

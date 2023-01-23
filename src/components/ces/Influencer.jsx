@@ -1,19 +1,16 @@
 import React from "react";
+import { getImg } from "../../helpers";
 import { CustomIMG, PageHeader } from "../Micro";
-import InfluencerImg from "../../assets/imgs/ces/influencer.png";
 
-function Influencer() {
+function Influencer({ response }) {
   return (
     <section className="section-container">
       <div>
-        <PageHeader title="Join our Influencer Club" className="text-center md:mb-24 mb-12" />
+        <PageHeader title={response?.JoinourTitle} className="text-center md:mb-24 mb-12" />
         <div>
-          <CustomIMG src={InfluencerImg} alt="InfluencerImg" className="rounded-3xl" />
+          <CustomIMG src={getImg(response?.JoinourImage)} alt="InfluencerImg" className="rounded-3xl" />
           <p className="mt-5 tracking-wider">
-            Join our exclusive “Influencer Club” which will give you early access to
-            our product launch information, a free product when it’s available and
-            a chance to be an affiliate marketer for our upcoming Kickstarter Launch
-            early next year.
+            {response?.JoinourDescription}
           </p>
         </div>
       </div>
