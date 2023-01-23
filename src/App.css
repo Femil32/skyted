@@ -36,7 +36,6 @@ details>summary::-webkit-details-marker {
 
 /* 1. Hero */
 .hero-bg {
-  background: url('./assets/imgs/hero-bg.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

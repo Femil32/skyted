@@ -47,7 +47,7 @@ const Press = () => {
     <section className="section-container py-0 mb-10">
       <div className="flex flex-col justify-center items-center mb-16 pt-24">
         <PageHeader
-          data-aos="fade-in"
+
           data-aos-delay="300"
           title="Press Release"
           className="text-center"

@@ -28,16 +28,16 @@ function Product() {
           {products?.map((product) => (
             <div key={product.id} className="p-1 overflow-hidden max-w-lg">
               <CustomIMG
-                data-aos="fade-in"
+
                 src={product.imgUrl}
                 alt="mask"
                 className="w-full rounded-3xl"
               />
               <div className="mt-8">
-                <h4 data-aos="fade-in" className="text-xl mb-4">
+                <h4 className="text-xl mb-4">
                   {product.title}
                 </h4>
-                <p data-aos="fade-in" className="text-sm">
+                <p className="text-sm">
                   {product.description}
                 </p>
               </div>

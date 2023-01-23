@@ -10,8 +10,8 @@ function SpotlightNew() {
         <div className="flex md:flex-nowrap flex-wrap justify-center md:gap-12 gap-8 items-center">
           <div
             className=" md:w-1/2"
-            data-aos="fade-in"
-            data-aos-delay="500"
+
+
           >
             <span className="block mb-4 text-gray-500">2023-01-04</span>
             <PageHeader title="Gamer Line – Silent Mask Headset" />
@@ -23,8 +23,8 @@ function SpotlightNew() {
           </div>
           <div
             className="md:w-1/2"
-            data-aos="fade-in"
-            data-aos-delay="500"
+
+
           >
             <div className="md:rounded-[50px] rounded-3xl overflow-hidden">
               <img src={PlanGirlIMG} alt="PlanGirlIMG" className=" overflow-hidden z-10 relative w-full h-full" />
