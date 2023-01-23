@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import BlogOneIMG from "../../assets/imgs/news/blog-one.png";
 import BlogSecondIMG from "../../assets/imgs/news/blog-second.png";
 import BlogThreeIMG from "../../assets/imgs/news/blog-three.png";
-import useFetach from "../../hooks/useFetch";
+// import useFetach from "../../hooks/useFetch";
 import { CustomIMG } from "../Micro";
 
 function Blogs() {
