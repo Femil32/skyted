@@ -77,4 +77,8 @@ input[type=number] {
             writing-mode: vertical-rl;
     @apply -rotate-180 uppercase
   }
+
+  .custom-ul > ul {
+    @apply list-disc list-outside ml-6 mt-8 xl:text-2xl lg:text-lg sm:text-base text-sm lg:space-y-5 space-y-4
+  }
 }
