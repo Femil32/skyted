@@ -18,12 +18,12 @@ function CesForm() {
         target="_blank"
         className="validate p-8 rounded-3xl bg-[#F7FAFB] flex flex-col gap-8 overflow-hidden mx-12 my-8"
       >
-        <h2 data-aos="fade-in" className="text-lg md:text-2xl text-[#001432]/80 font-medium md:mb-4">Sign up here to become our Influencer</h2>
+        <h2 className="text-lg md:text-2xl text-[#001432]/80 font-medium md:mb-4">Sign up here to become our Influencer</h2>
         <div className="flex gap-8 flex-col md:flex-row">
           <div className="mc-field-group flex-1">
             {/* <input type="text" name="FNAME" className="" id="mce-FNAME" /> */}
             <input
-              data-aos="fade-in"
+
               name="FNAME"
               id="mce-FNAME"
               className="px-5 py-3 border-none outline-none w-full bg-white text-black rounded-2xl"
@@ -40,7 +40,7 @@ function CesForm() {
               name="EMAIL"
               id="mce-EMAIL"
               required
-              data-aos="fade-in"
+
               className="px-5 py-3 border-none outline-none required email w-full bg-white text-black rounded-2xl"
               placeholder="Your email address"
               title="email"
@@ -53,7 +53,7 @@ function CesForm() {
               type="number"
               name="MMERGE3"
               id="mce-MMERGE3"
-              data-aos="fade-in"
+
               className="px-5 py-3 border-none outline-none w-full required email bg-white text-black rounded-2xl"
               pattern={/(7|8|9)\d{9}/}
               placeholder="Phone number"
@@ -70,7 +70,7 @@ function CesForm() {
             <div className="response" id="mce-success-response" style={{ display: "none" }} />
           </div>
           <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true"><input type="text" name="b_13691f994582aaf2190f0c8d2_b807faeffb" tabIndex="-1" /></div>
-          <CtaBtn type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" data-aos="fade-in" text="Sign Up" className="inline-block mx-auto bg-dark-blue text-white" />
+          <CtaBtn type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" text="Sign Up" className="inline-block mx-auto bg-dark-blue text-white" />
         </div>
       </form>
     </div>

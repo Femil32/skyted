@@ -34,16 +34,15 @@ const slideData = [
   },
 ];
 
-function Events() {
+function Events({ response }) {
   // const swiper = useSwiper();
 
   return (
     <section className="md:py-[88px] py-10 px-6 w-full bg-white text-black">
       <div>
         <PageHeader
-          data-aos="fade-in"
           className="text-center"
-          title="Coming up next..."
+          title={response?.ComingUp_Title}
         />
         <div className="grid grid-rows-1 grid-flow-col gap-1">
           {/* <div className="py-8 relative flex justify-center "> */}

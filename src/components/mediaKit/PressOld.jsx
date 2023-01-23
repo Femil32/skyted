@@ -27,9 +27,9 @@ const Press = () => {
 
   return (
     <section className="section-container py-0 mb-10">
-      <PageHeader data-aos="fade-in" data-aos-delay="300" title="Press Release" className="text-center" />
+      <PageHeader data-aos-delay="300" title="Press Release" className="text-center" />
       <div className="flex max-lg:flex-col gap-8 lg:gap-12 lg:h-[650px] h-auto lg:py-12 py-4">
-        <div data-aos="fade-in" data-aos-delay="300" className="lg:w-4/5">
+        <div data-aos-delay="300" className="lg:w-4/5">
           <Swiper
             autoplay={{
               delay: 2500,
@@ -49,7 +49,7 @@ const Press = () => {
             ))}
           </Swiper>
         </div>
-        <div data-aos="fade-in" data-aos-delay="300" className="lg:w-1/5">
+        <div data-aos-delay="300" className="lg:w-1/5">
           <Swiper
             slidesPerView={4}
             spaceBetween={20}

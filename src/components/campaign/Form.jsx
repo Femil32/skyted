@@ -1,12 +1,8 @@
 import React from "react";
-import { CtaBtn, Input } from "../Micro";
+import { parseHtml } from "../../helpers";
+import { CtaBtn } from "../Micro";
 
-function Form(setMargins) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target).entries());
-    console.log(data);
-  };
+function Form({ setMargins, response }) {
   return (
     <section className={`section-container py-0 ${setMargins ? "mt-8" : ""}`}>
       <form
@@ -20,13 +16,11 @@ function Form(setMargins) {
         <div className=" flex-col md:flex-row grid grid-rows-1 grid-flow-col gap-4 w-full">
           <div className="flex flex-col items-start gap-4 ">
             <h2
-              data-aos="fade-in"
               className="text-lg md:text-2xl font-medium md:mb-4 text-black"
             >
-              Reserve Skyted at CES Price
+              {response?.ReserveSkyted_Title}
               <p className="w-full md:max-w-[500px] text-base mt-4">
-                We&apos;re launching soon on Kickstarter. Sign up today and reserve skyted mask
-                at CES price. CES price is only valid till 8th January 2023.
+                {parseHtml(response?.ReserveSkyted_Detail)}
               </p>
             </h2>
           </div>
@@ -34,7 +28,6 @@ function Form(setMargins) {
             <div>
               <div className="mc-field-group">
                 <input
-                  data-aos="fade-in"
                   type="email"
                   name="EMAIL"
                   id="mce-EMAIL"

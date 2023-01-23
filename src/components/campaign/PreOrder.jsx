@@ -30,17 +30,17 @@ function PreOrder() {
     <section className="section-container">
       <div className="lg:mx-16">
         <PageHeader
-          data-aos="fade-in"
+
           title="Pre-order at huge discounts"
           className="text-center"
         />
         <div className="grid lg:grid-cols-2 gap-8 py-12">
           <div className="bg-gradient-radial from-white to-cyan-100 rounded-2xl p-8 lg:p-12 h-full flex flex-col items-start">
             <div>
-              <h4 data-aos="fade-in" className="red-header mb-4">
+              <h4 className="red-header mb-4">
                 How to sign up for the Kickstarter Launch?
               </h4>
-              <p data-aos="fade-in">
+              <p>
                 We are planning to launch the Kickstarter campaign in March 2023
                 where we will offer a huge discount off retail to all our early adopters.
                 However, this discount will be limited and will be available for the first 24
@@ -49,17 +49,17 @@ function PreOrder() {
               </p>
             </div>
             {/* <CtaBtn
-              data-aos="fade-in"
+
               text="Get huge discounts on launch day"
               className="bg-dark-blue text-white my-auto max-lg:mt-6"
             /> */}
           </div>
           <div className="bg-gradient-radial from-white to-blue-100 rounded-2xl p-8 lg:p-12">
             <div className="mb-8">
-              <h4 data-aos="fade-in" className="red-header mb-4">
+              <h4 className="red-header mb-4">
                 Why Kickstarter?
               </h4>
-              <p data-aos="fade-in">
+              <p>
                 We believe that our crowdfunding model is the best way to cut
                 the middlemen and distribution.
               </p>
@@ -67,7 +67,7 @@ function PreOrder() {
             <div className="flex gap-4 max-lg:gap-10 max-md:flex-col">
               {reasons.map((reason, i) => (
                 <div
-                  data-aos="fade-in"
+
                   key={i}
                   className="flex-1 text-center flex flex-col justify-between gap-4"
                 >

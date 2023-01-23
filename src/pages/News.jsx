@@ -7,7 +7,7 @@ function News() {
   return (
     <main className="bg-white text-black">
       <section
-        data-aos="fade-in"
+
         data-aos-delay="300"
         className="container mx-auto md:mt-28 mt-24 mb-5"
       >

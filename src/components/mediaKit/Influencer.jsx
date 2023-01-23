@@ -18,14 +18,14 @@ function Influencer() {
     <section className="section-container">
       <div className="flex justify-center items-center flex-col lg:gap-8 lg:py-12">
         <div className="flex justify-center flex-col items-center mb-8">
-          <PageHeader data-aos="fade-in" title="Join our Influencer Club" />
-          <p data-aos="fade-in">
+          <PageHeader title="Join our Influencer Club" />
+          <p>
             We offer you the possibility to promote our product before teh kick
             strater community.
           </p>
         </div>
         <ImgData
-          data-aos="fade-in"
+
           src={InfluencerIMG}
           alt="influencer"
           description="Join the Influencer club and get in touch wih us to promote
@@ -46,7 +46,7 @@ function Influencer() {
               <div className="mc-field-group">
 
                 <input
-                  data-aos="fade-in"
+
                   type="email"
                   name="EMAIL"
                   id="mce-EMAIL"
@@ -64,8 +64,8 @@ function Influencer() {
                 id="mce-FNAME"
                 value={formdata.name}
                 onChange={(e) => setFormdata({ ...formdata, name: e.target.value })}
-                data-aos="fade-in"
-                data-aos-delay="500"
+
+
                 placeholder="Name"
                 title="name"
                 className="px-5 py-3 w-full outline-none w-full rounded-xl backdrop-blur-lg bg-white lg:placeholder:text-base placeholder:text-sm"

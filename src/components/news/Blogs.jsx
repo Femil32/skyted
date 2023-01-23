@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import BlogOneIMG from "../../assets/imgs/news/blog-one.png";
 import BlogSecondIMG from "../../assets/imgs/news/blog-second.png";
 import BlogThreeIMG from "../../assets/imgs/news/blog-three.png";
+import useFetach from "../../hooks/useFetch";
 import { CustomIMG } from "../Micro";
 
 function Blogs() {
+  // const { data, loading, error } = useFetach("blogs");
   // eslint-disable-next-line no-unused-vars
   const [blogs, setBlogs] = useState([
     {
@@ -40,7 +42,7 @@ function Blogs() {
               <Link to={`/news/${blog.title}`} key={blog.id}>
                 <div
                   className="cursor-pointer transition-all md:p-6 rounded-[1.8rem] max-md:mb-8"
-                  data-aos="fade-in"
+
                   data-aos-delay={i * 100}
                   data-aos-offset="200"
                 >

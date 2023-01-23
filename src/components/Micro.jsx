@@ -90,7 +90,7 @@ export const IconCard = ({
     {...args}
   >
     <div className="flex h-full justify-center items-start flex-col gap-5">
-      <div>{icon}</div>
+      <CustomIMG src={icon} className="w-11" />
       <h6 className="text-lg font-semibold">{title}</h6>
       <SlatePara text={description} />
       <Link to={link} className="mt-auto">
@@ -252,7 +252,7 @@ export const CustomIMG = ({
   src, alt, className, ImgClassName, ...args
 }) => (
   <div className={`${className} overflow-hidden`} {...args}>
-    <img src={src} alt={alt} className={`${ImgClassName} w-full h-full`} />
+    <img loading="lazy" src={src} alt={alt} className={`${ImgClassName} w-full h-full`} />
   </div>
 );
 
