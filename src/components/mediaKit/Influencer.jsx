@@ -1,35 +1,23 @@
-import React, { useState } from "react";
-import { CtaBtn, Input, PageHeader } from "../Micro";
+import React from "react";
+import { CtaBtn, PageHeader } from "../Micro";
 // imgs
-import InfluencerIMG from "../../assets/imgs/profileKit/influencer.png";
+import { getImg } from "../../helpers";
 import ImgData from "../common/ImgData";
 
-function Influencer() {
-  const [formdata, setFormdata] = useState({
-    name: "",
-    email: "",
-  });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formdata);
-  };
-
+function Influencer({ response }) {
   return (
     <section className="section-container">
       <div className="flex justify-center items-center flex-col lg:gap-8 lg:py-12">
         <div className="flex justify-center flex-col items-center mb-8">
-          <PageHeader title="Join our Influencer Club" />
+          <PageHeader title={response?.JoinOurInfluencerTitle} />
           <p>
-            We offer you the possibility to promote our product before teh kick
-            strater community.
+            {response?.JoinOurInfluencerSubtitle}
           </p>
         </div>
         <ImgData
-
-          src={InfluencerIMG}
+          src={getImg(response?.JoinOurInfluencerImage)}
           alt="influencer"
-          description="Join the Influencer club and get in touch wih us to promote
-            how we could support Silent calls and silent games."
+          description={response?.JoinOurInfluencerDescription}
           dataClasses="max-md:order-2 max-md:text-center"
           imgClasses="max-md:order-1"
         >
@@ -44,9 +32,7 @@ function Influencer() {
           >
             <div>
               <div className="mc-field-group">
-
                 <input
-
                   type="email"
                   name="EMAIL"
                   id="mce-EMAIL"
@@ -62,13 +48,9 @@ function Influencer() {
                 type="text"
                 name="FNAME"
                 id="mce-FNAME"
-                value={formdata.name}
-                onChange={(e) => setFormdata({ ...formdata, name: e.target.value })}
-
-
                 placeholder="Name"
                 title="name"
-                className="px-5 py-3 w-full outline-none w-full rounded-xl backdrop-blur-lg bg-white lg:placeholder:text-base placeholder:text-sm"
+                className="px-5 py-3 w-full outline-none  rounded-xl backdrop-blur-lg bg-white lg:placeholder:text-base placeholder:text-sm"
               />
             </div>
             <div id="mce-responses" className="clear foot">
