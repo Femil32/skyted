@@ -25,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     console.log(error);
     setHeroData(response?.data?.attributes?.HomePage);
-    console.log(response?.data?.attributes?.HomePage);
+    // console.log(response?.data?.attributes?.HomePage);
   }, [error, response]);
 
   return (
