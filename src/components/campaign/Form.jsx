@@ -13,7 +13,7 @@ function Form({ setMargins, response }) {
         target="_blank"
         className="validate lg:p-8 p-6 rounded-3xl bg-[#bcc2c2] flex flex-col gap-8 overflow-hidden"
       >
-        <div className=" flex-col md:flex-row grid grid-rows-1 grid-flow-col gap-4 w-full">
+        <div className=" flex flex-col md:flex-row gap-4 w-full">
           <div className="flex flex-col items-start gap-4 ">
             <h2
               className="text-lg md:text-2xl font-medium md:mb-4 text-black"
@@ -24,14 +24,14 @@ function Form({ setMargins, response }) {
               </p>
             </h2>
           </div>
-          <div className="flex align self-center">
+          <div className="flex align self-center max-md:flex-col gap-2 w-full">
             <div>
               <div className="mc-field-group">
                 <input
                   type="email"
                   name="EMAIL"
                   id="mce-EMAIL"
-                  className="px-5 border-none outline-none min-w-[28rem] required email flex-1 bg-white text-black rounded-2xl py-4 h-11 text-base mr-4"
+                  className="px-5 border-none outline-none w-full md:min-w-[28rem] required email flex-1 bg-white text-black rounded-2xl py-4 h-11 text-base mr-4"
                   placeholder="Email"
                   required
                 />

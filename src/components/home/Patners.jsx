@@ -20,13 +20,20 @@ import { getImg } from "../../helpers";
 function Patners({ response }) {
   return (
     <section className="section-container lg:py-[60px] bg-white text-black border-b">
-      <div className="grid grid-cols-12">
-        <div className="col-span-4 flex items-center">
+      <div className="grid grid-cols-12 max-md:grid-rows-2">
+        <div className="col-span-12 md:col-span-4 flex items-center">
           <PageHeader title="Our Partners" />
         </div>
-        <div className="col-span-7 col-start-6">
+        <div className="md:col-span-7 col-span-12 md:col-start-6">
           <Swiper
-            slidesPerView={3}
+            spaceBetween={30}
+            breakpoints={{
+              720: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+            }}
+            slidesPerView={2}
             centeredSlides
             loop="true"
             className="mySwiper"

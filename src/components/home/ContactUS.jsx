@@ -36,7 +36,6 @@ function ContactUS() {
               type="number"
               name="MMERGE3"
               id="mce-MMERGE3"
-
               className="px-5 py-3 border-none outline-none w-full required email bg-white text-black rounded-2xl"
               pattern={/(7|8|9)\d{9}/}
               placeholder="Mobile Number"
@@ -51,7 +50,6 @@ function ContactUS() {
               name="EMAIL"
               id="mce-EMAIL"
               required
-
               className="px-5 py-3 border-none outline-none required email w-full bg-white text-black rounded-2xl"
               placeholder="Your email address"
               title="email"
@@ -66,7 +64,6 @@ function ContactUS() {
             type="text"
             name="MMERGE2"
             id="mce-MMERGE2"
-
             placeholder="Write your comment here..."
             className="px-5 py-3 w-full outline-none bg-white text-black rounded-2xl"
             rows={3}

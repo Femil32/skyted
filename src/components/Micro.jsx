@@ -252,7 +252,7 @@ export const CustomIMG = ({
   src, alt, className, ImgClassName, ...args
 }) => (
   <div className={`${className} overflow-hidden`} {...args}>
-    <img loading="lazy" src={src} alt={alt} className={`${ImgClassName} w-full h-full`} />
+    <img src={src} alt={alt} className={`${ImgClassName} w-full h-full`} />
   </div>
 );
 

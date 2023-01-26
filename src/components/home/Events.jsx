@@ -44,7 +44,7 @@ function Events({ response }) {
           className="text-center"
           title={response?.ComingUp_Title}
         />
-        <div className="flex justify-center items-center gap-20 mt-12">
+        <div className="flex max-xl:flex-col justify-center items-center gap-20 mt-12">
           {/* <div className="py-8 relative flex justify-center "> */}
           {/* <Swiper
             slidesPerView={1}
