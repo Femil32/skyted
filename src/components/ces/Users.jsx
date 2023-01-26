@@ -1,32 +1,29 @@
 import React from "react";
+import { getImg } from "../../helpers";
 import UsersCard from "./UsersCard";
-import Gamer from "../../assets/imgs/ces/gamer.png";
-import PlaneMan from "../../assets/imgs/ces/planman.png";
 
-function Users() {
+function Users({ businessRes, gamersRes }) {
   return (
     <section className="section-container py-16">
-      <div className="flex gap-12 w-full justify-center">
+      <div className="flex gap-12 w-full justify-center max-md:flex-col">
         <div className="max-w-lg">
           <UsersCard
-            header="Business Line"
-            src={PlaneMan}
+            header={businessRes?.BusinessLineTitle}
+            src={getImg(businessRes?.BusinessLineImage)}
             alt="PlaneMan"
-            title="Mobility (B2B/B2C)"
-            description="Travelers (Air passengers, Railway Passengers, Cabs) Office workers
-            (Shared workspace, Home offices, Open Workspaces)"
+            title={businessRes?.BusinessLineCategory}
+            description={businessRes?.BusinessLineDescription}
             linkText="Travel and calls « on the go »"
             link="/ces"
           />
         </div>
         <div className="max-w-lg">
           <UsersCard
-            header="For Gamers"
-            src={Gamer}
+            header={gamersRes?.ForGamersTitle}
+            src={getImg(gamersRes?.ForGamersImage)}
             alt="gamer"
-            title="Virtual World (B2B/B2C)"
-            description="Enjoy playing games anywhere anytime. Scream and shout without
-            the worry of disturbing others."
+            title={gamersRes?.ForGamersCategory}
+            description={gamersRes?.ForGamersDescription}
             linkText="Enjoy gaming anywhere now « on the go »"
             link="/ces"
           />

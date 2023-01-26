@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyted</title>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="module" src="/src/main.jsx"></script>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script type="text/javascript">
+    (function ($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[1] = "FNAME";
+      ftypes[1] = "text";
+      fnames[8] = "USERNAME";
+      ftypes[8] = "text";
+      fnames[0] = "EMAIL";
+      ftypes[0] = "email";
+      fnames[10] = "COUNTRY";
+      ftypes[10] = "text";
+      fnames[24] = "PROFILEPI";
+      ftypes[24] = "imageurl";
+    })(jQuery);
+    var $mcj = jQuery.noConflict(true);
+  </script>
+  <script src="src/index.js"></script>
+
+</body>
+
 </html>

@@ -3,6 +3,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: { xs: "425px" },
       colors: {
         black: "#121212",
         "light-gray": "#F7FAFB",
@@ -11,12 +12,17 @@ module.exports = {
         linkedin: "#0a66c2",
         yt: "#ff0000",
         twitter: "#1da1f2",
+        "dark-red": "#C5181F",
+        "dark-blue": "#1781B8",
       },
       fontFamily: {
         radwave: "radwave",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+      borderRadius: {
+        "4xl": "2.5rem",
       },
     },
   },

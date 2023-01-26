@@ -21,5 +21,8 @@ module.exports = {
     "react/no-array-index-key": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "no-unsafe-optional-chaining": "off",
+    "react/prop-types": "off",
   },
 };

@@ -1,46 +1,37 @@
-import React, { useState } from "react";
-import { RoundedMinus, RoundedPlus } from "../AllSvgs";
+import React from "react";
+import { parseHtml } from "../../helpers";
 import { Detail, PageHeader, SlatePara } from "../Micro";
 
-function FAQ() {
-  const [allFaq, setAllFaq] = useState([
-    {
-      summary: "How does the pairing work?",
-      detail: "The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
-    },
-    {
-      summary: "Where can we find Skyted Mask?",
-      detail: "1 The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
-    },
-    {
-      summary: "What kind of sound reduction can we expect?",
-      detail: "2 The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
-    },
-    {
-      summary: "Do you plan to launch a VIP Line?",
-      detail: "3 The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
-    },
-    {
-      summary: "Do you plan to launch a VIP Line?",
-      detail: "4 The mask integrates a Pcb that can pair with any phones, computers and on the earbud side with any TWS such as Airpods, speaker or headset.",
-    },
-  ]);
-
+function FAQ({ response }) {
   return (
     <section className="section-container bg-white text-black">
       <div className="flex gap-6 md:gap-0 flex-col md:flex-row">
         <div className="flex-1">
           <div className="max-w-lg">
-            <span className="text-red-500 font-medium mb-2" data-aos="fade-in">The FAQs</span>
-            <PageHeader title="You want to know more about us?" />
-            <SlatePara text="Everything you need to know about the product and billing.
-              Can’t find the answer you’re looking for? Please check."
+            <span className="red-header mb-8 text-xl">
+              {response?.FAQs_Title}
+            </span>
+            <PageHeader
+              title={response?.FAQs_Subtitle}
+            />
+            <SlatePara
+              text={(
+                <div>
+                  {parseHtml(response?.FAQs_Description)}
+                </div>
+              )}
             />
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col gap-4 md:gap-8 transition-all" data-aos="fade-in">
-            {allFaq.map((faq, i) => <Detail key={i} summary={faq.summary} detail={faq.detail} />)}
+          <div className="flex flex-col gap-4 md:gap-8 transition-all">
+            {response?.FAQs_Ques?.map((faq, i) => (
+              <Detail
+                key={i}
+                summary={faq?.title}
+                detail={faq?.description}
+              />
+            ))}
           </div>
         </div>
       </div>
