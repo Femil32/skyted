@@ -23,7 +23,7 @@ function MediaKit() {
       {loading ? <Loader />
         : (
           <>
-            {/* <MeadiaKit /> */}
+            {/* <MediaKit /> */}
             <Press response={mediaData?.[0]} />
             <Product response={mediaData?.[1]} />
             <Influencer response={mediaData?.[2]} />

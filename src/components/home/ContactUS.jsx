@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  CtaBtn, Input, PageHeader, TextArea,
+  CtaBtn, PageHeader,
 } from "../Micro";
 
-function ContactUS({ response }) {
+function ContactUS() {
   return (
     <section className="section-container bg-white text-black">
       <PageHeader title="Contact us" className="text-center mb-12" />
@@ -21,7 +21,6 @@ function ContactUS({ response }) {
           <div className="mc-field-group flex-1">
             {/* <input type="text" name="FNAME" className="" id="mce-FNAME" /> */}
             <input
-
               name="FNAME"
               id="mce-FNAME"
               className="px-5 py-3 border-none outline-none w-full bg-white text-black rounded-2xl"

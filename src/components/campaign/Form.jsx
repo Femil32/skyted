@@ -20,7 +20,7 @@ function Form({ setMargins, response }) {
             >
               {response?.ReserveSkyted_Title}
               <p className="w-full md:max-w-[500px] text-base mt-4">
-                {parseHtml(response?.ReserveSkyted_Detail)}
+                {parseHtml(response?.ReserveSkyted_Detail ?? response?.ReserveSkyted_Description)}
               </p>
             </h2>
           </div>
