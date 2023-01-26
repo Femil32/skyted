@@ -35,7 +35,7 @@ import { getImg } from "../../helpers";
 
 function Events({ response }) {
   // const swiper = useSwiper();
-  // console.log(response);
+  console.log(response);
 
   return (
     <section className="md:py-[88px] py-10 px-6 w-full bg-white text-black">
@@ -44,7 +44,7 @@ function Events({ response }) {
           className="text-center"
           title={response?.ComingUp_Title}
         />
-        <div className="grid grid-rows-1 grid-flow-col gap-1">
+        <div className="flex justify-center items-center gap-20 mt-12">
           {/* <div className="py-8 relative flex justify-center "> */}
           {/* <Swiper
             slidesPerView={1}
@@ -63,17 +63,17 @@ function Events({ response }) {
             <Link to={slide?.to} key={i} className={`${slide.className}`}>
               <div className="flex flex-col justify-center items-start gap-4">
                 <div className="w-full justify-self-center">
-                  <img src={getImg(slide?.ComingUp_Events_Image)} alt="ConsumerLogo" />
+                  <img src={getImg(slide?.ComingUp_Event_Image)} alt="ConsumerLogo" />
                 </div>
                 <h6 className="w-full md:max-w-[600px]">
-                  {slide?.ComingUp_Events_Title}
+                  {slide?.ComingUp_Event_Title}
                 </h6>
                 <div className="flex flex-col">
                   <span className="text-sm  text-[#001432]/50 font-medium">
-                    {slide?.ComingUp_Events_Artical_Date}
+                    {slide?.ComingUp_Event_Date}
                   </span>
                   <span className="text-sm text-[#001432]/50 font-medium">
-                    {slide?.ComingUp_Events_City_Name}
+                    {slide?.ComingUp_Event_City_Name}
                   </span>
                 </div>
               </div>

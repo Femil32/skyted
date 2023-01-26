@@ -15,7 +15,7 @@ function Profiles({ response }) {
               <CustomIMG
                 src={getImg(info?.OwnerImage)}
                 alt="CeoIMG"
-                className="rounded-[250px] lg:w-96 w-72 h-[28rem]"
+                className="rounded-[250px] lg:w-96 w-72 h-[32rem]"
               />
             </div>
           </div>

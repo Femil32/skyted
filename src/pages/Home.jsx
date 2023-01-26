@@ -10,7 +10,7 @@ import Factors from "../components/home/Factors";
 import FAQ from "../components/home/FAQ";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
-import MeadiaOutlets from "../components/home/MeadiaOutlets";
+import MediaOutlets from "../components/home/MediaOutlets";
 import Patners from "../components/home/Patners";
 import useAxios from "../hooks/useAxios";
 
@@ -37,7 +37,7 @@ const Home = () => {
             <Form setMargins response={heroData?.[1]} />
             <Patners response={heroData?.[2]} />
             <About response={heroData?.[3]} />
-            <MeadiaOutlets response={heroData?.[4]} />
+            <MediaOutlets response={heroData?.[4]} />
             <Features response={heroData?.[5]} />
             <Factors response={heroData?.[6]} />
             <Events response={heroData?.[7]} />

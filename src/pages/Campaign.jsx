@@ -16,7 +16,7 @@ function Campaign() {
   useEffect(() => {
     console.log(error);
     setCampaignData(response?.data?.attributes?.KickstarterPage);
-    console.log(response?.data?.attributes?.KickstarterPage[0]);
+    console.log(response?.data?.attributes?.KickstarterPage[2]);
   }, [error, response]);
 
   return (
@@ -25,9 +25,9 @@ function Campaign() {
         : (
           <>
             <Banner response={campaignData?.[0]} />
-            <PreOrder />
-            <Form response={campaignData?.[1]} />
-            <FAQ response={campaignData?.[2]} />
+            <PreOrder response={campaignData?.[1]} />
+            <Form response={campaignData?.[2]} />
+            <FAQ response={campaignData?.[3]} />
           </>
         )}
     </main>
