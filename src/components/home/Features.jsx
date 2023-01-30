@@ -14,7 +14,7 @@ function Features({ response }) {
         }
         className="max-w-lg text-center mx-auto"
       />
-      <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-8 md:gap-20 py-6">
+      <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap gap-8 md:gap-18 py-6">
         {response?.GetBackList?.map((partner) => (
           <IconCard
             key={partner?.id}

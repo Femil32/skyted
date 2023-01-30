@@ -35,7 +35,6 @@ import { getImg } from "../../helpers";
 
 function Events({ response }) {
   // const swiper = useSwiper();
-  console.log(response);
 
   return (
     <section className="md:py-[88px] py-10 px-6 w-full bg-white text-black">
