@@ -38,13 +38,10 @@ function Blogs() {
       <div className="container mx-auto md:py-24">
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-8 sm:gap-6">
           {
-            blogs.map((blog, i) => (
+            blogs.map((blog) => (
               <Link to={`/news/${blog.title}`} key={blog.id}>
                 <div
                   className="cursor-pointer transition-all md:p-6 rounded-[1.8rem] max-md:mb-8"
-
-                  data-aos-delay={i * 100}
-                  data-aos-offset="200"
                 >
                   <CustomIMG src={blog.imgUrl} className="rounded-3xl overflow-hidden mb-6" ImgClassName="object-cover w-full h-full" />
                   <div className="flex flex-col gap-3 justify-start items-start">

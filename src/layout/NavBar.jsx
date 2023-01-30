@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
+/* eslint-disable no-return-assign */
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
@@ -10,8 +12,10 @@ import {
   YoutubeIcon,
   TwitterIcon,
 } from "../components/AllSvgs";
+import { getImg } from "../helpers";
+import { CustomIMG } from "../components/Micro";
 
-const NavBar = ({ navState, handleNav }) => {
+const NavBar = ({ navState, handleNav, response }) => {
   const navLinks = [
     {
       title: "Home",
@@ -144,56 +148,51 @@ const NavBar = ({ navState, handleNav }) => {
         <div className="flex relative md:justify-between justify-center w-full items-start text-center sm:text-left">
           <div className="">
             <ul className="nav-links md:space-y-3 space-y-2 leading-3">
-              {navLinks.map((link, i) => (
+              {response?.[1]?.header_menu_list?.map((link, i) => (
                 <li key={i} className="nav-link">
                   <NavLink
                     onClick={() => handleNav(true)}
-                    to={link.link}
-                    state={link.state}
+                    to={link.menu_link}
+                    state={{}}
                     className={({ isActive }) => `${isActive ? "text-red-900" : "text-white"} transition-all font-bold xl:text-5xl lg:text-3xl text-xl uppercase
                       tracking-tight px-2`}
                   >
-                    {link.title}
+                    {link.menu_name}
                   </NavLink>
                 </li>
               ))}
 
-              <li className="flex">
-                <a className="hover:text-white w-full nav-link" href="https://www.facebook.com/#" target="_blank" rel="noreferrer">
-                  <FacebookIcon />
-                </a>
-                <a className="hover:text-white w-full nav-link" href="https://www.instagram.com/#" target="_blank" rel="noreferrer">
-                  <InstagramIcon />
-                </a>
-                <a className="hover:text-white w-full nav-link" href="https://www.linkedin.com/#" target="_blank" rel="noreferrer">
-                  <LinkedInIcon />
-                </a>
-                <a className="hover:text-white w-full nav-link" href="https://www.youtube.com/#" target="_blank" rel="noreferrer">
-                  <YoutubeIcon />
-                </a>
-                <a className="hover:text-white w-full nav-link" href="https://www.twitter.com/#" target="_blank" rel="noreferrer">
-                  <TwitterIcon />
-                </a>
+              <li className="flex gap-4 group">
+                {response?.[2]?.socialItem?.map((platform) => (
+                  <a
+                    className=" hover:text-white w-full nav-link bg-transparent "
+                    href={platform?.SocialLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <CustomIMG src={getImg(platform?.SocialIcon)} ImgClassName="invert hover:hue-rotate-0 hue-rotate-180" />
+                  </a>
+                ))}
               </li>
             </ul>
           </div>
           <aside className="border-l-2 border-gray-100/10 px-8 max-w-sm nav-link hidden md:block">
-            <h3 className="xl:text-2xl text-xl mb-10">Skyted.inc</h3>
+            <h3 className="xl:text-2xl text-xl mb-10">{response?.[0]?.company_name}</h3>
             <div className="text-light-gray">
               <address className="mb-6 lg:text-base text-sm">
-                B612 – Toulouse Aerospace Innovation ParkToulouse, France
+                {response?.[0]?.company_address}
               </address>
               <a
-                href="mailto:info@skypted.io"
+                href={`mailto:${response?.[0]?.company_email}`}
                 className="underline block lg:text-base text-sm"
               >
-                info@skyted.io
+                {response?.[0]?.company_email}
               </a>
             </div>
           </aside>
         </div>
         <div className="md:absolute bottom-24 right-28 xl:max-w-lg lg:max-w-sm max-sm:w-44 nav-link">
-          <img src={LogoNav} alt="skyted" className="w-full h-full" />
+          <img src={getImg(response?.[0]?.company_image)} alt="skyted" className="w-full h-full" />
         </div>
       </div>
     </nav>

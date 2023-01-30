@@ -28,13 +28,13 @@ const Scroll = ({ setScrollbar }) => {
     const myScrollbar = Scrollbar.init(document.querySelector("#scrollbar"), options);
     setScrollbar(myScrollbar);
 
-    [].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
-      myScrollbar.addListener(() => {
-        if (myScrollbar.isVisible(el)) {
-          el.classList.add("aos-animate");
-        }
-      });
-    });
+    // [].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
+    //   myScrollbar.addListener(() => {
+    //     if (myScrollbar.isVisible(el)) {
+    //       el.classList.add("aos-animate");
+    //     }
+    //   });
+    // });
 
     return () => {
       if (Scrollbar) Scrollbar.destroy(document.querySelector("#scrollbar"));

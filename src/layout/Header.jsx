@@ -6,11 +6,24 @@ import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { CtaBtn, SkytedLogo } from "../components/Micro";
 import NavBar from "./NavBar";
+import useAxios from "../hooks/useAxios";
 
 function Header({ scrollbar }) {
   const location = useLocation();
   const navbar = useRef();
   const prevpos = useRef(0);
+
+  const [headerData, setHeaderData] = useState([]);
+  const { error, response, loading } = useAxios({
+    url: "headers/1",
+    method: "get",
+  });
+
+  useEffect(() => {
+    console.log(error);
+    setHeaderData(response?.data?.attributes?.Header);
+    console.log(response?.data?.attributes?.Header);
+  }, [error, response]);
 
   const [navState, setNavState] = useState({
     initial: false,
@@ -105,7 +118,7 @@ function Header({ scrollbar }) {
         <div className="hidden md:inline-flex navbar-end ">
           <CtaBtn text="Let’s Connect" className={`${isBlackHeader ? "text-white bg-black" : "text-black bg-white"} xl:text-base text-sm`} />
         </div>
-        <NavBar navState={navState} handleNav={handleNav} />
+        <NavBar navState={navState} handleNav={handleNav} response={headerData} />
       </div>
     </div>
   );
